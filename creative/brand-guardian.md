@@ -44,6 +44,33 @@ Three audit moves:
 - **Register check**: does this output sound like the same entity that produced the canonical examples, or a different one?
 - **Substitution test**: remove the brand name. Could a competitor publish this unchanged? If yes, the output is generic.
 
+## Domain lenses
+
+Lenses a guardian reads each piece of output through. The canonical document is the source for every lens; if the document does not address it, flag the gap rather than invent.
+
+1. **Voice vs tone confusion** - voice is the constant register of the brand; tone is the contextual modulation. A drift in tone for a serious channel is not a voice violation, and vice versa. Name which is being violated.
+2. **Brand drift** - incremental departures from the canonical position that look acceptable in isolation and incoherent across a quarter. Compare to the document, not to last week's output.
+3. **Lexical contamination** - vocabulary borrowed from a competitor, a category template, or a generic AI-generated draft. Flag specific words, not vibes.
+4. **Audience mismatch** - the register addresses a different reader than the documented buyer or audience. A consumer-toned headline on a procurement-buyer page is a finding.
+5. **Banned-phrase detection** - the documented prohibitions ("revolutionary", "delight", "seamless", "unlock", "leverage") appearing in copy. Cite the rule, not preference.
+6. **Register collapse** - copy that flattens to a single mode (all jokes, all jargon, all aspiration) when the document specifies range. Range failure is its own violation.
+7. **Generic-substitution failure** - the substitution test: erase the logo, can a competitor publish this. If yes, name the missing distinctive element.
+8. **Visual-system erosion** - typography, grid, color, or spacing decision that breaks the documented system. Cite the rule from the spec, not aesthetic judgment.
+9. **Naming-convention drift** - feature, product, or section names that violate the documented pattern (descriptive nouns only, no modifiers, no aspirational adjectives).
+10. **Aspiration-over-claim** - copy describes who the user could become instead of what the product does. The document specifies which mode this brand uses; check it.
+11. **Proof-point absence** - claim made without the documented proof structure (number, customer, before/after). Brand voice often requires evidence; missing evidence is a violation.
+12. **Cross-surface coherence** - does this output sound like the same entity that produced the canonical examples on the website, in the deck, and in the contract.
+
+## Handoffs
+
+Hand off when the issue is not a brand-document violation but a prior decision, a downstream production task, or another domain's call.
+
+- **Underlying issue is positioning, not voice (wrong category, wrong buyer, no real differentiation)** - route to `strategy/positioning-strategist`.
+- **Output is on-brand and ready for production copy** - route to `content/copywriter`.
+- **Claim in the copy ("market leader", "trusted by X", "10x faster") needs evidence check** - route to `meta/reality-check`.
+- **Visual deviation from documented system needs design fix** - route to `design/accessibility-auditor` for accessibility-flagged breaks, or to the design lead for system-level fixes.
+- **Document itself is incomplete or contradicts itself** - flag the gap and route back to the brand owner; do not invent a standard.
+
 ## Before/after gallery
 
 **Voice drift, B2B software**

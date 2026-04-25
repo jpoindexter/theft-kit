@@ -82,6 +82,38 @@ After: "Diagnosis: Competitor A's AI feature automates the one task our shared b
 Before: "Our strategy is to become the market leader in our category."
 After: "That is a goal, not a strategy. To develop a strategy: (1) name the specific challenge making market leadership difficult -- why does the current leader hold that position and what would have to change for you to take it? (2) name the approach that addresses that specific challenge. (3) name the actions that reinforce the approach. Start with the diagnosis."
 
+## Domain lenses
+
+Lenses applied to a draft strategy. Each one is a way the strategy can be incoherent without looking incoherent. Run them before signing off on the kernel.
+
+1. **2x2 trap** -- if the strategy reduces to a 2x2 matrix that any management team could draw, no real choice has been made. Force a sharper diagnosis.
+2. **Reversibility** -- for each action, classify as reversible (cheap to undo) or one-way (expensive). One-way decisions deserve more uncertainty quantification before commitment.
+3. **Optionality lens** -- does the action set preserve future moves, or does it lock in a single path? Strategy under uncertainty values options that stay live.
+4. **Lockup risk** -- does the guiding policy commit capital, headcount, or contractual terms that prevent revision when the diagnosis is proven wrong? Pre-define exit cost.
+5. **Sequencing dependency** -- actions assume preconditions. If action B depends on action A succeeding, the strategy is the sequence, not the action list. Make the dependency explicit.
+6. **Constraint targeting** -- apply Goldratt: every action should attack the constraint named in the diagnosis. If an action does not move the constraint, it does not belong in the strategy.
+7. **Coherence test** -- remove any single action. Does the strategy weaken? If removal has no effect, the action is filler.
+8. **Time-horizon mismatch** -- diagnosis, policy, and actions should operate on compatible time horizons. A 5-year diagnosis with 90-day actions and an 18-month policy will fragment in execution.
+9. **Resource-reality check** -- does the strategy assume capacity, capital, or capability not currently in evidence? Blue-sky strategy is a planning artifact, not a strategy.
+10. **Competitor-response model** -- for each action, what does the competitor do in response? A strategy that ignores response is a unilateral plan, not a strategy.
+11. **Falsifiability** -- is the revision threshold pre-committed? Annie Duke's discipline: the conditions under which you abandon the policy must be defined before you place the bet.
+12. **Excludes-something test** -- Roger Martin: a strategy that excludes nothing is a slogan. Name at least one segment, channel, or capability the strategy actively says no to.
+13. **Translation test** -- Lutke's rule: can a specific person on the team make a specific decision today differently because of this strategy? If not, the strategy has not landed.
+14. **Concentration vs hedge lens** -- does the strategy concentrate force on the one place a win is likely, or spread effort to feel safe? Spreading is the default failure mode.
+
+## Handoffs
+
+Hand off when the strategic question depends on an input the developer cannot resolve, or when the strategy is sound and downstream execution is the next move.
+
+- **Diagnosis is sharp but positioning is the actual hard problem** -- route to `strategy/positioning-strategist`.
+- **Diagnosis depends on a market sizing or buyer-behavior claim that is unsourced** -- route to `strategy/market-researcher`.
+- **Guiding policy assumes competitor moves or moats that have not been characterized** -- route to `strategy/competitor-analyst`.
+- **Strategy is being developed for an idea that has not passed evaluation** -- route to `strategy/idea-evaluator`.
+- **Diagnosis or revision threshold contains inflated claims, hype, or unfalsifiable language** -- route to `meta/reality-check`.
+- **Coherent actions imply a product capability that needs spec'ing** -- route to `product/spec-validator`.
+- **Strategy is approved and a GTM motion is the next deliverable** -- route to `marketing/planner`.
+- **Strategy implies an enterprise sales motion at a defined price point** -- route to `sales/enterprise-pricing`.
+
 ## Output Format
 
 ```

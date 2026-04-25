@@ -69,6 +69,36 @@ Total: /15. Elite 13-15 / Strong 10-12 / Viable 7-9 / Archive below 7.
 - Horizontal productivity tool with no workflow specificity
 - Finance or trading tools without domain credential
 
+## Domain lenses
+
+Lenses applied at Gate 2 and Gate 3. Each one is a way an idea can score well on paper and fail in market. Run them all before recommending a verdict.
+
+1. **Distribution lens** -- does the builder have an existing channel to the named buyer, or does GTM depend on building one from scratch? Most ideas die from distribution, not product.
+2. **Capital lens** -- what is the minimum capital to first paying customer? An idea that needs $500K of build before any signal is a different bet than one that ships a service in week 1.
+3. **Timing lens** -- why now? If the same idea was viable two years ago and no one shipped it, name what changed. If nothing changed, the market has already voted.
+4. **Founder-market fit** -- does the builder have a credential, network, or scar tissue that closes the deal with this specific buyer? Generic "I can learn the domain" loses to a domain native every time.
+5. **Defensibility lens** -- once this works, what stops a funded incumbent from cloning it in 12 months? Data network, regulatory moat, brand, or switching cost. "First mover" is not defensibility.
+6. **ARR-velocity lens** -- at the price point and sales cycle implied, can this hit $1M ARR in 24 months with the team that exists? If not, this is a lifestyle business or a venture-scale fundraise problem, not the same idea.
+7. **Counter-positioning test** -- would an incumbent have to cannibalize their core business to compete? If yes, defensibility is real. If no, expect a fast-follow.
+8. **Wedge lens** -- is there a narrow first job small enough to ship in 6 weeks but valuable enough that one buyer will pay? Wedge clarity separates Build Now from Build Later.
+9. **Counterfactual lens** -- what does the buyer do today without this product, and is that solution good enough? "Spreadsheets and gut feel" is a beatable counterfactual; "they do not feel the pain yet" is not.
+10. **Painkiller vs vitamin** -- does the buyer's job get harder, slower, or more expensive without this? A vitamin loses budget battles every quarter end.
+11. **Procurement-budget lens** -- Jason's hard rule: B2B with procurement budget, not a credit card. Map the budget line item this would replace or expand.
+12. **Pattern-failure check** -- is this a pattern-matched failure (consumer creator tool, horizontal productivity, AI chatbot wrapper, another scraper)? If yes, instant Archive regardless of ICE score.
+13. **Sequencing dependency** -- does this idea require something else to be built or believed first? An idea that depends on a prior unproven assumption is two ideas, score the prior one.
+
+## Handoffs
+
+Hand off when the evaluation surfaces a question the framework cannot answer, or when the idea passes and needs downstream work.
+
+- **Buyer is named but alternatives or category are unclear** -- route to `strategy/positioning-strategist`.
+- **Sizing or sample of buyer interest is asserted without evidence** -- route to `strategy/market-researcher`.
+- **Funded incumbents are claimed but not characterized** -- route to `strategy/competitor-analyst`.
+- **Idea passes Gate 4 and needs a guiding policy and action set** -- route to `strategy/strategy-developer`.
+- **ICE inputs feel inflated or counterfactual is hand-waved** -- route to `meta/reality-check` before issuing a verdict.
+- **Verdict is Build Now and a v1 spec is the next step** -- route to `product/spec-validator`.
+- **Verdict is Build Now (service mode) and the day-1 ask needs sales motion** -- route to `sales/lead-qualifier` then `sales/proposal-writer`.
+
 ## Output Format
 
 ```

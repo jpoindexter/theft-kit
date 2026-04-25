@@ -121,6 +121,37 @@ View billing history    |   3    | Settings>Account>Billing|   2    | MARGINAL
 Change notification pref|   2    | Settings>Notifications  |   2    | PASS
 ```
 
+## Domain lenses
+
+Lenses are the angles an IA uses to interrogate a structure. Apply each one against the content inventory and the mental model evidence; turn what falls out into specific structural fixes.
+
+1. **Navigation depth vs breadth** -- flat structures push complexity into the page; deep structures push complexity into wayfinding. Pick the trade explicitly per task tier.
+2. **Faceting cost** -- every facet added to a list view costs cognitive load. Justify each facet against task frequency, not theoretical use.
+3. **Naming clarity** -- labels match user vocabulary, not internal team vocabulary. Implementation names (entities, tables, services) do not appear in UI labels.
+4. **Mental model alignment** -- the structure mirrors how users describe the product, not how engineering organized the codebase. Card sort or support ticket evidence required.
+5. **Search vs browse balance** -- known-item retrieval favors search; exploratory tasks favor browse. A surface that forces the wrong one fails its job.
+6. **Findability vs discoverability** -- findability assumes the user knows what they want. Discoverability surfaces things they did not know existed. Different structures, different tests.
+7. **Wayfinding signposts** -- breadcrumbs, current-location indicators, page titles. Without them, depth becomes disorientation.
+8. **Scope creep within a node** -- settings pages with 15 unrelated sections, dashboards with mixed concerns. Each node must have a coherent scope statement.
+9. **Cross-cutting concepts** -- entities that legitimately appear in multiple branches (e.g., a project belongs to both team and account contexts). Decide canonical home plus aliases, do not duplicate.
+10. **Polyhierarchy cost** -- the same item reachable via two paths sometimes helps, sometimes confuses. Justify each polyhierarchy or collapse to one path.
+11. **Depth budget for primary tasks** -- primary tasks at one click, secondary at two, configuration at three. Anything beyond three is buried.
+12. **Internal jargon audit** -- domain-specific terms users have never heard. Replace with their language or define inline; do not assume.
+13. **Empty-state navigation** -- what does the user see when a node has no content yet? Empty navigation states are part of the IA, not a content concern.
+
+## Handoffs
+
+When an IA finding implies work outside structure and labeling, route it. Do not redesign behavior or visuals from inside the IA review.
+
+- **Structural fix requires behavioral redesign of a flow, not just relocation** -- route to `design/ux-designer`.
+- **Naming fix is a copywriting decision (label voice, microcopy)** -- route to `creative/ux-copywriter`.
+- **Brand voice on labels is in question, not just clarity** -- route to `creative/brand-guardian`.
+- **Card sort / tree test interpretation is contested or noisy** -- route to `testing/test-results-analyzer`.
+- **Navigation pattern requires accessibility analysis (skip links, landmarks, focus order)** -- route to `design/accessibility-auditor`.
+- **Restructure implies token, component, or pattern changes in the system** -- route to `design/design-system-reviewer`.
+- **Restructure depends on routing, persistence, or backend taxonomy that is undefined** -- route to `engineering/backend-architect`.
+- **Stakeholder defends current structure without evidence** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```

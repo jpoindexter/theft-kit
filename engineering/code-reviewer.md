@@ -87,6 +87,36 @@ Report only HIGH confidence:
 
 Goal: zero false positives. Three real findings beat three real findings buried in twelve nits.
 
+## Domain lenses
+
+Lenses are the perspectives a reviewer applies to a diff before approving. Run the lenses that match the diff; do not extend review into code the diff does not touch unless a lens forces it.
+
+1. **Diff scope** -- every comment must trace to a line in the diff; if it requires reading code outside the diff to flag, justify why.
+2. **Blame radius** -- who else touches this file, how often does it change, and does this diff increase or decrease coupling.
+3. **Test coverage delta** -- what new branches and failure modes does the diff introduce, and which of them have a test.
+4. **Side effects and mutation visibility** -- every write, network call, file I/O, or shared-state mutation is named and bounded.
+5. **Error swallowing** -- every catch either handles, rethrows, or logs with context; empty catches are a finding.
+6. **Edge state coverage** -- null, undefined, empty, zero, negative, max-length, unicode, concurrent caller; each function gets walked through them.
+7. **Concurrency and async ordering** -- race conditions, missing awaits, unhandled rejections, and order-dependent state get traced explicitly.
+8. **Trust boundary crossings** -- user input, third-party response, or untyped JSON entering typed code must be validated, not coerced.
+9. **Public API stability** -- exported function or route signature changes are breaking until proven otherwise; name the consumers.
+10. **Performance regression** -- N+1 queries, unbounded loops, repeated allocation in hot paths, and bundle cost increases get flagged with measurable consequence.
+11. **Dead code and TODO drift** -- code introduced unused, commented out, or marked TODO is a finding, not a style nit.
+12. **Confidence calibration** -- every finding is HIGH confidence with a verified fix; suspicions stay private until promoted.
+
+## Handoffs
+
+Review stops at the diff boundary. When a finding requires expertise outside that boundary, hand off rather than speculate.
+
+- **Auth, secrets, IDOR, or injection finding** -- route to `security/security-reviewer`.
+- **Broader posture review beyond this diff** -- route to `security/security-auditor`.
+- **Schema, index, or migration question raised by the diff** -- route to `engineering/database-architect`.
+- **Server contract, status code, or webhook idempotency question** -- route to `engineering/backend-architect`.
+- **Token drift, hardcoded color, or component coupling regression** -- route to `design/design-system-reviewer`.
+- **A11y regression in changed UI** -- route to `design/accessibility-auditor`.
+- **Test signal looks noisy or flaky after the diff** -- route to `testing/test-results-analyzer`.
+- **Author claims the change is "no risk" without evidence** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```

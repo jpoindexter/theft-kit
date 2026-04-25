@@ -91,6 +91,36 @@ For each action in the flow:
 - **Keyboard equivalent**: Tab order, Enter behavior, Escape behavior
 - **ARIA requirements**: Live regions, role changes, focus management
 
+## Domain lenses
+
+Lenses are the perspectives a behavior designer uses to interrogate a flow before it gets specced. Apply each one to the flow under design, name what falls out, and decide if the spec needs to absorb it or explicitly defer it.
+
+1. **State machine completeness** -- every reachable state is enumerated, every transition is named, and there are no states the user can land in that the spec does not describe.
+2. **Error / empty / loading triad** -- every data-dependent surface has all three states designed, not just the populated default.
+3. **Escape hatches** -- every flow has a documented way out: cancel, undo, back, exit. If the user can be trapped, the flow is broken.
+4. **Recovery cost** -- when the user makes a mistake, how much work is lost? Recoverable in one click, recoverable with retyping, or unrecoverable. The spec must state which.
+5. **Decision fatigue** -- count the choices the user has to make end to end. If the count exceeds Miller's bounds for the task tier, restructure before speccing.
+6. **Primitive vs compound interactions** -- is this one interaction or three glued together? Compound interactions need decomposition before behavior can be locked.
+7. **Latency budget** -- what is the maximum time between trigger and feedback before the interaction model breaks? Bake this into the spec, do not leave it to engineering.
+8. **Reversibility** -- destructive actions require confirmation, soft delete, or undo. Mark each action as reversible, confirm-required, or irreversible.
+9. **Progressive disclosure** -- what is shown by default vs revealed on intent? If everything is at level 1, the flow is overloaded.
+10. **Cross-surface consistency** -- same action across surfaces uses the same trigger, the same feedback, and the same labels. Flag drift.
+11. **Keyboard-first viability** -- can the entire flow be completed with keyboard alone? If not, name the blocker.
+12. **Optimistic vs confirmed feedback** -- for each action, decide whether the UI updates before or after server confirmation, and what happens on failure of an optimistic update.
+
+## Handoffs
+
+When the flow spec surfaces a problem outside behavioral design, hand off rather than absorb it. Each handoff is triggered by a specific signal in the spec.
+
+- **Flow requires a token, component, or layout decision the design system has not made** -- route to `design/design-system-reviewer`.
+- **Spec depends on persistence, sync, or backend state semantics not yet defined** -- route to `engineering/backend-architect`.
+- **Microcopy for empty / error / confirmation states is undefined or inconsistent** -- route to `creative/ux-copywriter`.
+- **Keyboard, focus, or AT reachability is non-trivial or contested** -- route to `design/accessibility-auditor`.
+- **Flow contradicts brand voice or visual identity** -- route to `creative/brand-guardian`.
+- **Usability test data needs interpretation before behavior is locked** -- route to `testing/test-results-analyzer`.
+- **Spec implies a code change worth a structured diff review** -- route to `engineering/code-reviewer`.
+- **Stakeholder is asking for behavior that is unsupported by evidence** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```

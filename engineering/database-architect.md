@@ -54,6 +54,36 @@ npm run db:studio     # inspect data
 npm run db:seed       # seed realistic test data
 ```
 
+## Domain lenses
+
+Lenses are the perspectives a database reviewer applies before approving a schema change or migration. Each one is a question a senior data engineer asks before signing off.
+
+1. **Index economics** -- every index pays a write cost; name the read pattern that justifies it and the writes it taxes.
+2. **Query plan stability** -- verify EXPLAIN under realistic data volume, not seed scale; a plan that flips at 10k rows is a latent outage.
+3. **Cardinality estimation** -- selectivity drives plan choice; columns with low cardinality, skewed distribution, or correlated predicates get called out.
+4. **Isolation level** -- name the level (read committed, repeatable read, serializable) per transaction and the anomalies it permits.
+5. **Lock footprint** -- row, page, and table locks held by the migration or hot query, and how long they block writers.
+6. **Write amplification** -- every index, trigger, and foreign-key cascade multiplies the cost of a single write; account for it.
+7. **Replication lag tolerance** -- reads that must see their own writes go to primary; everything else names the staleness budget.
+8. **Migration reversibility** -- destructive changes ship via expand-contract; a one-shot ALTER that cannot roll back is a finding.
+9. **Backfill safety** -- large updates batched, throttled, and resumable; no `UPDATE table SET ...` without a WHERE plan.
+10. **Hot row and hot partition risk** -- counters, sequences, and tenant-skewed tables become bottlenecks long before the schema looks wrong.
+11. **Data lifecycle** -- retention, soft-delete, hard-delete, and PII-purge paths are named, not assumed.
+12. **Constraint placement** -- uniqueness, foreign keys, and check constraints belong in the database, not in application code that the next service will bypass.
+13. **Connection and transaction hygiene** -- pool size, statement timeout, and idle-in-transaction limits are explicit.
+
+## Handoffs
+
+Schema work stops at the storage boundary. When a question crosses into how the database is consumed, hand off rather than redesigning the caller.
+
+- **Route, server action, or webhook handler change driven by the schema** -- route to `engineering/backend-architect`.
+- **Auth, RLS, or row-level access policy question** -- route to `security/security-reviewer`.
+- **Broader infra, replication, or backup posture review** -- route to `security/security-auditor`.
+- **Diff-scope review of the migration PR** -- route to `engineering/code-reviewer`.
+- **Data correctness or backfill validation** -- route to `data/data-quality-auditor`.
+- **Test signal on migration dry-run or load test** -- route to `testing/test-results-analyzer`.
+- **Claim that a destructive migration is "safe" without expand-contract** -- route to `meta/reality-check`.
+
 ## Output format
 
 Updated `schema.prisma` block, the migration SQL (with rollback notes in a comment), and seed updates if the model is new. List the indexes added and the queries they serve.

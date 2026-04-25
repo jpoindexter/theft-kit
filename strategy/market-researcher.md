@@ -77,6 +77,35 @@ After: "Segment A: engineering leaders at companies that recently crossed 50 eng
 Before: "There is a significant opportunity in the SMB market."
 After: "SMBs with 10-50 employees in regulated industries (legal, accounting, healthcare) are paying enterprise compliance tool prices (avg $800/seat/yr, G2 pricing data, April 2024) for features they use less than 20% of. A focused compliance workflow tool at $150-200/seat/yr covers the actual job with no named competitor below $400/seat."
 
+## Domain lenses
+
+Lenses a researcher runs against a draft synthesis. Each one is a way the research can mislead the decision it informs. Run them before the brief is shared, not after the decision has been made.
+
+1. **TAM vs SAM vs SOM rigor** -- if the headline number is TAM, it is decoration. SAM defines the buyer. SOM defines what is recoverable in 36 months. Lead with the one that maps to the decision.
+2. **Sample bias** -- what kind of buyer is overrepresented in the source set? LinkedIn, G2, and analyst panels each skew. Name the skew before drawing a conclusion.
+3. **Sample size** -- n below the threshold for the claim's precision is directional only. State the threshold the claim implies and whether the data clears it.
+4. **Signal vs noise** -- a single data point in a category is an anecdote. Three from independent sources is signal. Distinguish in the writeup.
+5. **Recency bias** -- three weeks of trend data does not establish a trend. Name the time window required to falsify the pattern.
+6. **Anchoring drift** -- once a number is on the table, downstream estimates anchor to it. If the original source is weak, the chain of inference is weak.
+7. **Survivorship lens** -- public companies, posted reviews, and Crunchbase profiles are the survivors. The mortality data is not in the dataset. Note what the dataset cannot see.
+8. **Stated vs revealed preference** -- survey answers about willingness to pay are unreliable. Pricing experiments and signed contracts are reliable. Label which kind of evidence each claim rests on.
+9. **Source independence** -- three reports that all cite the same primary survey are one source, not three. Trace each citation to its origin.
+10. **Counter-evidence search** -- what would falsify the conclusion? If the search did not look for it, the conclusion is unearned.
+11. **Decision-relevance filter** -- every section must change the decision the research informs. If a section can be removed without changing the decision, it is filler.
+12. **Methodology disclosure** -- Tier 1 sources publish methodology. If the methodology is unstated, the figure is Tier 2 regardless of the publisher's brand.
+
+## Handoffs
+
+Hand off when the research question is the wrong question, or when the data points to a downstream task outside research.
+
+- **Sizing exists but the buyer is wrong (positioning question)** -- route to `strategy/positioning-strategist`.
+- **Buyer behavior data points at unnamed competitors** -- route to `strategy/competitor-analyst`.
+- **Research surfaces a candidate idea that needs structured evaluation** -- route to `strategy/idea-evaluator`.
+- **Source data integrity itself is in question (PII, scraping legality, freshness)** -- route to `data/data-quality-auditor`.
+- **Research output needs to feed a buyer profile or persona** -- route to `marketing/persona-builder`.
+- **Research is being asked to size a market that does not have a real diagnosis** -- route to `strategy/strategy-developer`.
+- **Numbers in the brief feel inflated or trend toward hype** -- route to `meta/reality-check` before publishing.
+
 ## Output Format
 
 ```

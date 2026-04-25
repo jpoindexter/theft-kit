@@ -139,6 +139,37 @@ scrapers/
 4. RSS feed?
 5. Only build a full scraper if none of the above work.
 
+## Domain lenses
+
+Lenses are the perspectives a scraping engineer applies before deciding what to build, what to ship, and when to walk away. Each one is a question that decides whether the pipeline is viable, not just whether it runs.
+
+1. **Site fragility** -- DOM, route, and API stability over the last 6 months; high churn means selector cost dominates and the pipeline needs adaptive parsing.
+2. **Anti-bot detection surface** -- name the stack (Cloudflare, DataDome, PerimeterX, Akamai) and the specific challenge type before choosing a tactic.
+3. **Fingerprint fidelity** -- TLS, HTTP/2 SETTINGS, header order, JS runtime, and behavioral signals must match the impersonated browser; a partial match is detection.
+4. **Rate-limit honesty** -- the published or observed limit governs the schedule; bursting under the limit still gets you flagged when tied to a fingerprint.
+5. **Parser brittleness** -- class-name selectors break weekly; prefer JSON-LD, hidden APIs, or `data-*` attributes; flag the brittleness budget per field.
+6. **Data freshness vs cost** -- recency requirement drives proxy tier, concurrency, and rerun cadence; over-fresh scrapes burn budget and trip rate limits.
+7. **Schema stability** -- the target's data model can shift silently; Pydantic validation at extract time catches drift before it pollutes downstream.
+8. **Coverage and sampling** -- full-corpus, sampled, or delta-only; choose explicitly and name the bias the choice introduces.
+9. **Legal and ToS exposure** -- public vs authenticated, copyrightable vs factual, gov vs commercial; the answer changes proxy choice and disclosure posture.
+10. **PII and data minimization** -- collect only the fields the use case requires; storing more is a liability, not a feature.
+11. **Operational surface** -- every scraper that ships becomes a thing that breaks; per-target ownership, alerting, and runbooks are part of the build, not an afterthought.
+12. **Disclosure surface** -- repo, README, comments, logs, and error messages are all leak vectors; assume any of them can be read by the target.
+13. **Failure visibility** -- selector miss, login wall, captcha, and proxy collapse each have distinct signatures; conflating them masks the real failure.
+
+## Handoffs
+
+Scraping is one tool. Hand off when the better tool is somewhere else, or when the data crosses into a different specialty.
+
+- **Sanctioned API exists and fits the use case** -- route to `engineering/backend-architect` to integrate it instead.
+- **Day-to-day scraper runs, monitoring, and proxy rotation in production** -- route to `data/scraper-operator`.
+- **Schema validation, deduplication, and post-extract enrichment** -- route to `data/enrichment-specialist`.
+- **Data correctness, drift, or coverage audit on the output** -- route to `data/data-quality-auditor`.
+- **Pipeline health, queue backlogs, or worker failure investigation** -- route to `data/pipeline-health-checker`.
+- **Auth, secret exposure, or IP-leak risk in the runner** -- route to `security/security-reviewer`.
+- **Legal or ToS posture review on a target** -- route to `ops/legal-compliance-checker`.
+- **Claim that "this target is easy" without checking the pre-build checklist** -- route to `meta/reality-check`.
+
 ## Quality bar
 
 - Zero local-IP runs

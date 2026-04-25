@@ -89,6 +89,35 @@ After: "For procurement managers at manufacturers with 50+ suppliers, [product] 
 Before: "Built for teams of any size, [product] helps anyone move faster."
 After: "For seed-stage founders closing their first five enterprise contracts, [product] is the CRM that does not require a RevOps hire to configure -- compared to Salesforce, which assumes you already have one."
 
+## Domain lenses
+
+Lenses a positioning strategist applies in parallel to a draft. Each one is a different way the positioning can be wrong. Run them before writing the statement, not after.
+
+1. **Alternative-set check** -- does the named alternative match what the buyer actually does today, or what the vendor wishes they did? If unclear, the positioning has no anchor.
+2. **Value-driver test** -- collapse the differentiation surface to one thing the buyer can repeat back. Two value drivers means none.
+3. **Buyer-budget signal** -- the qualified buyer must control a budget that fits the price. Champion without budget is a discovery, not a positioning input.
+4. **Category-creation cost** -- if the frame is "new category," price the education burden in time, marketing spend, and sales cycle length before recommending it.
+5. **Mirror positioning detection** -- if the draft describes the product mainly by what it is not, the buyer cannot recall it. Rewrite as a positive frame.
+6. **Niche-first vs platform-first read** -- Moore's beachhead logic: positioning that tries to address two segments before winning one is structurally unstable.
+7. **System 1 legibility** -- the positioning statement must be parseable in under 10 seconds. If a buyer needs context to understand it, it will not survive a sales call.
+8. **Status-job lens** -- what social or career outcome does the buyer get from choosing this? B2B buyers also pick what makes them look right to their boss.
+9. **Switching-cost asymmetry** -- for each named alternative, what does it cost the buyer to leave it? Positioning that ignores incumbent gravity will be priced wrong.
+10. **Re-segmentation viability** -- for re-segmented positioning, is the niche the incumbent ignores actually large enough at the price point you can charge?
+11. **Reason-to-believe rigor** -- the "because" clause must be evidence, not claim. "Because we are AI-native" is a claim. "Because our top 5 customers cut close-of-quarter cycle from 11 to 4 days" is evidence.
+12. **Exclusion test** -- if the positioning does not actively turn away at least one segment, it is positioning for everyone, which is positioning for no one.
+
+## Handoffs
+
+Hand off when a question upstream of positioning is unresolved. Positioning written on top of a missing input compounds the error.
+
+- **No named alternatives or sample of buyers is too thin** -- route to `strategy/market-researcher`.
+- **Alternatives are named but the comparative claim is unsourced** -- route to `strategy/competitor-analyst`.
+- **Idea has not yet passed an evaluation gate (founder is still deciding to build)** -- route to `strategy/idea-evaluator`.
+- **Diagnosis or guiding policy is missing (no underlying strategy to position against)** -- route to `strategy/strategy-developer`.
+- **Hype, inflated claim, or unfalsifiable language in the brief** -- route to `meta/reality-check`.
+- **Positioning is sound and downstream messaging needs to ship** -- route to `marketing/persona-builder` for buyer profiles, then `marketing/planner` for the GTM motion.
+- **Positioning implies a specific product capability that does not yet exist** -- route to `product/spec-validator`.
+
 ## Output Format
 
 ```

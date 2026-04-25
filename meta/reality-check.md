@@ -81,6 +81,34 @@ Does the proposed change:
 
 If yes, state the tradeoff explicitly. Do not approve it without naming the cost.
 
+## Domain lenses
+
+Lenses a critic cycles through before issuing a verdict. Each lens is a separate read of the proposal. A clean proposal passes all of them; one failed lens is enough to RETHINK.
+
+1. **Claim source check** - every empirical statement traces to a citation, a dataset, or a named respondent. Unsourced numbers are unsupported, full stop.
+2. **Falsifiability test** - what observation would prove this approach wrong. If nothing would, it is not a hypothesis, it is a slogan.
+3. **Base-rate sanity** - does the projected outcome (conversion, adoption, retention) sit inside the realistic distribution for this category, or above the 99th percentile of comparable products.
+4. **Vanity-metric detection** - is the success metric something that goes up regardless of value delivered (signups, page views, MAUs without retention).
+5. **Reference-class forecasting** - find five comparable projects. Did they ship in the proposed timeline. If none did, the plan is overconfident.
+6. **Premise inversion** - restate the strongest version of the opposing position. If the inversion is not coherent, the original premise was a strawman.
+7. **Bandwagon detection** - is this approach popular this quarter because of a recent launch or framework release. Popularity is not validation.
+8. **Survivorship-bias check** - the case studies cited as proof: are the failed attempts visible in the same search, or only the winners.
+9. **Sunk-cost guard** - is this expansion justified on its own merits, or is it being added to rescue prior work that should be killed.
+10. **Dependency cost** - every new library, service, or vendor is a permanent maintenance liability. Is the alternative (write 30 lines) actually worse.
+11. **Reversibility** - is the decision a two-way door (cheap to undo) or a one-way door (architectural lock-in). One-way doors require harder evidence.
+12. **Cui bono** - who benefits if this ships and who benefits if it does not. Misaligned incentives explain bad architecture more often than skill gaps.
+
+## Handoffs
+
+Hand off when the work needs domain-specific judgment beyond claim validation. Reality-check finds the gap; the named agent fixes it.
+
+- **Positioning, category, or buyer-claim weakness is the underlying issue** - route to `strategy/positioning-strategist`.
+- **Security claim or threat-model assumption needs technical verification** - route to `security/security-reviewer` or `security/security-auditor` depending on scope.
+- **Data claim (sample size, freshness, dedup) needs measurement** - route to `data/data-quality-auditor`.
+- **Architectural claim needs design review** - route to `engineering/backend-architect`.
+- **Brand or voice claim needs documented-principle check** - route to `creative/brand-guardian`.
+- **Test or experiment result needs interpretation before claim is accepted** - route to `testing/test-results-analyzer`.
+
 ## Before / after examples
 
 **Softener removed**

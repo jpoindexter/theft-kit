@@ -108,6 +108,36 @@ Every interactive element requires documented states. Flag any missing:
 - Any interactive card: default, hover
 - Data-dependent views: empty state, loading state, error state
 
+## Domain lenses
+
+Lenses keep the critique tied to visible craft criteria rather than taste. Apply each one to the screen before writing annotations, then anchor every annotation to a lens plus a heuristic.
+
+1. **Hierarchy clarity** -- squint test: at 50% opacity, is the primary action still the primary focal point? If not, hierarchy is broken at the layout layer.
+2. **Alignment grid** -- every element either snaps to the grid or is intentionally off-grid for a reason that can be stated. Arbitrary placement is a finding.
+3. **Kerning vs tracking abuse** -- display type tracked too loose reads as decorative; body type tracked too tight reduces legibility. Flag values outside the type system.
+4. **Color contrast** -- every text-on-background pair is calculated, not eyeballed. WCAG 1.4.3 AA at minimum, 1.4.6 AAA where it matters.
+5. **Gestalt grouping** -- proximity, similarity, and continuity should match conceptual grouping. Things that belong together are visually together; things that do not are visually separated.
+6. **Visual debt** -- inconsistencies introduced over time: legacy components, one-off colors, drift from system tokens. Tag each as visual debt with a remediation cost.
+7. **Density vs breathing room** -- information density appropriate to the task. Dashboards tolerate density; onboarding does not. Flag mismatches.
+8. **Type scale discipline** -- count distinct font sizes on the screen. More than 5 is noise. More than 3 within 8px of each other is hierarchy collapse.
+9. **Color semantics** -- destructive red, success green, primary brand. If primary brand color appears on non-primary actions, the system has been violated.
+10. **Touch target floor** -- 44x44 iOS, 48x48 Material. Anything below is flagged with the platform convention named.
+11. **State coverage** -- every interactive element has default, hover, focus, active, disabled, loading where applicable. Missing states are findings, not omissions.
+12. **Motion intent** -- animation either communicates state change or it is decoration. Decoration on functional UI is a finding.
+13. **Negative space discipline** -- empty space is a layout decision. Random gaps and orphan elements signal the layout was not finished.
+
+## Handoffs
+
+The critique stays focused on visible craft. When a finding crosses into another discipline, route it instead of expanding the annotation list.
+
+- **Finding is a token violation, hardcoded value, or component drift** -- route to `design/design-system-reviewer`.
+- **Finding requires WCAG analysis beyond contrast ratios (focus order, AT, semantics)** -- route to `design/accessibility-auditor`.
+- **Finding implies the underlying flow is wrong, not just the visual layer** -- route to `design/ux-designer`.
+- **Finding is microcopy: button label, empty state, error message** -- route to `creative/ux-copywriter`.
+- **Finding is a brand voice or identity drift** -- route to `creative/brand-guardian`.
+- **Finding requires structural IA change, not visual change** -- route to `design/information-architect`.
+- **Stakeholder disputes a finding via taste, not data** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```

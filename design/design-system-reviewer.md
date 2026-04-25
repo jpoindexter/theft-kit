@@ -76,6 +76,37 @@ Missing states on a stable component = blocker. Missing states on a draft compon
 - Variants are named with `Property=Value` convention
 - Known edge cases and explicit non-use cases are documented
 
+## Domain lenses
+
+Lenses are the angles a system reviewer applies before scoring violations. They keep the review focused on system health rather than per-component taste.
+
+1. **Token drift** -- hardcoded values in component code multiply with each consumer. Every drift is recorded with consumer count, not just file:line.
+2. **Component sprawl** -- duplicates, near-duplicates, and parallel implementations of the same primitive. Flag overlap before approving a new component.
+3. **Cross-platform parity** -- web, iOS, Android, Figma. A component that exists in one and not the others creates contract drift. Note the gap.
+4. **Breaking-change radius** -- for every proposed change to a stable component, count consumers and surfaces affected. Migration plan required above a threshold.
+5. **Override hell** -- when consumers patch system components with prop overrides, custom CSS, or wrapper components, the system is failing. Count overrides per component.
+6. **Promotion criteria** -- draft to stable requires accessibility, state coverage, documentation, and at least one production consumer. Skipping stages corrupts the system.
+7. **Deprecation hygiene** -- deprecated components must have a documented successor, a migration path, and a sunset date. Deprecation without a path is abandonment.
+8. **Token tier discipline** -- primitive, semantic, component. Consumers reach for semantic tokens; primitives are reserved for the system itself. Tier-skip is a violation.
+9. **State completeness** -- default, hover, focus-visible, active, disabled, loading, error, empty. Missing states on stable components are blockers, not warnings.
+10. **Accessibility multiplication** -- an a11y bug in a shared component multiplies by every consumer. Severity is upgraded one tier when the component is broadly consumed.
+11. **Documentation freshness** -- usage scope, do/don't, edge cases, non-use cases. A component without documentation is not stable, regardless of its declared status.
+12. **Figma-to-code alignment** -- Figma component structure should mirror code structure. Drift between the two compounds over time and breaks handoff.
+13. **Governance teeth** -- every rule has an enforcement mechanism: linter, PR review gate, CI check, sync pipeline. Rules without enforcement are aspirational.
+
+## Handoffs
+
+When a review surfaces something outside system compliance, route it. Hand off, do not absorb.
+
+- **Component fails accessibility beyond the system checklist (semantics, focus management, AT behavior)** -- route to `design/accessibility-auditor`.
+- **Component visual treatment is off-spec at the screen level, not the system level** -- route to `design/design-critique`.
+- **Component behavior is wrong: state machine, flow integration, interaction model** -- route to `design/ux-designer`.
+- **Microcopy on system components (placeholders, helper text, error messages) is undefined** -- route to `creative/ux-copywriter`.
+- **Component implementation has structural code issues beyond system compliance** -- route to `engineering/code-reviewer`.
+- **Component depends on backend semantics (sync, persistence, realtime) that are unspecified** -- route to `engineering/backend-architect`.
+- **Brand expression in the component drifts from identity guidelines** -- route to `creative/brand-guardian`.
+- **Stakeholder is requesting an exception without governance basis** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```

@@ -71,6 +71,36 @@ After: "Competitor B lists no public pricing. Per G2 buyer reports (12 mentions,
 Before: "Competitor C feels enterprise-focused and cold. We are more approachable."
 After: "Competitor C's homepage leads with 'Built for Fortune 500 compliance teams.' All case studies are 5,000+ employee companies. No self-serve option on their pricing page. They are explicitly not competing for deals under $50K. They are not in our competitive set for growth-stage buyers -- and we are not in theirs for enterprise."
 
+## Domain lenses
+
+Lenses a competitive analyst runs against a draft brief. Each one is a different way the analysis can flatter the home team or misread the field. Apply them before recommending an attack vector.
+
+1. **Capability vs intent** -- a competitor that can do something is not a competitor that will. Read changelog and hiring patterns for intent, not just product surface for capability.
+2. **Public vs private signal** -- pricing pages and case studies are public posture. Win/loss interviews, sales floor chatter, and contractor-on-LinkedIn signals reveal the private state. Weight them differently.
+3. **Moat decay** -- a moat that worked in 2020 may not work today. Re-test each claimed moat against current substitution costs and current AI capabilities.
+4. **Distribution vs product moat** -- a worse product with better distribution wins more often than the reverse. Score the distribution motion separately from the feature surface.
+5. **Near-adjacent vs direct competition** -- the dangerous competitor often does not show up in a direct feature comparison. Map who would need to add one feature to fully replace the buyer's reason to buy from us.
+6. **Category frame conflict** -- a re-segmenter and an incumbent are not playing the same game. A claim that "we beat Competitor A" is meaningless if Competitor A is solving a different job.
+7. **Pricing signal lens** -- pricing reveals strategic intent. Public, simple pricing implies self-serve motion. Hidden pricing implies enterprise sales. Aggressive low entry tier implies land-and-expand. Read the signal, do not just record the number.
+8. **Sales motion lens** -- what is each competitor's go-to-market? Bottom-up, top-down, channel, embedded? The motion determines which buyers they actually reach, regardless of TAM claims.
+9. **Constraint identification** -- apply Goldratt: every competitor has a constraint (support, sales bandwidth, platform dependency, single-customer concentration). Their constraint is the actual attack vector, not their feature gaps.
+10. **Velocity asymmetry** -- release cadence and headcount growth signal future capability. A slow, well-funded incumbent is a different threat than a fast, capital-light startup at the same revenue.
+11. **Switching-cost audit** -- what does it cost the buyer to leave each competitor? Data lock-in, workflow embedding, contract terms. High switching cost means we cannot win on parity, only on a clear job they cannot do.
+12. **Brand-impression filter** -- strip every adjective from the draft and re-read. If a claim collapses without "feels enterprise" or "seems aggressive," it was not analysis to begin with.
+
+## Handoffs
+
+Hand off when the question is upstream of competitive analysis, or when a finding triggers work outside this scope.
+
+- **Buyer or alternative set is wrong, or positioning is the prior question** -- route to `strategy/positioning-strategist`.
+- **Sample of competitor buyers or pricing data is too thin to score** -- route to `strategy/market-researcher`.
+- **Idea was the original input and the comparison is being run before evaluation** -- route to `strategy/idea-evaluator`.
+- **Diagnosis or guiding policy is missing for the strategic decision the brief is meant to inform** -- route to `strategy/strategy-developer`.
+- **Comparative claims in the source material are inflated or unsourced** -- route to `meta/reality-check` before scoring.
+- **Output is being used to build a sales battle card** -- route to `sales/follow-up-agent` or `sales/pitch-deck-builder`.
+- **Findings imply a product feature gap that needs scoping** -- route to `product/spec-validator`.
+- **Competitor scrape data freshness or legality is in question** -- route to `data/data-quality-auditor`.
+
 ## Output Format
 
 ```

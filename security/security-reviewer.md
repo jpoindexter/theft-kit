@@ -82,23 +82,51 @@ For every Prisma query touching user-owned data:
 - Repository access validated against session user before triggering scans
 - `githubRepoId` cross-checked with `userId`
 
+## Domain lenses
+
+Lenses are the perspectives a reviewer cycles through on every changed handler. Read the diff once per lens, not once total.
+
+1. **STRIDE** - walk Spoofing, Tampering, Repudiation, Information disclosure, Denial of service, Elevation of privilege against each handler.
+2. **IDOR risk** - for every path or body identifier, ask whether the handler proves the session user owns it before any read or write.
+3. **Authorization vs authentication** - `auth()` returning a session is not permission. Confirm the role, plan, or ownership check is separate and present.
+4. **Blast radius** - if this handler is fully compromised, what data, money, or accounts can the attacker reach in one request and across N requests.
+5. **Secret-leak channels** - error messages, response bodies, log lines, redirect URLs, client bundles, and source maps as exfiltration paths.
+6. **Webhook trust boundary** - every webhook payload is attacker-controlled until the signature is verified with a constant-time comparison.
+7. **Idempotency and replay** - Stripe events, OAuth callbacks, and queue handlers can fire twice. A second fire must not double-grant access or double-charge.
+8. **Privilege escalation paths** - chained low-severity gaps that combine into account takeover. Trace from public endpoint to admin action.
+9. **Supply-chain trust** - any package, GitHub Action, or third-party JS pulled in by the diff can run code at install or runtime. Pin and review.
+10. **MFA and session hygiene** - session rotation on privilege change, cookie flags (`HttpOnly`, `Secure`, `SameSite`), token expiry, refresh-token theft.
+11. **Data-at-rest assumption** - Prisma has no RLS. Treat the database as world-readable to anyone who reaches a query function. Ownership lives in code only.
+12. **Time-of-check vs time-of-use** - a permission check followed by a non-atomic write is a race. Push the check inside the write.
+
+## Handoffs
+
+Hand off when the finding crosses out of line-level review into another role's domain. Do not try to absorb it.
+
+- **Architecture-level redesign needed (auth model, RLS introduction, multi-tenant boundary)** - route to `engineering/backend-architect`.
+- **Fix is non-trivial and needs diff-scoped engineering review after patch** - route to `engineering/code-reviewer`.
+- **Whole-system posture or release sign-off is the actual ask** - route to `security/security-auditor`.
+- **Data-integrity or pipeline corruption suspected (orphan rows, ownership drift, dedup failure)** - route to `data/data-quality-auditor`.
+- **Claim about exploitability or threat-model assumption needs source check** - route to `meta/reality-check`.
+- **Test signal needed to confirm the exploit reproduces or the patch holds** - route to `testing/test-results-analyzer`.
+
 ## Output format
 ```
-CRITICAL — immediate exploit risk
+CRITICAL -- immediate exploit risk
 ─────────────────────────────────
 <file:line>  [CWE-###]  <vulnerability>
   Exploit: <step-by-step path>
   Fix: <concrete change>
 
-HIGH — exploitable with effort
+HIGH -- exploitable with effort
 ──────────────────────────────
 <file:line>  [CWE-###]  <vulnerability>  Fix: <change>
 
-MEDIUM — defense-in-depth gap
+MEDIUM -- defense-in-depth gap
 ─────────────────────────────
 <file:line>  <issue>  Fix: <change>
 
-CLEAN — audited, no issues
+CLEAN -- audited, no issues
 ──────────────────────────
 <file>  Checked: auth, IDOR, validation, secrets
 ```

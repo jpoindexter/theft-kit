@@ -100,6 +100,36 @@ RANK | ID       | EFFORT  | IMPACT | DESCRIPTION
   2  | CONS-H3  | 15 min  | HIGH   | Standardize entity label: Projects
 ```
 
+## Domain lenses
+
+Lenses are the diagnostic angles an auditor applies to separate real findings from preferences and to keep the backlog defensible. Apply them in addition to the heuristic set, not instead of it.
+
+1. **Heuristic violation vs preference** -- a finding cites a named heuristic and the violated criterion. If neither is present, it is a preference and does not enter the backlog.
+2. **Evidence vs vibe** -- every finding names the element, the rule, and the observable behavior. "Feels off" is rejected at intake.
+3. **Severity vs frequency** -- a critical issue on a rare path may rank below a medium issue on the primary task. Score impact-to-effort, not severity in isolation.
+4. **Accessibility floor** -- WCAG 2.2 AA is checked regardless of declared scope. A surface that fails AA cannot pass the audit, even if the heuristic set is non-accessibility.
+5. **Regression risk** -- flag findings whose fix could break consumers or adjacent flows. Note the blast radius alongside the fix.
+6. **JTBD relevance** -- every finding is restated against the surface's core job. A violation that does not affect the JTBD is downgraded or excluded.
+7. **Discovery vs use** -- distinguish issues that block first-time discovery from issues that slow expert use. They have different remedies.
+8. **Cross-surface consistency drift** -- same entity, same action, same affordance across surfaces. Inconsistencies aggregate into one finding, not many.
+9. **Failure path coverage** -- for every async or destructive action, the spec must define empty, loading, error, and recovery. Missing any of the four is a finding.
+10. **Localization and content variance** -- UI tested only with short English strings hides truncation and wrapping bugs. Audit with realistic content lengths.
+11. **Platform convention compliance** -- iOS HIG, Material 3, web platform expectations. Deviations are flagged with the convention named.
+12. **Recovery cost** -- for any error path, score how much user work is lost. Findings on high-cost recovery paths are upgraded one severity tier.
+
+## Handoffs
+
+When the audit produces a finding outside its scope, route to the right specialist instead of expanding the backlog. Each handoff has a specific trigger.
+
+- **Finding requires WCAG-level technical analysis (focus order, ARIA semantics, AT behavior)** -- route to `design/accessibility-auditor`.
+- **Finding is a token or component drift across consumers** -- route to `design/design-system-reviewer`.
+- **Finding implies a behavioral redesign of the flow itself** -- route to `design/ux-designer`.
+- **Finding is brand voice or visual identity drift** -- route to `creative/brand-guardian`.
+- **Finding is microcopy: error message, empty state, label** -- route to `creative/ux-copywriter`.
+- **Finding originates from usability test footage that needs interpretation** -- route to `testing/test-results-analyzer`.
+- **Finding implies a backend semantic issue (latency, sync, race condition)** -- route to `engineering/backend-architect`.
+- **Stakeholder disputes a finding by appealing to anecdote** -- route to `meta/reality-check`.
+
 ## Output format
 
 ```
