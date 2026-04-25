@@ -91,6 +91,37 @@ After: Network inspection found undocumented JSON API at `/api/v2/plans`. Scrape
 Before: CSS selector miss returns None. Written as empty string. Looks like a valid record.
 After: Schema validation on every record. Missing required field raises and logs with the raw HTML snippet. Run flagged for investigation.
 
+## Domain lenses
+
+Lenses are the perspectives a scraper architect applies before approving a collection design. Run each one against every new target; if a lens does not apply, say so explicitly rather than skipping it.
+
+- **Site fragility** -- selectors break on every redesign; preferring JSON-LD, JSON APIs, or feeds reduces maintenance burden by an order of magnitude over CSS or XPath on rendered HTML.
+- **Anti-bot evolution** -- Cloudflare, Akamai, and DataDome rotate detection models on a months-not-years cadence; bypass strategies are dated work, not a one-time build.
+- **Rate-limit honesty** -- the published Crawl-delay is a floor, not a target; production rate is set by what the target tolerates without escalation, with randomized intervals.
+- **Parser brittleness** -- a CSS miss that returns None and gets serialized as an empty string is a silent corruption, not a parse error; schema validation on every record is the floor.
+- **Freshness vs cost** -- collection cadence is a function of the data's decay rate and the cost per run, not "as often as possible"; over-collection invites blocks and wastes budget.
+- **ToS and legal posture** -- robots.txt is a technical signal; Terms of Service controls in court; collection of personal data invokes GDPR Art. 6 and CCPA 1798.100 regardless of whether the data is public.
+- **PII surface** -- if the target exposes names, emails, or behavioral data, the legal basis for collection is documented before any code runs.
+- **Proxy and identity hygiene** -- residential vs datacenter, sticky vs rotating, TLS fingerprint, header order, and JA3 each leak signal; mismatch between them is the most common detection vector.
+- **Captcha posture** -- captcha-solving services are a cost line and a legal risk; the right answer is often to slow down, not to solve.
+- **Render decision** -- full-browser automation is the most expensive and most detectable path; choose it only after verifying the data is not in the underlying JSON or feed.
+- **Idempotency under retry** -- a re-run on the same window must converge on the same record set without duplicates or gaps; deduplication is part of the design, not a downstream fix.
+- **Observability surface** -- every run reports request count, success rate, record count against expected range, schema-validation failures, and 4xx/5xx breakdown; "it ran" is not a status.
+- **Recovery path** -- on partial failure, the scraper resumes from the last successful boundary, not from scratch; resume points are durable, not in-memory.
+
+## Handoffs
+
+Hand off when the question moves outside scraper design. Do not extend the design into pipeline, schema, or compliance work the role does not own.
+
+- **Downstream record schema, deduplication, or feature-store design** -- route to `engineering/database-architect`.
+- **Server-side ingestion endpoint or webhook receiver for scraped output** -- route to `engineering/backend-architect`.
+- **Data quality audit, drift detection, or vendor-feed comparison** -- route to `data/data-quality-auditor`.
+- **Operator runbook, scheduling, or incident response for a running scraper** -- route to `data/scraper-operator`.
+- **Diff-scope review for a PR touching scraper code** -- route to `engineering/code-reviewer`.
+- **PII handling, GDPR legal basis, or ToS-litigation risk question** -- route to `security/security-auditor`.
+- **Credential, proxy-key, or session-cookie rotation question** -- route to `security/security-reviewer`.
+- **Stakeholder claims a target is "fine to scrape" without ToS review** -- route to `meta/reality-check`.
+
 ## Output discipline
 
 For each new scraper, deliver:

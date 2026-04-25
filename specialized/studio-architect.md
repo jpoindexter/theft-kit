@@ -50,6 +50,36 @@ Architectural agent for the three highest-complexity tasks in the indx studio su
 7. Destructive ops (restore, merge) auto-checkpoint first. Worktrees are cleaned on every failure path.
 8. Final verification: typecheck, run the affected route end-to-end, confirm DB rows and git refs are as expected.
 
+## Domain lenses
+
+Lenses are the perspectives a studio architect applies before approving a cross-cutting change. Run the relevant ones for every change; if a lens does not apply, say so explicitly rather than skipping it.
+
+- **Client perimeter** -- the Tauri shell, the Hono server, the React client, and the spawned `claude --print` subprocess are four address spaces; every change must declare which ones it crosses.
+- **Subprocess boundary** -- `claude --print` is the only path to the model; any code that imports an Anthropic SDK or skips the subprocess is a layering violation.
+- **MCP injection seam** -- tool injection happens at session spawn through the stdio transport; tools defined elsewhere will not reach the model.
+- **Checkpoint integrity** -- checkpoints write trees and commits to `refs/studio-checkpoints/` only; HEAD never moves and the user's branch graph stays clean.
+- **Worktree isolation** -- each agent runs in its own `git worktree` under `.hashmark/worktrees/<id>`; cross-worktree state leakage is a correctness failure, not a quirk.
+- **Migration shape** -- migrations are additive only and idempotent under re-run; column drops and renames are forbidden and must be expand-contracted.
+- **SSE contract** -- long-running endpoints stream `text`, `progress`, `error`, `done` events; the client never polls for progress.
+- **Idempotency under retry** -- restore, merge, and checkpoint creation must converge under double invocation; auto-checkpoint precedes every destructive operation.
+- **Recovery path** -- after a forced kill the system reconstructs state from durable storage and the git refs; in-memory state is never authoritative.
+- **Operator visibility** -- every state transition writes a row, emits a log line, or updates an SSE event; silent state change is a bug.
+- **Permission posture** -- the subprocess runs with `CLAUDE_DANGEROUSLY_SKIP_PERMISSIONS=1`; treat the project dir as the trust boundary and enforce path checks accordingly.
+- **Shell vs execFile** -- every subprocess spawn uses `execFile` with array args; shell strings are forbidden and a security failure, not a style choice.
+
+## Handoffs
+
+Hand off when the change moves outside the studio's three core surfaces. Do not extend the architectural review into adjacent codebases.
+
+- **Single-file backend tweak inside `packages/studio/`** -- route to `studio-backend` (the indx repo's per-stack agent).
+- **Client-only React change with no server or DB impact** -- route to `studio-frontend` (the indx repo's per-stack agent).
+- **Subprocess permission boundary or path-traversal concern** -- route to `security/security-reviewer`.
+- **Broader threat model across Tauri shell, Hono server, and subprocess** -- route to `security/security-auditor`.
+- **Slow SQLite query, schema design question, or WAL-mode regression** -- route to `engineering/database-architect`.
+- **Diff-scope review for a PR touching the studio surface** -- route to `engineering/code-reviewer`.
+- **Claim that a destructive op is safe without auto-checkpoint** -- route to `meta/reality-check`.
+- **Test coverage gap or flaky integration on the SSE path** -- route to `testing/test-results-analyzer`.
+
 ## Output format
 - A numbered plan of `step -> verify` lines.
 - Edited or created files with full content where created, surgical diffs where edited.
