@@ -1,168 +1,164 @@
-# Claude Skills — Complete Reference
+# Claude Skills -- Complete Reference
 
-Extracted from "The Complete Guide to Building Skills for Claude" (Anthropic, 2025).
+Source: "The Complete Guide to Building Skills for Claude" (Anthropic, 2025). anthropic/skills on GitHub.
 
-## Skill Structure
+---
+
+## Skill file structure
+
 ```
 my-skill/
-  SKILL.md          # Required. YAML frontmatter + instructions
-  scripts/           # Optional. Validation scripts, helpers
-  references/        # Optional. Detailed docs loaded on demand
-  assets/            # Optional. Templates, configs
+  SKILL.md          # Required. YAML frontmatter + instructions. Max 5,000 words.
+  scripts/          # Optional. Validation scripts, helpers.
+  references/       # Optional. Detailed docs loaded on demand -- keeps SKILL.md lean.
+  assets/           # Optional. Templates, configs.
 ```
 
-## YAML Frontmatter (Required)
+---
+
+## YAML frontmatter
+
 ```yaml
 ---
-name: my-skill-name          # kebab-case, required, no spaces/capitals, no "claude"/"anthropic"
-description: |                # Required, <1024 chars
+name: my-skill-name          # kebab-case, required, no spaces, no capitals, no "claude"/"anthropic"
+description: |               # Required, under 1024 chars. This is what triggers the skill.
   [What it does] + [When to use it] + [Key capabilities]
-license: MIT                  # Optional
-compatibility: "1-500 chars"  # Optional
-metadata:                     # Optional
-  key: value
----
-```
-
-## Two Skill Approaches
-1. **Problem-first**: "I need to set up a workspace" — skill orchestrates MCP calls in right sequence. Users describe outcomes.
-2. **Tool-first**: "I have Notion MCP connected" — skill teaches Claude optimal workflows/best practices. Users have access.
-
-## 5 Design Patterns
-
-### Pattern 1: Sequential Workflow Orchestration
-Use when: multi-step processes in specific order.
-Key: explicit step ordering, dependencies between steps, validation at each stage, rollback for failures.
-
-### Pattern 2: Multi-MCP Coordination
-Use when: workflows span multiple services (Figma → Drive → Linear → Slack).
-Key: clear phase separation, data passing between MCPs, validation before next phase, centralized error handling.
-
-### Pattern 3: Iterative Refinement
-Use when: output quality improves with iteration (report generation).
-Key: explicit quality criteria, validation scripts, refinement loop, know when to stop.
-
-### Pattern 4: Context-Aware Tool Selection
-Use when: same outcome, different tools depending on context (file storage routing).
-Key: clear decision criteria, fallback options, transparency about choices.
-
-### Pattern 5: Domain-Specific Intelligence
-Use when: skill adds specialized knowledge beyond tool access (financial compliance).
-Key: domain expertise embedded in logic, compliance before action, comprehensive documentation, clear governance.
-
-## Description Field — Critical for Triggering
-- Too generic ("Helps with projects") = never triggers
-- Must include trigger phrases users would actually say
-- Include relevant file types if applicable
-- Add negative triggers to prevent false matches: "Do NOT use for [X]"
-- Debug: ask Claude "When would you use [skill name] skill?" — it quotes the description back
-
-## Troubleshooting
-
-### Skill won't upload
-- File must be named exactly `SKILL.md` (case-sensitive)
-- YAML must use `---` delimiters, proper quoting
-
-### Skill doesn't trigger
-- Description too generic or missing trigger phrases
-- Fix: revise description with specific use cases
-
-### Skill triggers too often
-- Add negative triggers in description
-- Be more specific about scope
-
-### Instructions not followed
-- Instructions too verbose → use bullet points, numbered lists
-- Instructions buried → put critical ones at top with ## headers
-- Ambiguous language → be explicit ("CRITICAL: Before calling X, verify: [list]")
-- Model laziness → add "## Performance Notes: Take your time, quality > speed"
-- For critical validations: bundle a script instead of language instructions
-
-### MCP connection issues
-- Verify MCP server connected (Settings > Extensions)
-- Check auth (API keys, OAuth tokens, permissions)
-- Test MCP independently without skill
-- Verify tool names are case-sensitive match
-
-### Large context issues
-- Keep SKILL.md under 5,000 words
-- Move detailed docs to references/ (loaded on demand)
-- Don't enable more than 20-50 skills simultaneously
-- Consider skill "packs" for related capabilities
-
-## Distribution
-- **Claude.ai**: Settings > Capabilities > Skills > Upload folder
-- **Claude Code**: Skills in project directory
-- **API**: `/v1/skills` endpoint, `container.skills` parameter in Messages API
-- **Org-level**: Admin-deployed workspace-wide (shipped Dec 2025)
-
-## All Optional YAML Fields
-```yaml
-name: skill-name
-description: [required]
 license: MIT
-allowed-tools: "Bash(python:*) Bash(npm:*) WebFetch"  # Restrict tool access
+compatibility: "..."         # Optional
 metadata:
   author: Company Name
   version: 1.0.0
   mcp-server: server-name
   category: productivity
   tags: [project-management, automation]
-  documentation: https://example.com/docs
-  support: support@example.com
+---
 ```
 
-## Quick Checklist
+---
 
-### Before you start
-- [ ] 2-3 concrete use cases identified
-- [ ] Tools identified (built-in or MCP)
-- [ ] Reviewed guide and example skills
-- [ ] Planned folder structure
+## Two design approaches
 
-### During development
-- [ ] Folder named in kebab-case
-- [ ] SKILL.md file exists (exact spelling)
-- [ ] YAML frontmatter has --- delimiters
-- [ ] name: kebab-case, no spaces, no capitals
-- [ ] description includes WHAT and WHEN
-- [ ] No XML tags (< >) anywhere
-- [ ] Instructions clear and actionable
-- [ ] Error handling included
-- [ ] Examples provided
-- [ ] References clearly linked
+**Problem-first**: "I need to set up a workspace." User describes an outcome. Skill orchestrates tools in the right sequence.
 
-### Before upload
-- [ ] Tested triggering on obvious tasks
-- [ ] Tested triggering on paraphrased requests
-- [ ] Verified doesn't trigger on unrelated topics
-- [ ] Functional tests pass
-- [ ] Tool integration works
-- [ ] Compressed as .zip file
+**Tool-first**: "I have Notion MCP connected." User has access to something. Skill teaches Claude optimal workflows for that tool.
 
-### After upload
-- [ ] Test in real conversations
-- [ ] Monitor for under/over-triggering
-- [ ] Collect user feedback
-- [ ] Iterate on description and instructions
-- [ ] Update version in metadata
+---
 
-## Resources
-- Public skills repo: anthropic/skills (GitHub)
-- Partner Skills Directory: Asana, Atlassian, Canva, Figma, Sentry, Zapier
-- Document Skills: PDF, DOCX, PPTX, XLSX creation
-- skill-creator skill: built into Claude.ai + Claude Code — generates skills from descriptions
-- Validation: ask "Review this skill and suggest improvements"
-- Bug reports: GitHub Issues at anthropic/skills/issues
-- Community: Claude Developers Discord
+## 5 design patterns
 
-## Testing Methodology
-1. **Trigger tests**: should-trigger scenarios + should-NOT-trigger scenarios (target: 90% accuracy)
-2. **Functional tests**: Given/When/Then format for each capability
-3. **Performance comparison**: with-skill vs without-skill on same tasks
+**1. Sequential workflow orchestration**
+Use when: multi-step processes that must run in a specific order.
+Key: explicit step ordering, dependency validation at each stage, rollback path on failure.
 
-## Progressive Disclosure
-- YAML frontmatter: always loaded (used for trigger matching)
-- SKILL.md body: loaded when skill is triggered
-- references/ files: loaded on demand when skill needs them
-- This layering prevents context bloat
+**2. Multi-MCP coordination**
+Use when: workflows span multiple services (Figma to Drive to Linear to Slack).
+Key: clear phase separation, defined data passing between MCPs, validation before advancing, centralized error handling.
+
+**3. Iterative refinement**
+Use when: output quality improves with iteration (report generation, spec writing).
+Key: explicit quality criteria, validation scripts, defined stop condition. Do not loop indefinitely.
+
+**4. Context-aware tool selection**
+Use when: same outcome, different tools depending on context (file storage routing, environment detection).
+Key: clear decision criteria, documented fallback options, transparency about choices made.
+
+**5. Domain-specific intelligence**
+Use when: the skill adds specialized knowledge beyond tool access (financial compliance, legal review).
+Key: domain rules embedded in logic, compliance checks before action, governance documented.
+
+---
+
+## Description field -- the trigger mechanism
+
+The description is how Claude decides whether to invoke a skill. A poor description means the skill never triggers or triggers incorrectly.
+
+- Too generic ("Helps with projects") = never triggers
+- Must include phrases users would actually say
+- Include relevant file types if the skill operates on files
+- Add negative triggers to prevent false matches: "Do NOT use for [X]"
+
+Debug method: ask Claude "When would you use [skill name]?" -- it quotes the description back. If the answer is wrong, the description is wrong.
+
+---
+
+## Context loading (progressive disclosure)
+
+Three tiers. This prevents context bloat.
+
+| Layer | When loaded | Contents |
+|-------|------------|---------|
+| YAML frontmatter | Always, on every skill match | Name, description, tool list |
+| SKILL.md body | When skill is triggered | Instructions, patterns, examples |
+| references/ files | On demand, when skill needs them | Detailed docs, large tables, templates |
+
+Keep SKILL.md under 5,000 words. Move anything longer than a reference table to `references/`.
+
+---
+
+## Troubleshooting
+
+**Skill will not upload**
+- File must be named exactly `SKILL.md` (case-sensitive)
+- YAML must use `---` delimiters. Check quoting on multi-line values.
+
+**Skill does not trigger**
+- Description too generic or missing the phrases users actually type
+- Fix: add specific trigger phrases from real user requests
+
+**Skill triggers too often**
+- Add negative triggers: "Do NOT use for [X]"
+- Narrow scope in the description
+
+**Instructions not followed**
+- Instructions too verbose: use numbered lists, not paragraphs
+- Critical instructions buried: put them at the top with a `##` header
+- Ambiguous language: be explicit ("CRITICAL: Before calling X, verify: [list]")
+- For validations that must not be skipped: bundle a script instead of relying on language instructions
+
+**MCP connection issues**
+- Verify MCP server connected at Settings > Extensions
+- Check auth: API keys, OAuth tokens, permission scopes
+- Test MCP independently before testing with the skill
+- Tool names are case-sensitive
+
+---
+
+## Testing methodology
+
+Source: Anthropic skill development guidelines (anthropic/skills, 2025).
+
+**Trigger tests**: should-trigger scenarios + should-NOT-trigger scenarios. Target: 90% accuracy before distributing.
+
+**Functional tests**: Given / When / Then format for each capability.
+
+**Performance comparison**: run the same task with-skill and without-skill. If the skill does not improve accuracy or reduce steps, the instructions need revision.
+
+---
+
+## Distribution
+
+| Target | Method |
+|--------|--------|
+| Claude.ai (personal) | Settings > Capabilities > Skills > Upload folder |
+| Claude Code | Skills in project directory |
+| API | `/v1/skills` endpoint, `container.skills` parameter in Messages API |
+| Org-level | Admin-deployed workspace-wide (available Dec 2025+) |
+
+Do not enable more than 20-50 skills simultaneously -- context cost compounds.
+
+---
+
+## Quick checklist
+
+Before upload:
+- [ ] Folder name in kebab-case
+- [ ] File named exactly `SKILL.md`
+- [ ] YAML `---` delimiters present
+- [ ] `name` is kebab-case, no capitals, no "claude"/"anthropic"
+- [ ] Description includes WHAT and WHEN, specific enough to trigger correctly
+- [ ] No XML tags (`< >`) anywhere in the file
+- [ ] Critical validations at the top, not buried
+- [ ] Error handling documented
+- [ ] Tested triggering on obvious and paraphrased requests
+- [ ] Tested NOT triggering on unrelated topics
+- [ ] Compressed as .zip before upload to Claude.ai
