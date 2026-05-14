@@ -1,34 +1,34 @@
 # theft-kit
 
-Centralized skill library for THEFT AI and related agentic build workflows.
+Centralized skill library for THEFT AI and agentic software delivery workflows.
 
-## What this repo contains
+## Repo purpose
+- Maintain one source of truth for reusable `SKILL.md` modules.
+- Keep global skill availability stable through symlinks.
+- Enforce predictable build quality via core process skills.
 
-- Reusable `SKILL.md` modules for product, engineering, onboarding, routing, QA, and operations.
-- Consolidated skills sourced from local project ecosystems into one global catalog.
-- Process skills for architect/builder handoff, sprint packs, context discipline, model routing, and release gates.
+## Core docs
+- `CORE_SKILLS.md` — daily-use curated skill set
+- `IMPROVEMENTS.md` — consolidation and governance roadmap
+- `ARCHIVE_CANDIDATES.md` — staged cleanup targets
+- `SKILLS_INDEX.md` — full inventory
 
-## Global usage
-
-This library is symlinked into Codex global skills:
-
+## Global setup
 - Source: `/Users/jasonpoindexter/Documents/GitHub/theft-kit`
 - Global: `/Users/jasonpoindexter/.codex/skills`
 
-## Core operating skills (recommended)
+## High-priority core skills
+- architect-builder-method
+- project-brain-folder-system
+- sprint-architect-pack
+- clean-context-engineering
+- model-switch-router
+- onboarding-state-machine
+- happy-path-route-audit
+- local-release-gate
+- paperclip-parity-delta
 
-- `architect-builder-method`
-- `project-brain-folder-system`
-- `sprint-architect-pack`
-- `clean-context-engineering`
-- `model-switch-router`
-- `happy-path-route-audit`
-- `paperclip-parity-delta`
-- `onboarding-state-machine`
-- `local-release-gate`
-
-## Notes
-
-- Keep `SKILL.md` frontmatter valid YAML and delimited by `---`.
-- Favor consolidation over near-duplicate skills.
-- Track active/experimental/archive status during cleanup phases.
+## Quality rules
+- Every skill must include valid YAML frontmatter delimited by `---`.
+- Avoid duplicate-purpose skills; extend existing skills first.
+- Keep skill instructions concise and workflow-specific.
