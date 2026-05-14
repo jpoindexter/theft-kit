@@ -32,3 +32,9 @@ Centralized skill library for THEFT AI and agentic software delivery workflows.
 - Every skill must include valid YAML frontmatter delimited by `---`.
 - Avoid duplicate-purpose skills; extend existing skills first.
 - Keep skill instructions concise and workflow-specific.
+
+## Streamline Tools
+
+- `SKILL_PACKS.md` — curated packs for day-to-day use.
+- `scripts/validate_skills.sh` — validates SKILL.md YAML/frontmatter.
+- `scripts/streamline_inventory.py` — generates overlap report and grouping CSV.
