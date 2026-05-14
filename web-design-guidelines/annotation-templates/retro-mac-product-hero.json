@@ -1,0 +1,107 @@
+{
+  "id": "retro-mac-ai-product-hero",
+  "name": "Retro Macintosh Product Hero Page",
+  "description": "A warm parchment-toned product landing page pairing EB Garamond serif copy with a fully CSS-rendered 3D Macintosh 128k-style computer — complete with CRT scanlines, text-based interface on screen, rainbow logo badge, novelty stickers, and a 3D keyboard — as a vehicle for introducing a retro-styled product.",
+  "vibes": {
+    "tags": [
+      "retro",
+      "nostalgic",
+      "skeuomorphic",
+      "3d-css",
+      "warm-neutral",
+      "serif-display",
+      "product-page",
+      "macintosh",
+      "crt",
+      "parchment",
+      "playful",
+      "witty",
+      "light-mode",
+      "vintage-computing",
+      "y2k-adjacent",
+      "editorial"
+    ],
+    "mood": "Feels like someone went back to 1984 and told Steve Jobs about ChatGPT — the warmth of an old Apple ad combined with the wink of a startup that knows exactly what it's doing. Charming, clever, and completely self-aware.",
+    "influences": [
+      "apple 1984 macintosh advertising",
+      "are.na editorial aesthetic",
+      "teenage engineering product pages",
+      "poolside.fm nostalgia",
+      "stripe press book design"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "calm",
+      "formality": "casual",
+      "complexity": "rich",
+      "technicality": "human",
+      "temporality": "nostalgic",
+      "weight": "grounded",
+      "playfulness": "whimsical",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#f4f1e6",
+      "secondary": "#E0DCCF",
+      "accent": "#C05621",
+      "background": "#f4f1e6",
+      "surface": "#E0DCCF",
+      "text_primary": "#0f0f0f",
+      "text_secondary": "#444444",
+      "scheme": "muted-earth",
+      "saturation": "muted",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "transitional-serif",
+      "scale": "dramatic",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "mixed",
+      "letter_spacing": "tight",
+      "line_height": "snug",
+      "case_treatment": "mixed-case"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "statement"
+    },
+    "shape": {
+      "border_radius": "subtle",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "3d",
+      "shadow_character": "diffused",
+      "z_layers": "extreme"
+    },
+    "surface": {
+      "primary_texture": "paper",
+      "gradient_type": "linear",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "none",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "smooth",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "subtle-shift"
+    },
+    "iconography": {
+      "style": "custom-illustrated",
+      "weight": "regular",
+      "size_role": "hero"
+    }
+  },
+  "meta": {
+    "type": "hero",
+    "domain": "landing",
+    "audience": "Design-literate early adopters who appreciate conceptual wit—those who recognize the visual reference immediately and value playful sophistication",
+    "device": "desktop"
+  }
+}

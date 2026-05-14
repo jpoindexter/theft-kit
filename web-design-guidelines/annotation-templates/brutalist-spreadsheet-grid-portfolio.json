@@ -1,0 +1,107 @@
+{
+  "id": "brutalist-spreadsheet-agency",
+  "name": "Brutalist Spreadsheet Grid Portfolio",
+  "description": "A portfolio interface that cosplays as a spreadsheet — complete with column/row rulers, a 20px cell grid, crosshair cursor, coordinate readout, and procedurally generated pixel-art brush strokes laid over white content cards with subtle grid overlays and box shadows.",
+  "vibes": {
+    "tags": [
+      "brutalist",
+      "anti-design",
+      "spreadsheet",
+      "grid-system",
+      "monochrome",
+      "pixel-art",
+      "raw",
+      "utilitarian",
+      "light-mode",
+      "geometric",
+      "dense",
+      "editorial",
+      "crosshair-cursor",
+      "neo-brutalist",
+      "website-like",
+      "swiss-design"
+    ],
+    "mood": "Feels like someone built an agency site inside Google Sheets on purpose and it's the most compelling portfolio you've seen all year — aggressively anti-aesthetic in a way that loops back around to being extremely aesthetic.",
+    "influences": [
+      "bloomberg terminal column layout",
+      "karl gerstner's designing programmes",
+      "hort.org.uk brutalist portfolio",
+      "are.na grid interface",
+      "excel/google sheets chrome"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "formal",
+      "complexity": "rich",
+      "technicality": "engineered",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "restrained",
+      "luxury": "utilitarian"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#000000",
+      "secondary": "#dcdcdc",
+      "accent": "#000000",
+      "background": "#f0f0f0",
+      "surface": "#FFFFFF",
+      "text_primary": "#000000",
+      "text_secondary": "#666666",
+      "scheme": "monochrome",
+      "saturation": "desaturated",
+      "contrast": "high",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "normal",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "case-driven",
+      "letter_spacing": "tracked",
+      "line_height": "normal",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "dense",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "subtle-shadow",
+      "shadow_character": "long-cast",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "defined",
+      "background_complexity": "textured"
+    },
+    "motion_implied": {
+      "animation_style": "none",
+      "transition_feel": "instant",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "landing",
+    "audience": "Design-literate practitioners who appreciate conceptual audacity—people who recognize when an interface becomes its own statement, blurring the line between tool and expression",
+    "device": "desktop"
+  }
+}

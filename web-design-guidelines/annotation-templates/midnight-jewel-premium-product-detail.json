@@ -1,0 +1,105 @@
+{
+  "id": "midnight-jewel-luxury-ecommerce",
+  "name": "Midnight Jewel-Tone Premium Product Detail",
+  "description": "A premium product detail page on a near-black background with deep jewel-tone and gold accent touches, a full-bleed hero image, a didone serif for the product name, and a single-column layout that forces the eye downward with cinematic pacing.",
+  "vibes": {
+    "tags": [
+      "dark-mode",
+      "luxury",
+      "jewel-tone",
+      "ecommerce",
+      "didone",
+      "cinematic",
+      "editorial",
+      "spacious",
+      "gold-accent",
+      "serif-display",
+      "premium-feel",
+      "polished",
+      "opulent",
+      "website-like"
+    ],
+    "mood": "Feels like opening a velvet-lined box in a dimly lit room — the kind of page where you instinctively straighten your posture. Money isn't mentioned because it doesn't need to be.",
+    "influences": [
+      "cartier digital experience",
+      "van cleef & arpels website",
+      "nick knight photography",
+      "ssense product pages",
+      "tiffany & co rebrand"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "serene",
+      "formality": "ceremonial",
+      "complexity": "minimal",
+      "technicality": "human",
+      "temporality": "timeless",
+      "weight": "heavy",
+      "playfulness": "serious",
+      "luxury": "opulent"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0C0C0C",
+      "secondary": "#1C1C1C",
+      "accent": "#C5A55A",
+      "background": "#080808",
+      "surface": "#141414",
+      "text_primary": "#F5F0E8",
+      "text_secondary": "#7A7568",
+      "scheme": "jewel-tone",
+      "saturation": "muted",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "didone",
+      "scale": "dramatic",
+      "weight_emphasis": "hairline",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "wide",
+      "line_height": "loose",
+      "case_treatment": "uppercase-headings"
+    },
+    "spacing": {
+      "density": "cavernous",
+      "rhythm": "progressive",
+      "whitespace_philosophy": "void"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "radial",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "none",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "cinematic",
+      "transition_feel": "dramatic",
+      "hover_philosophy": "reveal"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "detail",
+    "domain": "product",
+    "audience": "Discerning consumers who expect digital presentation to match the caliber of the product itself—those for whom aesthetics and quality are inseparable",
+    "device": "desktop"
+  }
+}

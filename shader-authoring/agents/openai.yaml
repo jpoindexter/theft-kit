@@ -1,0 +1,6 @@
+interface:
+  display_name: "Shader Authoring"
+  short_description: "Build GLSL/WebGL effects for apps, artifacts, and HyperFrames"
+  default_prompt: "Use $shader-authoring to create a deterministic WebGL shader visual for this surface."
+policy:
+  allow_implicit_invocation: true

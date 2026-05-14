@@ -1,0 +1,106 @@
+{
+  "id": "terracotta-studio-portfolio-landing",
+  "name": "Terracotta Print-Proof Studio Portfolio Landing",
+  "description": "A warm Mediterranean studio portfolio on a plaster-grain terracotta canvas where project image cards overlap at 2–4° rotations with drop shadows that simulate physical prints stacked on a table, hand-drawn SVG underlines beneath section titles that wobble slightly like dried ink, a serif/sans type pairing where the serif (an old-style face) is reserved exclusively for proper nouns and project names while everything else is set in a light geometric sans, registration marks and crop-mark crosses positioned at the corners of each panel like a print proof awaiting trimming, and a footer contact block set in small-caps tracked monospace on a torn-edge paper-white strip.",
+  "vibes": {
+    "tags": [
+      "warm-palette",
+      "terracotta-plaster",
+      "print-proof-marks",
+      "overlapping-cards",
+      "slight-rotation",
+      "hand-drawn-svg",
+      "serif-for-names-only",
+      "grain-texture",
+      "mediterranean",
+      "editorial-craft",
+      "crop-marks",
+      "physical-paper",
+      "organic-precision",
+      "studio-visit",
+      "artisan"
+    ],
+    "mood": "Feels like picking up a stack of printed proofs from a Lisbon studio's worktable — the terracotta grain is dried plaster dust, the crop marks say this was prepared for press, and the hand-drawn underlines are the creative director's pen corrections on the final galley.",
+    "influences": [
+      "aesop store bag and packaging typography",
+      "kinfolk magazine print production aesthetic",
+      "werkplaats typografie student publications",
+      "neri&hu raw material palette",
+      "pre-press proof sheets with registration marks"
+    ],
+    "axes": {
+      "temperature": "hot",
+      "energy": "unhurried",
+      "formality": "crafted",
+      "complexity": "layered",
+      "technicality": "analog",
+      "temporality": "timeless",
+      "weight": "grounded",
+      "playfulness": "wry",
+      "luxury": "artisanal"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#C4725A",
+      "secondary": "#E8D5C4",
+      "accent": "#2C2418",
+      "background": "#F2E6D9",
+      "surface": "#FAF4ED",
+      "text_primary": "#2C2418",
+      "text_secondary": "#8B7355",
+      "scheme": "muted-earth",
+      "saturation": "muted",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "mixed-serif-for-nouns",
+      "scale": "dramatic",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "classification-driven",
+      "letter_spacing": "tracked-headings",
+      "line_height": "relaxed",
+      "case_treatment": "uppercase-headings"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "overlapping-asymmetric",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "minimal",
+      "geometry": "rotated-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "physical-stack",
+      "shadow_character": "long-cast-warm",
+      "z_layers": "overlapping"
+    },
+    "surface": {
+      "primary_texture": "plaster-grain",
+      "gradient_type": "linear",
+      "gradient_character": "sand-to-terracotta",
+      "blur_usage": "none",
+      "border_treatment": "crop-marks",
+      "background_complexity": "textured"
+    },
+    "motion_implied": {
+      "animation_style": "slow-drift",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "lift-and-straighten"
+    },
+    "iconography": {
+      "style": "hand-drawn-svg",
+      "weight": "light",
+      "size_role": "decorative-accent"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "agency",
+    "audience": "Architecture firms, hospitality brands, and luxury goods clients who evaluate a studio by whether the portfolio itself feels like a designed object — people who notice crop marks and know what they mean",
+    "device": "desktop"
+  }
+}

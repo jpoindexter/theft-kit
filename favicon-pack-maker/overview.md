@@ -1,0 +1,1 @@
+Use when the user asks to create, redesign, preview, or install a favicon, browser tab icon, app icon set, or favicon pack for a website or generated app, including prompt-only requests with no reference image such as 'make me a pack of favicons'.

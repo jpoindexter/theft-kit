@@ -1,0 +1,41 @@
+{
+  "skill_name": "company-naming",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Help me name a B2B analytics startup for RevOps teams. I do not want a generic -lytics or -ops name. Ask what matters first, then generate better directions.",
+      "expected_output": "Should gather or reuse context, map naming territory to avoid, identify a stronger benefit-led direction, and generate names that avoid generic category suffixes.",
+      "assertions": [
+        "Reuses or requests the core context first",
+        "Defines naming territory to avoid",
+        "Uses benefit-led naming direction",
+        "Avoids generic category suffixes"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We are thinking about renaming from CloudTask Pro to something more ownable. Compare these finalists and recommend a winner: Luma, Taskora, Northline, and Veylo.",
+      "expected_output": "Should score the finalists on distinctiveness, fluency, resonance, energy, and longevity, explain tradeoffs, and make a clear recommendation instead of treating all options equally.",
+      "assertions": [
+        "Scores or compares finalists on multiple dimensions",
+        "Explains tradeoffs",
+        "Makes a clear recommendation",
+        "Avoids treating all finalists as equally strong"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a shortlist of company names for an AI tool that helps teams feel less chaos and more clarity during launches. Keep the names short and memorable, and tell me which ones have real energy.",
+      "expected_output": "Should derive naming territory from the emotional and ultimate benefit, generate a broad but selective shortlist, and explicitly call out which names feel safest versus which have more energy.",
+      "assertions": [
+        "Uses the emotional or ultimate benefit as naming territory",
+        "Produces short and memorable candidates",
+        "Separates safe names from energetic ones",
+        "Keeps the shortlist selective"
+      ],
+      "files": []
+    }
+  ]
+}

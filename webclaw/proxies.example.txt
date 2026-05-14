@@ -1,0 +1,10 @@
+# Webclaw Proxy List
+# Copy this file to proxies.txt and add your proxies.
+# webclaw auto-loads proxies.txt when it exists — no config needed.
+#
+# Format: host:port:user:pass (one per line)
+# Lines starting with # are ignored.
+#
+# Example:
+# 123.45.67.89:8080:username:password
+# proxy2.example.com:3128:user:pass123

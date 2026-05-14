@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>webclaw</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+
+  h1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    color: #e0e0e0;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  input[type="text"]:focus {
+    border-color: #444;
+  }
+
+  input[type="text"]::placeholder {
+    color: #444;
+  }
+
+  button {
+    background: #e0e0e0;
+    color: #0a0a0a;
+    border: none;
+    padding: 14px 28px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+  }
+
+  button:hover { background: #fff; }
+  button:disabled { background: #333; color: #666; cursor: not-allowed; }
+
+  .format-row {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 32px;
+  }
+
+  .format-btn {
+    background: none;
+    border: 1px solid #2a2a2a;
+    color: #666;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .format-btn:hover { border-color: #444; color: #aaa; }
+  .format-btn.active { border-color: #666; color: #e0e0e0; background: #1a1a1a; }
+  .format-btn:disabled { cursor: not-allowed; }
+
+  .status {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 16px;
+    min-height: 20px;
+  }
+
+  .status.error { color: #e55; }
+  .status.success { color: #5a5; }
+
+  .meta {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .meta span { color: #888; }
+
+  .result {
+    display: none;
+  }
+
+  .result.visible {
+    display: block;
+  }
+
+  .result-content {
+    background: #111;
+    border: 1px solid #1e1e1e;
+    border-radius: 6px;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #ccc;
+    max-height: 70vh;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .result-content::-webkit-scrollbar { width: 6px; }
+  .result-content::-webkit-scrollbar-track { background: #111; }
+  .result-content::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .action-btn {
+    background: none;
+    border: 1px solid #2a2a2a;
+    color: #666;
+    padding: 6px 14px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .action-btn:hover { border-color: #444; color: #aaa; }
+
+  .spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #333;
+    border-top-color: #888;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>webclaw</h1>
+
+  <div class="input-row">
+    <input type="text" id="url" placeholder="https://example.com" autofocus>
+    <button id="go" onclick="scrape()">Scrape</button>
+  </div>
+
+  <div class="format-row">
+    <button class="format-btn active" data-format="markdown">markdown</button>
+    <button class="format-btn" data-format="text">text</button>
+    <button class="format-btn" data-format="llm">llm</button>
+    <button class="format-btn" data-format="json">json</button>
+  </div>
+
+  <div class="status" id="status"></div>
+
+  <div class="result" id="result">
+    <div class="meta" id="meta"></div>
+    <div class="result-content" id="content"></div>
+    <div class="actions">
+      <button class="action-btn" onclick="copyResult()">Copy</button>
+      <button class="action-btn" onclick="downloadResult()">Download</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'http://localhost:3000';
+const AUTH = 'test123';
+let currentFormat = 'markdown';
+let lastResult = null;
+
+document.querySelectorAll('.format-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFormat = btn.dataset.format;
+  });
+});
+
+document.getElementById('url').addEventListener('keydown', e => {
+  if (e.key === 'Enter') scrape();
+});
+
+async function scrape() {
+  let url = document.getElementById('url').value.trim();
+  if (!url) return;
+  if (!url.includes('://')) url = 'https://' + url;
+
+  const status = document.getElementById('status');
+  const result = document.getElementById('result');
+  const content = document.getElementById('content');
+  const meta = document.getElementById('meta');
+  const goBtn = document.getElementById('go');
+
+  goBtn.disabled = true;
+  document.querySelectorAll('.format-btn').forEach(b => b.disabled = true);
+  result.classList.remove('visible');
+  status.className = 'status';
+  status.innerHTML = '<span class="spinner"></span>Scraping...';
+
+  const start = Date.now();
+
+  try {
+    const resp = await fetch(API + '/v1/scrape', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + AUTH,
+      },
+      body: JSON.stringify({
+        url: url,
+        formats: [currentFormat],
+        timeout: 45,
+      }),
+    });
+
+    const data = await resp.json();
+    const elapsed = ((Date.now() - start) / 1000).toFixed(1);
+
+    if (!data.success) {
+      status.className = 'status error';
+      status.textContent = data.error || 'Scrape failed';
+      return;
+    }
+
+    const d = data.data;
+    const text = d.markdown || d.text || d.llm || JSON.stringify(d, null, 2);
+    lastResult = { text, format: currentFormat, url };
+
+    status.className = 'status success';
+    status.textContent = `Done in ${elapsed}s`;
+
+    meta.innerHTML = [
+      d.metadata.title ? `<span>${d.metadata.title}</span>` : '',
+      `${d.metadata.word_count} words`,
+      `${d.metadata.elapsed_ms}ms server`,
+    ].filter(Boolean).join(' · ');
+
+    content.textContent = text;
+    result.classList.add('visible');
+  } catch (err) {
+    status.className = 'status error';
+    status.textContent = err.message === 'Failed to fetch'
+      ? 'Cannot reach API. Is webclaw-api running on localhost:3000?'
+      : err.message;
+  } finally {
+    goBtn.disabled = false;
+    document.querySelectorAll('.format-btn').forEach(b => b.disabled = false);
+  }
+}
+
+function copyResult() {
+  if (lastResult) navigator.clipboard.writeText(lastResult.text);
+}
+
+function downloadResult() {
+  if (!lastResult) return;
+  const ext = { markdown: 'md', text: 'txt', llm: 'md', json: 'json' }[lastResult.format] || 'txt';
+  const host = new URL(lastResult.url).hostname.replace('www.', '');
+  const blob = new Blob([lastResult.text], { type: 'text/plain' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${host}.${ext}`;
+  a.click();
+}
+</script>
+
+</body>
+</html>

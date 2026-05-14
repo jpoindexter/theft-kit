@@ -1,0 +1,106 @@
+{
+  "id": "nordic-frost-minimal-saas-hero",
+  "name": "Nordic Frost Absolute Whitespace SaaS Hero",
+  "description": "A landing page that is 90% empty — a single browser-chrome mockup (three traffic-light dots, a real URL in the address bar, a thin 1px #E2E8F0 window border) floating dead-center in absolute snow-white space, one line of 20px regular-weight geometric sans copy above it, a single thin ice-blue underline on the CTA link as the only color on the entire page, and a small monospaced version number anchored bottom-right like a specimen label. The design is what you removed.",
+  "vibes": {
+    "tags": [
+      "extreme-minimal",
+      "light-mode",
+      "scandinavian",
+      "whitespace-as-design",
+      "single-element",
+      "browser-chrome-mockup",
+      "ice-blue-accent",
+      "restrained",
+      "one-color",
+      "specimen-layout",
+      "absence",
+      "centered-single-column",
+      "dieter-rams",
+      "anti-decoration",
+      "quiet"
+    ],
+    "mood": "Feels like a Dieter Rams calculator sitting alone on a white marble shelf in an empty room — the product is the only thing in the space and the space itself is the argument for quality. You trust it because it didn't decorate.",
+    "influences": [
+      "dieter rams braun product photography",
+      "muji no-brand product pages",
+      "basecamp hey.com original launch",
+      "john pawson architectural interiors",
+      "iA writer marketing site"
+    ],
+    "axes": {
+      "temperature": "frigid",
+      "energy": "still",
+      "formality": "precise",
+      "complexity": "elemental",
+      "technicality": "invisible",
+      "temporality": "timeless",
+      "weight": "weightless",
+      "playfulness": "ascetic",
+      "luxury": "monastic"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FAFBFD",
+      "secondary": "#FFFFFF",
+      "accent": "#3B82F6",
+      "background": "#FAFBFD",
+      "surface": "#FFFFFF",
+      "text_primary": "#0F172A",
+      "text_secondary": "#94A3B8",
+      "scheme": "white-plus-one",
+      "saturation": "near-absent",
+      "contrast": "quiet",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "scale": "modest",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "single-level",
+      "letter_spacing": "normal",
+      "line_height": "relaxed",
+      "case_treatment": "sentence-case"
+    },
+    "spacing": {
+      "density": "cavernous",
+      "rhythm": "singular",
+      "whitespace_philosophy": "the-design-itself"
+    },
+    "shape": {
+      "border_radius": "subtle",
+      "geometry": "soft-rect",
+      "edges": "precise"
+    },
+    "depth": {
+      "strategy": "single-shadow",
+      "shadow_character": "barely-visible",
+      "z_layers": "two"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "hairline",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "none",
+      "transition_feel": "instant",
+      "hover_philosophy": "underline-only"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "none",
+      "size_role": "absent"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "saas",
+    "audience": "Design-literate product leads who read restraint as confidence — the kind of person who chose their apartment for the light, not the square footage, and picks tools the same way",
+    "device": "responsive"
+  }
+}

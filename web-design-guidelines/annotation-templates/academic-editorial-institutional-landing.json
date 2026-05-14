@@ -1,0 +1,84 @@
+{
+  "id": "academic-editorial-ai-lab-landing",
+  "name": "Academic Editorial Institutional Landing",
+  "description": "A light-mode institutional landing page using a strict grid system with 1px border divisions, pairing Playfair Display serif headings with Inter sans-serif body text, accented by a warm coral-orange against an otherwise monochrome white and near-black palette. Isometric stippled SVG illustration and generous whitespace evoke a scholarly journal reimagined as a modern website.",
+  "vibes": {
+    "tags": ["editorial", "academic", "grid-system", "serif-headings", "light-mode", "swiss-design", "structured", "clean", "spacious", "intellectual", "polished", "warm-accent", "isometric-illustration", "border-divided", "typographic-hierarchy"],
+    "mood": "Feels like picking up a beautifully typeset research journal that's been redesigned by a contemporary branding studio — serious and credible, but with just enough warmth in the coral accent and italic serif to avoid feeling cold or institutional.",
+    "influences": ["stripe 2023 homepage", "linear changelog", "MIT media lab website", "the economist editorial layout", "dieter rams grid philosophy"],
+    "axes": {
+      "temperature": "warm",
+      "energy": "calm",
+      "formality": "formal",
+      "complexity": "moderate",
+      "technicality": "technical",
+      "temporality": "timeless",
+      "weight": "grounded",
+      "playfulness": "restrained",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#111111",
+      "secondary": "#FAFAFA",
+      "accent": "#EF6A4C",
+      "background": "#ffffff",
+      "surface": "#ffffff",
+      "text_primary": "#111111",
+      "text_secondary": "#555555",
+      "scheme": "neutral-plus-accent",
+      "saturation": "muted",
+      "contrast": "high",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "dramatic",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "mixed",
+      "letter_spacing": "tracked",
+      "line_height": "relaxed",
+      "case_treatment": "uppercase-headings"
+    },
+    "spacing": {
+      "density": "expansive",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "statement"
+    },
+    "shape": {
+      "border_radius": "mixed",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "diffused",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "defined",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "micro",
+      "transition_feel": "ease",
+      "hover_philosophy": "subtle-shift"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "landing",
+    "audience": "Design-literate readers of institutional communication—researchers, academics, and stakeholders who expect information architecture as sophisticated as the content itself",
+    "device": "desktop"
+  }
+}

@@ -1,0 +1,27 @@
+services:
+  webclaw:
+    build: .
+    ports:
+      - "${WEBCLAW_PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+      - WEBCLAW_SIDECAR=/opt/webclaw/sidecar/render.mjs
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  ollama:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:

@@ -1,0 +1,127 @@
+{
+  "id": "mint-fintech-trust-landing",
+  "name": "Mint Fintech Trust Landing",
+  "description": "A light-mode fintech landing where the hero IS a live-updating account balance display in tabular lining figures at 96px on a white field — the number ticks up in real time like a deposit just cleared. Below, a horizontal scrolling tape of transaction entries styled exactly like a bank ledger with date, payee, and amount columns in monospaced type. The body uses deliberately varied layout patterns to avoid monotony: an asymmetric bento grid pairs a dark-background live agent feed (terminal-style scrolling log) with sparkline metric cards; a split-panel functions section anchors a giant '6' stat sidebar against a ledger table; a testimonial is styled as a bank transaction memo with reference number and monospaced attribution; the compliance section inverts to a full-width dark slate ground with a teal-accented audit checklist; and a horizontal stepper with an animated progress line replaces the typical card grid for how-it-works. Trust signals are embedded as footnotes with superscript reference numbers and monospaced citation text at the page bottom — not badge icons. A single teal accent color (#0D9488) appears ONLY on positive monetary amounts and live status indicators; everything else is slate and white. The CTA section goes full-bleed dark.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "fintech",
+      "trust-building",
+      "teal-accent",
+      "clean",
+      "structured",
+      "tabular-figures",
+      "ledger-style",
+      "monospaced-footnotes",
+      "professional",
+      "modern-saas",
+      "metric-display",
+      "consumer-app",
+      "compliance-aesthetic",
+      "polished",
+      "trustworthy",
+      "audit-checklist",
+      "horizontal-scroll-tape",
+      "single-accent-rule",
+      "bento-grid",
+      "live-feed",
+      "asymmetric-layout",
+      "inverted-sections",
+      "stepper-flow",
+      "sparkline-charts"
+    ],
+    "mood": "Feels like the moment you open a banking app and your balance is higher than you expected — the tabular figures are steady and legible, the ledger tape scrolls with the quiet confidence of money that's accounted for, and the footnoted trust signals read like a legal document that's actually trying to be helpful. The teal only appears on positive numbers, which means you start associating that color with good news. Below the fold, the layout keeps surprising you — a live terminal feed, a bold stat sidebar, a dark-inverted compliance section — so the page never settles into a predictable rhythm.",
+    "influences": [
+      "mercury banking",
+      "wise transfer interface",
+      "stripe atlas",
+      "brex dashboard",
+      "ramp.com marketing",
+      "linear app changelog",
+      "vercel dashboard"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "corporate",
+      "complexity": "detailed",
+      "technicality": "precise",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "restrained",
+      "luxury": "understated"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FFFFFF",
+      "secondary": "#F8FAFB",
+      "accent": "#0D9488",
+      "background": "#FFFFFF",
+      "surface": "#F8FAFB",
+      "text_primary": "#0F172A",
+      "text_secondary": "#64748B",
+      "inverted_surface": "#0F172A",
+      "inverted_card": "#1E293B",
+      "scheme": "neutral-plus-accent",
+      "saturation": "surgical",
+      "contrast": "moderate",
+      "surface_mode": "mixed"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "scale": "generous",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "weight-driven",
+      "letter_spacing": "normal",
+      "line_height": "relaxed",
+      "case_treatment": "normal"
+    },
+    "layout": {
+      "strategy": "varied-asymmetric",
+      "section_contrast": "alternating-light-dark",
+      "grid_patterns": ["bento-2col-uneven", "split-panel", "horizontal-stepper", "centered-memo"],
+      "avoids": "repeating the same card-grid pattern across consecutive sections"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "varied",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "geometry": "soft-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "subtle-shadow",
+      "shadow_character": "diffused",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "backdrop-nav",
+      "border_treatment": "hairline",
+      "background_complexity": "solid-with-inverted-breaks"
+    },
+    "motion_implied": {
+      "animation_style": "ticker",
+      "transition_feel": "ease",
+      "hover_philosophy": "subtle-shift",
+      "interactive_elements": ["live-counter", "agent-feed-log", "stepper-progress-fill", "sparkline-hover"]
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "finance",
+    "audience": "Startup founders, small-business owners, and finance-savvy professionals choosing banking tools — those who trust interfaces that look like they already work over interfaces that look like they're trying to impress",
+    "device": "responsive"
+  }
+}

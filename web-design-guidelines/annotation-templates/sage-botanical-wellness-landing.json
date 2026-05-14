@@ -1,0 +1,106 @@
+{
+  "id": "sage-botanical-wellness-landing",
+  "name": "Sage Botanical Bleed-Through Illustrated Landing",
+  "description": "A single-column reading-flow landing page where full-bleed botanical line-art illustrations ARE the layout — large-scale ink drawings of fern fronds, eucalyptus branches, and root systems bleed across section boundaries and behind text blocks, with body copy wrapping around illustration shapes using CSS shape-outside, hand-lettered display numerals for statistics rendered in a brushy calligraphic weight, a muted sage-and-cream palette where every element is desaturated except a single deep forest green (#2D5A3D) pill-shaped CTA that appears exactly twice, and generous vertical rhythm where the botanical drawings create natural section breaks instead of horizontal rules — the page reads like a field guide that happens to sell something.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "sage-green",
+      "botanical-illustration",
+      "full-bleed-art",
+      "text-wrap",
+      "single-column",
+      "organic",
+      "field-guide",
+      "hand-lettered-numerals",
+      "line-art",
+      "desaturated",
+      "calligraphic",
+      "nature",
+      "reading-flow",
+      "editorial-wellness"
+    ],
+    "mood": "Feels like a page torn from a Victorian botanical compendium that someone typeset wellness copy over — the fern illustrations were here first and the text arranged itself around them respectfully. The only color that demands anything of you is the forest-green CTA, which feels less like a button and more like a wax seal on a letter from an herbalist.",
+    "influences": [
+      "kew gardens printed specimen catalogs",
+      "aesop product page long-scroll format",
+      "kinfolk magazine interior spreads",
+      "ernst haeckel kunstformen der natur plates",
+      "mrs lowther floristry branding"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "still",
+      "formality": "gentle",
+      "complexity": "layered",
+      "technicality": "organic",
+      "temporality": "antiquarian",
+      "weight": "ethereal",
+      "playfulness": "contemplative",
+      "luxury": "understated"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#E8E4DA",
+      "secondary": "#EDF2EB",
+      "accent": "#2D5A3D",
+      "background": "#F0ECE3",
+      "surface": "#F7F5F0",
+      "text_primary": "#1B3026",
+      "text_secondary": "#6B8574",
+      "scheme": "monochromatic-sage-with-single-saturated-accent",
+      "saturation": "desaturated-except-cta",
+      "contrast": "low",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "humanist-serif-display-with-sans-body",
+      "scale": "generous",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "illustration-driven",
+      "letter_spacing": "tracked-display-normal-body",
+      "line_height": "generous",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "expansive",
+      "rhythm": "illustration-dictated",
+      "whitespace_philosophy": "organic-breathing"
+    },
+    "shape": {
+      "border_radius": "pill-cta-only",
+      "geometry": "organic-contours",
+      "edges": "feathered"
+    },
+    "depth": {
+      "strategy": "illustration-layering",
+      "shadow_character": "none",
+      "z_layers": "illustrations-behind-text"
+    },
+    "surface": {
+      "primary_texture": "laid-paper",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "none",
+      "background_complexity": "illustrated-bleed"
+    },
+    "motion_implied": {
+      "animation_style": "slow-reveal",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "opacity-fade"
+    },
+    "iconography": {
+      "style": "hand-drawn-botanical",
+      "weight": "hairline",
+      "size_role": "structural"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "health",
+    "audience": "Consumers who buy wellness products based on packaging and editorial taste — those who would frame a supplement label if the illustration was good enough and trust brands that look like they were designed by someone who has read Braiding Sweetgrass",
+    "device": "responsive"
+  }
+}

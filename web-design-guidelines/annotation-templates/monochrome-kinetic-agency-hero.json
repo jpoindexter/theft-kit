@@ -1,0 +1,107 @@
+{
+  "id": "monochrome-kinetic-agency-hero",
+  "name": "Monochrome Kinetic Spatial Gallery Hero",
+  "description": "A black-void agency landing page structured as a spatial gallery, not a scrolling page — a single word set in a compressed grotesque at 25vw floats centered in a 90vh empty viewport with letter-spacing that animates from 0 to 0.2em as you scroll away. Below the hero void, project names are positioned ABSOLUTELY across a full-viewport scatter field at varying sizes (3vw–7vw) and asymmetric coordinates, not in rows or grids — hovering any name materializes a white floating card (260px) that follows the cursor with details inside. The marquee is NOT a section — it is a barely-visible 28px belt at 12% opacity functioning as background texture. A statement section dims prepositions and articles to 10% opacity so only the nouns and verbs are readable. The only navigational chrome is a single 1px white horizontal rule. The cursor is replaced with a 48px circle using mix-blend-mode difference that grows to 80px on interactive elements. No color. No cards. No grids. The void IS the layout — negative space is 70% of the page area.",
+  "vibes": {
+    "tags": [
+      "monochrome",
+      "spatial-scatter",
+      "kinetic-type",
+      "void-layout",
+      "cursor-interactive",
+      "mix-blend-difference",
+      "floating-hover-cards",
+      "absolute-positioning",
+      "scroll-driven-animation",
+      "negative-space",
+      "gallery-not-page",
+      "zero-chrome",
+      "compressed-grotesque",
+      "custom-cursor",
+      "physics-inertia",
+      "black-only"
+    ],
+    "mood": "Feels like walking through a gallery where the labels are the art — project names float in the void at different scales like exhibits in a darkened room, the inverted-circle cursor is your flashlight, and hovering anything summons a white card that appears with the quiet confidence of a gallery didactic. The whole page is 70% nothing, and the nothing is the point.",
+    "influences": [
+      "basic/agency website",
+      "studio feixen",
+      "locomotive.ca",
+      "porto rocha",
+      "gmunk portfolio"
+    ],
+    "axes": {
+      "temperature": "cold",
+      "energy": "coiled",
+      "formality": "irreverent",
+      "complexity": "reductive",
+      "technicality": "engineered",
+      "temporality": "contemporary",
+      "weight": "monumental",
+      "playfulness": "deadpan",
+      "luxury": "austere"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#000000",
+      "secondary": "#000000",
+      "accent": "#FFFFFF",
+      "background": "#000000",
+      "surface": "#000000",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#FFFFFF",
+      "scheme": "binary",
+      "saturation": "zero",
+      "contrast": "absolute",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "compressed-grotesque",
+      "scale": "extreme",
+      "weight_emphasis": "ultra-black",
+      "hierarchy_strategy": "spatial-positioning",
+      "letter_spacing": "animated-on-scroll",
+      "line_height": "cramped",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "cavernous",
+      "rhythm": "scattered-spatial",
+      "whitespace_philosophy": "void-is-layout"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "hover-materialization",
+      "shadow_character": "none",
+      "z_layers": "floating-on-demand"
+    },
+    "surface": {
+      "primary_texture": "void",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "single-1px-horizontal-rule",
+      "background_complexity": "empty"
+    },
+    "motion_implied": {
+      "animation_style": "inertial-physics",
+      "transition_feel": "physics-based",
+      "hover_philosophy": "card-materialization-at-cursor"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "regular",
+      "size_role": "absent"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "agency",
+    "audience": "Brands looking for creative agencies that treat their own website as proof of capability — those who believe the portfolio entry starts at the URL bar and that a custom cursor is a design decision, not a gimmick",
+    "device": "desktop"
+  }
+}

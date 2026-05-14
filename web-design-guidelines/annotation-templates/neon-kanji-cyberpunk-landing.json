@@ -1,0 +1,111 @@
+{
+  "id": "neon-kanji-cyberpunk-landing",
+  "name": "Neon Kanji Cyberpunk Landing",
+  "description": "A full-bleed void-black landing page where the headline uses four stacked CSS text-shadows in hot pink and cyan to simulate a neon tube glow, with a keyframe flicker animation that stutters the opacity like a faulty transformer. Vertical Japanese-inspired text runs down the left margin in a narrow column, set in a condensed gothic and reading top-to-bottom. Product images are rendered with a CSS chromatic aberration filter — three layered copies of the image offset by 2px in red, green, and blue channels using mix-blend-mode screen. A full-viewport canvas element behind everything draws scrolling rain-static noise in real time. A scanline overlay sits on top of the entire page at 2px repeating-linear-gradient intervals. Card borders default to transparent but on hover glow hot pink with a 0.4s ease-in transition — like a neon tube warming up from cold gas to full burn. The interface doesn't reference cyberpunk, it IS a neon sign that someone wired up as a website.",
+  "vibes": {
+    "tags": [
+      "cyberpunk",
+      "dark-mode",
+      "neon-accents",
+      "japanese-influenced",
+      "glitch",
+      "scanlines",
+      "high-contrast-duo",
+      "immersive",
+      "gaming",
+      "sci-fi",
+      "animated",
+      "condensed-type",
+      "chromatic-aberration",
+      "dense",
+      "futuristic",
+      "neon-tube-glow",
+      "vertical-text",
+      "rain-static-canvas",
+      "warm-up-hover",
+      "rgb-channel-split"
+    ],
+    "mood": "Feels like buying black-market firmware from a rain-soaked street vendor in Kabukichō — every surface is wet and reflective, the vertical kanji crawls down the left edge like a building sign viewed from the sidewalk, the neon flicker catches your peripheral vision, and the card borders warm up on hover like gas ionizing inside a glass tube. The scanlines remind you this is a screen. The chromatic aberration reminds you the screen is lying.",
+    "influences": [
+      "cyberpunk 2077 marketing",
+      "akira poster art",
+      "cd projekt red website",
+      "ghost in the shell UI design",
+      "shinjuku golden gai neon signage"
+    ],
+    "axes": {
+      "temperature": "cold",
+      "energy": "volatile",
+      "formality": "irreverent",
+      "complexity": "maximalist",
+      "technicality": "cybernetic",
+      "temporality": "dystopian-future",
+      "weight": "heavy",
+      "playfulness": "menacing",
+      "luxury": "street-level"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0A0A0F",
+      "secondary": "#111118",
+      "accent": "#FF1493",
+      "background": "#05050A",
+      "surface": "#0F0F18",
+      "text_primary": "#F0E8FF",
+      "text_secondary": "#4A4A6A",
+      "scheme": "dark-mode-neon",
+      "saturation": "neon",
+      "contrast": "extreme",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "condensed-gothic",
+      "scale": "extreme",
+      "weight_emphasis": "black",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "tight",
+      "line_height": "cramped",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "dense",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "suffocating"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "angular",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "neon-glow",
+      "z_layers": "deep"
+    },
+    "surface": {
+      "primary_texture": "noise",
+      "gradient_type": "none",
+      "gradient_character": "duotone",
+      "blur_usage": "background-only",
+      "border_treatment": "warm-up-glow",
+      "background_complexity": "rain-static-canvas"
+    },
+    "motion_implied": {
+      "animation_style": "flicker",
+      "transition_feel": "delayed-ease-in",
+      "hover_philosophy": "neon-warm-up"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "gaming",
+    "audience": "Gamers, cyberpunk enthusiasts, and hardware collectors who want a storefront that feels like entering a district — those for whom visual excess is atmosphere, not decoration, and who notice when the hover delay feels like a neon tube warming up",
+    "device": "desktop"
+  }
+}

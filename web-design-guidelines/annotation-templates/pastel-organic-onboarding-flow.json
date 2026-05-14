@@ -1,0 +1,105 @@
+{
+  "id": "pastel-organic-wellness-onboarding",
+  "name": "Pastel Organic Onboarding Flow",
+  "description": "A soft-focus onboarding sequence with lavender-to-peach gradient backgrounds, oversized rounded pill inputs, hand-drawn illustration accents, and a breathing-room layout that makes filling out forms feel like a meditation exercise.",
+  "vibes": {
+    "tags": [
+      "pastel-wash",
+      "organic",
+      "wellness",
+      "onboarding",
+      "rounded",
+      "soft",
+      "gradient-heavy",
+      "calming",
+      "consumer-app",
+      "mobile-first",
+      "dreamy",
+      "spacious",
+      "light-mode",
+      "human"
+    ],
+    "mood": "Feels like the first morning of a wellness retreat — everything is soft-edged, unhurried, the palette whispers instead of speaks. You'd trust this app with your sleep data.",
+    "influences": [
+      "headspace app",
+      "calm app onboarding",
+      "glossier branding",
+      "hims & hers design system",
+      "apple health"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "serene",
+      "formality": "casual",
+      "complexity": "stark",
+      "technicality": "organic",
+      "temporality": "contemporary",
+      "weight": "ethereal",
+      "playfulness": "whimsical",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#E8D5F5",
+      "secondary": "#FDE0CC",
+      "accent": "#9B6DB5",
+      "background": "#F7F0FC",
+      "surface": "#FFFFFF",
+      "text_primary": "#2D1B4E",
+      "text_secondary": "#9B8AAF",
+      "scheme": "pastel-wash",
+      "saturation": "muted",
+      "contrast": "whisper",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "humanist-sans",
+      "scale": "generous",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "weight-driven",
+      "letter_spacing": "normal",
+      "line_height": "loose",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "expansive",
+      "rhythm": "progressive",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "pill",
+      "geometry": "rounded",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "subtle-shadow",
+      "shadow_character": "diffused",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "linear",
+      "gradient_character": "smooth",
+      "blur_usage": "background-only",
+      "border_treatment": "none",
+      "background_complexity": "simple-gradient"
+    },
+    "motion_implied": {
+      "animation_style": "spring",
+      "transition_feel": "physics-based",
+      "hover_philosophy": "expand"
+    },
+    "iconography": {
+      "style": "custom-illustrated",
+      "weight": "light",
+      "size_role": "decorative"
+    }
+  },
+  "meta": {
+    "type": "onboarding",
+    "domain": "onboarding",
+    "audience": "Users who expect applications to be calming and human-centered—those who value emotional intelligence in product design",
+    "device": "mobile"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "skill_name": "last30days-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What's working in our niche over the last 30 days? We're a B2B SaaS for developer productivity. Competitors are Linear, Height, and Shortcut.",
+      "expected_output": "A plan confirming seed set (competitor handles, niche keywords), a surface mix biased to YouTube long-form / HN / GitHub / blogs (not TikTok), a cost estimate via apify-plan-signal-collection, and only after confirmation, a ranked brief with themes, formats, breakout creators, outlier posts, and routed handoffs into content-strategy / social-content / competitor-alternatives.",
+      "assertions": [
+        "Calls apify-plan-signal-collection before apify-run-signal-collection-target",
+        "Proposes at most 3 surfaces and justifies each for a B2B dev niche",
+        "Does NOT default to TikTok/Instagram for this niche",
+        "Includes a confirmation step with estimated cost before running paid scrapes",
+        "Deliverable ranks clusters rather than listing raw posts",
+        "Routes at least one theme into a named downstream skill (content-strategy, social-content, competitor-alternatives, etc.)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I don't have budget for apify this month but I still want to see what's trending in the indie hacker / bootstrapped SaaS community.",
+      "expected_output": "A free-tier-only pass that uses Reddit public JSON, HN Algolia, GitHub, and direct WebFetch on relevant blogs. No apify calls. The deliverable explicitly states the tier used and flags that cross-surface dedupe is limited without paid sources.",
+      "assertions": [
+        "Does NOT call apify-plan-signal-collection or any apify-* tool",
+        "Uses Reddit public JSON (.json endpoint) for relevant subreddits",
+        "Uses HN Algolia API or GitHub for dev-adjacent signal",
+        "Deliverable says 'free tier' or equivalent and explains the trade-off",
+        "Does not fabricate engagement numbers for missing sources"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Pull a last30days scan for our consumer creator-tool niche. We compete with CapCut and Riverside. Focus on TikTok and Instagram.",
+      "expected_output": "A plan with apify-plan-signal-collection covering TikTok + Instagram for both competitor handles and niche hashtags, a cost confirmation, ranked themes/formats normalized against creator baseline, per-author cap applied, cross-surface dedupe between TikTok and Reels, and breakout creator detection.",
+      "assertions": [
+        "Uses both TikTok and Instagram apify surfaces",
+        "Seeds include BOTH competitor handles AND niche keyword/hashtag searches",
+        "Deliverable normalizes engagement per surface (does not compare raw TikTok views to Instagram plays)",
+        "Deliverable applies a per-author cap (same creator does not occupy >2 top slots)",
+        "Deliverable cross-surface dedupes cross-posted content between TikTok and Reels",
+        "Includes breakout-creator section with baseline-vs-recent lift"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Can you pull all the top Reddit posts from r/SaaS, r/startups, and r/entrepreneur over the last 30 days with full comment threads and author histories?",
+      "expected_output": "Acknowledges that apify Reddit scraping at scale is not wired in this codebase. Offers Tier 1 fallback using Reddit public JSON (top.json?t=month) for the three subreddits. States limitation (no full comment-tree scraping without a Reddit actor) and flags as follow-up work. Does NOT fabricate a Reddit scrape or invoke the wrong actor.",
+      "assertions": [
+        "Explicitly says Reddit-at-scale apify scraping is not currently wired",
+        "Falls back to Reddit public JSON for the three subreddits",
+        "Does NOT call apify-run-actor with a made-up Reddit actor id",
+        "Notes the limitation as a follow-up improvement rather than claiming completion"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "We just did a last30days scan and the themes were strong. Can you turn this into something we keep running automatically?",
+      "expected_output": "Hands the durable patterns from the one-off scan into external-signal-monitoring with a proposed monitor scope, cadence, and routing. Clearly distinguishes which clusters are durable enough to monitor (multi-creator, multi-surface, lift-sustained) versus which were one-off outliers that should NOT become recurring monitors.",
+      "assertions": [
+        "Routes the follow-up into external-signal-monitoring, not a new last30days-research run",
+        "Filters which clusters are monitor-worthy (multi-creator + durable lift) vs one-off",
+        "Proposes a specific cadence (e.g., weekly)",
+        "Does not simply rerun the same ad hoc scan"
+      ],
+      "files": []
+    }
+  ]
+}

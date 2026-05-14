@@ -1,0 +1,105 @@
+{
+  "id": "clay-neumorphic-smart-home",
+  "name": "Clay Neumorphic Control Dashboard",
+  "description": "A control dashboard rendered in soft neumorphic style on a warm clay-gray surface, with extruded toggle switches, sunken circular dials for settings and parameters, and pressed-in status indicators — tactile UI that begs to be touched.",
+  "vibes": {
+    "tags": [
+      "neumorphism",
+      "light-mode",
+      "clay",
+      "tactile",
+      "smart-home",
+      "soft",
+      "warm-neutral",
+      "rounded",
+      "skeuomorphic",
+      "consumer-app",
+      "polished",
+      "app-like",
+      "geometric",
+      "organic"
+    ],
+    "mood": "Feels like a control panel carved from warm stone — every interaction has physical weight, like pressing a button on a really expensive Japanese rice cooker. Satisfying in a way that flat design forgot about.",
+    "influences": [
+      "braun product design",
+      "apple homepod interface",
+      "muji electronics",
+      "teenage engineering ep-133",
+      "original neumorphism dribbble trend 2020"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "calm",
+      "formality": "balanced",
+      "complexity": "moderate",
+      "technicality": "balanced",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "restrained",
+      "luxury": "premium"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#D9D1C7",
+      "secondary": "#E6DED4",
+      "accent": "#E8833A",
+      "background": "#D9D1C7",
+      "surface": "#D9D1C7",
+      "text_primary": "#3D3530",
+      "text_secondary": "#8A7E74",
+      "scheme": "neutral-plus-accent",
+      "saturation": "muted",
+      "contrast": "low",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "scale": "normal",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "weight-driven",
+      "letter_spacing": "tracked",
+      "line_height": "normal",
+      "case_treatment": "uppercase-headings"
+    },
+    "spacing": {
+      "density": "normal",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "geometry": "rounded",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "elevation-system",
+      "shadow_character": "inner",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "linear",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "none",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "spring",
+      "transition_feel": "physics-based",
+      "hover_philosophy": "elevation"
+    },
+    "iconography": {
+      "style": "filled",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "dashboard",
+    "domain": "controls",
+    "audience": "Users who expect physical tactility from digital interfaces—those who value haptic feedback in design and appreciate craft in everyday tools",
+    "device": "tablet"
+  }
+}

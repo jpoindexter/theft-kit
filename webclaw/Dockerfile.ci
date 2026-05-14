@@ -1,0 +1,16 @@
+# Slim runtime image — uses pre-built binaries from the release.
+# The full Dockerfile (multi-stage Rust build) is for local development.
+# CI uses this to avoid 60+ min QEMU cross-compilation.
+ARG BINARY_DIR=binaries
+
+FROM ubuntu:24.04
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+ARG BINARY_DIR
+COPY ${BINARY_DIR}/webclaw /usr/local/bin/webclaw
+COPY ${BINARY_DIR}/webclaw-mcp /usr/local/bin/webclaw-mcp
+
+CMD ["webclaw"]

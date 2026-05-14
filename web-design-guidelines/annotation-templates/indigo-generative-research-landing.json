@@ -1,0 +1,117 @@
+{
+  "id": "indigo-generative-research-landing",
+  "name": "Indigo Generative Research Landing",
+  "description": "A two-column landing page pairing a sticky left sidebar of bordered info sections with a wide main stage — an italic serif display heading in deep indigo at extreme scale, an offset subheading pulling right, pill-shaped CTA in the top nav, and a full-bleed WebGL generative-art hero with a gradient bleed at the top edge rendered as flowing simplex-noise color fields in magenta, gold, and cyan on a cool grey ground. Interactive nav switches hero content with crossfade transitions. Scroll-triggered reveals on below-fold sections. The serif/sans pairing (Instrument Serif display, Inter body) creates a research-journal-meets-tech-platform tension — editorial restraint in the chrome, experimental generative maximalism in the hero.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "two-column",
+      "sticky-sidebar",
+      "editorial",
+      "scientific",
+      "institutional",
+      "generative-art",
+      "webgl",
+      "indigo",
+      "cool-grey",
+      "pill-button",
+      "serif-display-headings",
+      "ultra-light-display",
+      "serif-sans-pairing",
+      "clean",
+      "spacious",
+      "research",
+      "bordered-sections",
+      "scroll-reveal",
+      "interactive-nav",
+      "gradient-bleed",
+      "contemporary",
+      "website-like"
+    ],
+    "mood": "Feels like the homepage of a research institute that moonlights as a type foundry — the italic Instrument Serif display headings have the weight of a journal title page, the Inter body copy is clinical and precise, and the psychedelic noise shader sits between them like a petri dish under a blacklight. The interactive nav swaps hero content with the quiet confidence of someone who knows you'll click every option. The gradient bleed at the shader's top edge says 'this is integrated, not decoration.'",
+    "influences": [
+      "MIT media lab website structure",
+      "stripe institutional landing cadence",
+      "pharmaceutical brand sites (clean indigo authority)",
+      "instrument serif type specimens",
+      "sagmeister & walsh editorial typography",
+      "three.js / shadertoy generative art community",
+      "monocle magazine sidebar information density",
+      "linear.app scroll-reveal patterns"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "formal",
+      "complexity": "moderate",
+      "technicality": "technical",
+      "temporality": "contemporary",
+      "weight": "light",
+      "playfulness": "restrained",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#2A2A86",
+      "secondary": "#6B6B8E",
+      "accent": "#4A3AFF",
+      "background": "#F4F4F7",
+      "surface": "#F4F4F7",
+      "text_primary": "#2A2A86",
+      "text_secondary": "#6B6B8E",
+      "scheme": "monochrome",
+      "saturation": "muted",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "extreme",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "tight",
+      "line_height": "snug",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "mixed",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "none",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "animated",
+      "gradient_character": "aurora",
+      "blur_usage": "none",
+      "border_treatment": "subtle",
+      "background_complexity": "animated"
+    },
+    "motion_implied": {
+      "animation_style": "liquid",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "ai",
+    "audience": "Technical stakeholders and design-literate founders exploring a research-driven AI platform — the kind of audience that expects typographic precision, finds a generative shader more persuasive than a stock photo, and reads the left rail like a pharmaceutical insert",
+    "device": "desktop"
+  }
+}

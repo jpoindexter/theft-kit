@@ -1,0 +1,242 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+  packages: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: Build ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: x86_64-apple-darwin
+            os: macos-latest
+          - target: aarch64-apple-darwin
+            os: macos-latest
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-latest
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.target }}
+
+      # Cross-compilation support for aarch64-linux
+      # boring-sys2 builds BoringSSL from C source via cmake — needs cross-compiler + cmake
+      - name: Install cross-compilation tools
+        if: matrix.target == 'aarch64-unknown-linux-gnu'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu cmake
+          echo "CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=aarch64-linux-gnu-gcc" >> $GITHUB_ENV
+          echo "CC_aarch64_unknown_linux_gnu=aarch64-linux-gnu-gcc" >> $GITHUB_ENV
+          echo "CXX_aarch64_unknown_linux_gnu=aarch64-linux-gnu-g++" >> $GITHUB_ENV
+          echo "CMAKE_SYSTEM_NAME=Linux" >> $GITHUB_ENV
+          echo "CMAKE_SYSTEM_PROCESSOR=aarch64" >> $GITHUB_ENV
+
+      # BoringSSL build tools for native targets
+      - name: Install cmake
+        if: matrix.target != 'aarch64-unknown-linux-gnu' && runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y cmake
+
+      - name: Build
+        run: cargo build --release --target ${{ matrix.target }}
+
+      - name: Package
+        shell: bash
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          staging="webclaw-${tag}-${{ matrix.target }}"
+          mkdir "$staging"
+          cp target/${{ matrix.target }}/release/webclaw "$staging/" 2>/dev/null || true
+          cp target/${{ matrix.target }}/release/webclaw-mcp "$staging/" 2>/dev/null || true
+          cp README.md LICENSE "$staging/"
+          tar czf "$staging.tar.gz" "$staging"
+          echo "ASSET=$staging.tar.gz" >> $GITHUB_ENV
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.target }}
+          path: ${{ env.ASSET }}
+
+  release:
+    name: Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Compute checksums
+        run: |
+          cd artifacts
+          find . -name '*.tar.gz' -exec mv {} . \;
+          sha256sum *.tar.gz > SHA256SUMS
+          cat SHA256SUMS
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            artifacts/*.tar.gz
+            artifacts/SHA256SUMS
+
+  docker:
+    name: Docker
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+
+      - uses: docker/setup-buildx-action@v3
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # Download pre-built binaries for both architectures
+      - name: Download release binaries
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          for target in x86_64-unknown-linux-gnu aarch64-unknown-linux-gnu; do
+            dir="webclaw-${tag}-${target}"
+            curl -sSL "https://github.com/0xMassi/webclaw/releases/download/${tag}/${dir}.tar.gz" -o "${target}.tar.gz"
+            tar xzf "${target}.tar.gz"
+            mkdir -p "binaries-${target}"
+            cp "${dir}/webclaw" "binaries-${target}/webclaw"
+            cp "${dir}/webclaw-mcp" "binaries-${target}/webclaw-mcp"
+            chmod +x "binaries-${target}"/*
+          done
+          ls -laR binaries-*/
+
+      # Build per-arch images with plain docker build (no buildx manifest nesting)
+      - name: Build and push
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+
+          # amd64
+          docker build -f Dockerfile.ci --build-arg BINARY_DIR=binaries-x86_64-unknown-linux-gnu \
+            --platform linux/amd64 -t ghcr.io/0xmassi/webclaw:${tag}-amd64 --push .
+
+          # arm64
+          docker build -f Dockerfile.ci --build-arg BINARY_DIR=binaries-aarch64-unknown-linux-gnu \
+            --platform linux/arm64 -t ghcr.io/0xmassi/webclaw:${tag}-arm64 --push .
+
+          # Multi-arch manifest
+          docker manifest create ghcr.io/0xmassi/webclaw:${tag} \
+            ghcr.io/0xmassi/webclaw:${tag}-amd64 \
+            ghcr.io/0xmassi/webclaw:${tag}-arm64
+          docker manifest push ghcr.io/0xmassi/webclaw:${tag}
+
+          docker manifest create ghcr.io/0xmassi/webclaw:latest \
+            ghcr.io/0xmassi/webclaw:${tag}-amd64 \
+            ghcr.io/0xmassi/webclaw:${tag}-arm64
+          docker manifest push ghcr.io/0xmassi/webclaw:latest
+
+  homebrew:
+    name: Update Homebrew
+    needs: [release, docker]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compute all checksums and update formula
+        env:
+          COMMITTER_TOKEN: ${{ secrets.HOMEBREW_TAP_TOKEN }}
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          base="https://github.com/0xMassi/webclaw/releases/download/${tag}"
+
+          # Download all 4 tarballs and compute SHAs
+          for target in aarch64-apple-darwin x86_64-apple-darwin aarch64-unknown-linux-gnu x86_64-unknown-linux-gnu; do
+            curl -sSL "${base}/webclaw-${tag}-${target}.tar.gz" -o "${target}.tar.gz"
+          done
+
+          SHA_MAC_ARM=$(sha256sum aarch64-apple-darwin.tar.gz | cut -d' ' -f1)
+          SHA_MAC_X86=$(sha256sum x86_64-apple-darwin.tar.gz | cut -d' ' -f1)
+          SHA_LINUX_ARM=$(sha256sum aarch64-unknown-linux-gnu.tar.gz | cut -d' ' -f1)
+          SHA_LINUX_X86=$(sha256sum x86_64-unknown-linux-gnu.tar.gz | cut -d' ' -f1)
+
+          echo "macOS arm64:  $SHA_MAC_ARM"
+          echo "macOS x86_64: $SHA_MAC_X86"
+          echo "Linux arm64:  $SHA_LINUX_ARM"
+          echo "Linux x86_64: $SHA_LINUX_X86"
+
+          # Generate formula
+          cat > webclaw.rb << FORMULA
+          class Webclaw < Formula
+            desc "The fastest web scraper for AI agents. 67% fewer tokens. Sub-ms extraction."
+            homepage "https://webclaw.io"
+            license "AGPL-3.0"
+            version "${tag#v}"
+
+            on_macos do
+              if Hardware::CPU.arm?
+                url "${base}/webclaw-${tag}-aarch64-apple-darwin.tar.gz"
+                sha256 "${SHA_MAC_ARM}"
+              else
+                url "${base}/webclaw-${tag}-x86_64-apple-darwin.tar.gz"
+                sha256 "${SHA_MAC_X86}"
+              end
+            end
+
+            on_linux do
+              if Hardware::CPU.arm?
+                url "${base}/webclaw-${tag}-aarch64-unknown-linux-gnu.tar.gz"
+                sha256 "${SHA_LINUX_ARM}"
+              else
+                url "${base}/webclaw-${tag}-x86_64-unknown-linux-gnu.tar.gz"
+                sha256 "${SHA_LINUX_X86}"
+              end
+            end
+
+            def install
+              bin.install "webclaw"
+              bin.install "webclaw-mcp"
+            end
+
+            test do
+              assert_match "webclaw", shell_output("#{bin}/webclaw --version")
+            end
+          end
+          FORMULA
+
+          # Remove leading whitespace from heredoc
+          sed -i 's/^          //' webclaw.rb
+
+          # Push to homebrew tap
+          git clone "https://x-access-token:${COMMITTER_TOKEN}@github.com/0xMassi/homebrew-webclaw.git" tap
+          cp webclaw.rb tap/Formula/webclaw.rb
+          cd tap
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Formula/webclaw.rb
+          git diff --cached --quiet || git commit -m "Update webclaw to ${tag}"
+          git push

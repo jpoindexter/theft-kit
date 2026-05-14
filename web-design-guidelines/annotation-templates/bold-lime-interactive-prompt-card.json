@@ -1,0 +1,107 @@
+{
+  "id": "bold-lime-riddle-card",
+  "name": "Bold Lime Interactive Prompt Card",
+  "description": "A split-panel interaction interface pairing a dark left sidebar with topographic SVG line art and oversized stage number against a vivid chartreuse right panel housing a prompt, radio-button answer options, and a social scoreboard — all wrapped in a white-bordered card on a black canvas.",
+  "vibes": {
+    "tags": [
+      "split-panel",
+      "bold",
+      "lime-accent",
+      "dark-and-light",
+      "quiz",
+      "gamified",
+      "topographic",
+      "oversized-type",
+      "pill-buttons",
+      "app-like",
+      "energetic",
+      "playful",
+      "bento-grid",
+      "high-contrast-duo",
+      "consumer-app",
+      "neo-brutalist"
+    ],
+    "mood": "Feels like a trivia night designed by a streetwear brand — loud, confident, the kind of interface that makes answering riddles feel like unlocking a level. The lime screams and the black anchors it.",
+    "influences": [
+      "duolingo gamification patterns",
+      "teenage engineering color usage",
+      "apple fitness+ activity rings UI",
+      "wordle reveal mechanic",
+      "figma community templates"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "energetic",
+      "formality": "casual",
+      "complexity": "minimal",
+      "technicality": "human",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "playful",
+      "luxury": "modest"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#CFE938",
+      "secondary": "#111111",
+      "accent": "#FFFFFF",
+      "background": "#000000",
+      "surface": "#FFFFFF",
+      "text_primary": "#000000",
+      "text_secondary": "rgba(0, 0, 0, 0.6)",
+      "scheme": "high-contrast-duo",
+      "saturation": "vivid",
+      "contrast": "stark",
+      "surface_mode": "mixed"
+    },
+    "typography": {
+      "classification": "neo-grotesque",
+      "scale": "dramatic",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "tight",
+      "line_height": "snug",
+      "case_treatment": "mixed-case"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "geometry": "soft-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "background-only",
+      "border_treatment": "subtle",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "micro",
+      "transition_feel": "snappy",
+      "hover_philosophy": "expand"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "card",
+    "domain": "card",
+    "audience": "Users who want engaging interactive prompts that feel contemporary and social—the kind of interface designed to be screenshot-worthy and shareable",
+    "device": "desktop"
+  }
+}

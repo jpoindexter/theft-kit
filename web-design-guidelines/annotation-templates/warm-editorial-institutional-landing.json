@@ -1,0 +1,107 @@
+{
+  "id": "warm-editorial-ai-research-lab",
+  "name": "Warm Editorial Institutional Landing",
+  "description": "A light-mode institutional landing page with strong editorial typography, a warm cream-to-amber-to-red triadic accent palette, geometric half-circle SVG artwork, and an animated grain texture overlay that evokes risograph printing on archival paper.",
+  "vibes": {
+    "tags": [
+      "editorial",
+      "magazine-style",
+      "light-mode",
+      "geometric",
+      "grain-texture",
+      "serif-typography",
+      "warm-palette",
+      "academic",
+      "research",
+      "swiss-design",
+      "bauhaus",
+      "risograph",
+      "spacious",
+      "refined",
+      "modernist",
+      "paper-texture"
+    ],
+    "mood": "Feels like flipping through a beautifully typeset monograph from an elite research lab that commissioned a Bauhaus-trained graphic designer — cerebral gravitas softened by warmth and artful restraint.",
+    "influences": [
+      "stripe press book design",
+      "monocle magazine",
+      "bauhaus geometric compositions",
+      "linear app marginalia details",
+      "openai research page circa 2023"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "calm",
+      "formality": "formal",
+      "complexity": "moderate",
+      "technicality": "engineered",
+      "temporality": "timeless",
+      "weight": "grounded",
+      "playfulness": "restrained",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#F3F1EC",
+      "secondary": "#181818",
+      "accent": "#ED4B33",
+      "background": "#F3F1EC",
+      "surface": "#F3F1EC",
+      "text_primary": "#181818",
+      "text_secondary": "rgba(24, 24, 24, 0.6)",
+      "scheme": "neutral-plus-accent",
+      "saturation": "saturated",
+      "contrast": "high",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "dramatic",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "mixed",
+      "letter_spacing": "tracked",
+      "line_height": "relaxed",
+      "case_treatment": "mixed-case"
+    },
+    "spacing": {
+      "density": "expansive",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "statement"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "none",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "grain",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "subtle",
+      "background_complexity": "animated"
+    },
+    "motion_implied": {
+      "animation_style": "micro",
+      "transition_feel": "ease",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "regular",
+      "size_role": "decorative"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "landing",
+    "audience": "Intellectually rigorous readers and practitioners—those who judge institutions partly by their commitment to visual and typographic excellence",
+    "device": "desktop"
+  }
+}

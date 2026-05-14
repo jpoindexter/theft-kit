@@ -1,0 +1,105 @@
+{
+  "id": "neon-brutalist-crypto-exchange",
+  "name": "Neon Brutalist Dense Data Interface",
+  "description": "A high-voltage dark trading interface with raw monospaced type, electric magenta and cyan accent borders, oversized numerical readouts, and brutalist grid divisions — every surface screams velocity and zero ornamentation.",
+  "vibes": {
+    "tags": [
+      "neo-brutalist",
+      "dark-mode",
+      "neon-accents",
+      "crypto",
+      "monospace",
+      "dense",
+      "data-viz",
+      "grid-based",
+      "high-contrast-duo",
+      "raw",
+      "anti-design",
+      "cybernetic",
+      "app-like",
+      "fintech-feel"
+    ],
+    "mood": "Feels like the UI they'd use to trade currencies on a space station — all signal, no noise, the kind of interface where every millisecond of rendering budget went to data, not decoration.",
+    "influences": [
+      "dydx exchange",
+      "bloomberg terminal",
+      "david rudnick typography",
+      "gmk keycap colorways",
+      "eth.limo"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "intense",
+      "formality": "irreverent",
+      "complexity": "maximalist",
+      "technicality": "cybernetic",
+      "temporality": "futuristic",
+      "weight": "heavy",
+      "playfulness": "serious",
+      "luxury": "utilitarian"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0A0A0A",
+      "secondary": "#1A1A1A",
+      "accent": "#FF00FF",
+      "background": "#050505",
+      "surface": "#111111",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "#666666",
+      "scheme": "dark-mode-neon",
+      "saturation": "neon",
+      "contrast": "extreme",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "mono",
+      "scale": "dramatic",
+      "weight_emphasis": "bold",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "tight",
+      "line_height": "cramped",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "compressed",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "colored",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "accent-colored",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "none",
+      "transition_feel": "instant",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "dashboard",
+    "domain": "dashboard",
+    "audience": "Information-dense users who prioritize speed and efficiency over polish—those who expect interfaces to respect their time and expertise",
+    "device": "desktop"
+  }
+}

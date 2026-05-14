@@ -1,0 +1,9 @@
+[package]
+name = "webclaw-antibot"
+version = "0.1.0"
+edition = "2021"
+description = "Anti-bot infrastructure: adaptive pacer, circuit breaker, proxy pool, backoff"
+
+[dependencies]
+rand = "0.8"
+log = "0.4"

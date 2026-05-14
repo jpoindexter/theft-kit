@@ -1,0 +1,107 @@
+{
+  "id": "cobalt-pixel-creative-portfolio",
+  "name": "Cobalt Pixel Art Portfolio Hero",
+  "description": "A full-viewport portfolio hero set on a saturated cobalt blue ground with a faint grid overlay, dominated by an oversized italic serif name in white, a pixel-art flower embedded inline in the type, and floating pixel sprite elements with mouse-parallax — playful maximalism anchored by monospace nav.",
+  "vibes": {
+    "tags": [
+      "light-on-dark",
+      "pixel-art",
+      "cobalt-blue",
+      "playful",
+      "creative-portfolio",
+      "serif-display",
+      "mono-nav",
+      "grid-overlay",
+      "parallax",
+      "whimsical",
+      "y2k-adjacent",
+      "personal-brand",
+      "anti-design",
+      "bold",
+      "retro-digital",
+      "website-like"
+    ],
+    "mood": "Feels like stumbling onto the homepage of a French creative developer who spent their childhood on Neopets — the cobalt is confident, the pixel flowers are charming, and that italic serif name hits like a poster in a gallery you'd actually want to visit.",
+    "influences": [
+      "lusion.co hero treatments",
+      "pierre nel portfolio",
+      "neocities indie web aesthetic",
+      "matisse cut-outs",
+      "early 2000s flash portfolio sites, but make it good"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "energetic",
+      "formality": "casual",
+      "complexity": "moderate",
+      "technicality": "human",
+      "temporality": "nostalgic",
+      "weight": "light",
+      "playfulness": "playful",
+      "luxury": "modest"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0044CC",
+      "secondary": "#003399",
+      "accent": "#FFD700",
+      "background": "#0044CC",
+      "surface": "rgba(255, 255, 255, 0.08)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255, 255, 255, 0.7)",
+      "scheme": "monochrome",
+      "saturation": "vivid",
+      "contrast": "stark",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "extreme",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "wide",
+      "line_height": "snug",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "statement"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "parallax",
+      "shadow_character": "none",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "subtle",
+      "background_complexity": "textured"
+    },
+    "motion_implied": {
+      "animation_style": "liquid",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "custom-illustrated",
+      "weight": "bold",
+      "size_role": "hero"
+    }
+  },
+  "meta": {
+    "type": "hero",
+    "domain": "portfolio",
+    "audience": "Design-conscious individuals looking to showcase work that blends technical skill with visual personality—employers or collaborators who value maker sensibility",
+    "device": "desktop"
+  }
+}

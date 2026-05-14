@@ -1,0 +1,13 @@
+[package]
+name = "webclaw-browser"
+description = "Playwright sidecar for JS rendering and anti-bot bypass"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json.workspace = true
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }

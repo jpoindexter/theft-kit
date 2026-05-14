@@ -1,0 +1,107 @@
+{
+  "id": "dark-terminal-algorithmic-terraforming",
+  "name": "Dark Terminal Generative Visualization Hero",
+  "description": "A full-viewport dark-mode landing page with a Three.js point-cloud visualization, monospaced diagnostic side panel with live data widgets, scanline and grid overlays, and a green-on-black terminal aesthetic reminiscent of CRT command interfaces.",
+  "vibes": {
+    "tags": [
+      "dark-mode",
+      "terminal",
+      "sci-fi",
+      "data-viz",
+      "3d-webgl",
+      "monospace",
+      "hud",
+      "cybernetic",
+      "generative-art",
+      "grid-overlay",
+      "scanlines",
+      "green-on-black",
+      "immersive",
+      "dense",
+      "cutting-edge",
+      "dev-tool-aesthetic"
+    ],
+    "mood": "Feels like logging into a classified planetary engineering console at 3am — the hum of a server room, phosphor glow on your face, the terrain undulating like it's breathing. Equal parts NOAA research station and sci-fi film prop.",
+    "influences": [
+      "github universe event branding",
+      "alien franchise UI design",
+      "bloomberg terminal",
+      "territory studio film UI",
+      "linear app dark mode"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "formal",
+      "complexity": "rich",
+      "technicality": "cybernetic",
+      "temporality": "futuristic",
+      "weight": "grounded",
+      "playfulness": "serious",
+      "luxury": "premium"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#92D36C",
+      "secondary": "#658A6F",
+      "accent": "#92D36C",
+      "background": "#061109",
+      "surface": "rgba(6, 17, 9, 0.7)",
+      "text_primary": "#E4F2E7",
+      "text_secondary": "#658A6F",
+      "scheme": "monochrome",
+      "saturation": "muted",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "dramatic",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "mixed",
+      "letter_spacing": "wide",
+      "line_height": "relaxed",
+      "case_treatment": "mixed-case"
+    },
+    "spacing": {
+      "density": "dense",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "colored",
+      "z_layers": "deep"
+    },
+    "surface": {
+      "primary_texture": "noise",
+      "gradient_type": "linear",
+      "gradient_character": "subtle",
+      "blur_usage": "frosted-glass",
+      "border_treatment": "subtle",
+      "background_complexity": "animated"
+    },
+    "motion_implied": {
+      "animation_style": "cinematic",
+      "transition_feel": "ease",
+      "hover_philosophy": "color-change"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "data-viz",
+    "audience": "Technical practitioners and creative coders who appreciate the intersection of systems design and visual expression—those drawn to procedural aesthetics",
+    "device": "desktop"
+  }
+}

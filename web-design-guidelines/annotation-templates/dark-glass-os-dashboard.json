@@ -1,0 +1,107 @@
+{
+  "id": "dark-glass-os-saas-dashboard",
+  "name": "Dark Glassmorphic OS-Style Dashboard",
+  "description": "A full-viewport application landing page with a blurred photographic environment layer, floating glassmorphic panels (sidebar nav, hero CTA, operations panel), orbiting frosted-glass content cards with 3D parallax motion, and a centered pill OS-bar — the aesthetic of a native application interface translated into a marketing hero.",
+  "vibes": {
+    "tags": [
+      "glassmorphism",
+      "dark-mode",
+      "frosted-glass",
+      "app-like",
+      "os-ui",
+      "floating-panels",
+      "3d-parallax",
+      "ai-saas",
+      "blurred-background",
+      "nighttime-ui",
+      "spacious",
+      "premium-feel",
+      "monospace-accents",
+      "cutting-edge",
+      "futuristic",
+      "consumer-app"
+    ],
+    "mood": "Feels like logging into an AI workspace that exists slightly in the future — the kind of product you demo in a darkened room and the audience goes quiet. Glass surfaces catch light that doesn't quite exist, and everything floats just enough to feel alive.",
+    "influences": [
+      "apple vision pro visionOS UI",
+      "linear app dark mode",
+      "raycast",
+      "vercel v0 interface",
+      "arc browser design language"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "casual",
+      "complexity": "rich",
+      "technicality": "engineered",
+      "temporality": "futuristic",
+      "weight": "ethereal",
+      "playfulness": "restrained",
+      "luxury": "premium"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#050505",
+      "secondary": "rgba(255, 255, 255, 0.06)",
+      "accent": "#32D74B",
+      "background": "#050505",
+      "surface": "rgba(255, 255, 255, 0.03)",
+      "text_primary": "rgba(255, 255, 255, 0.9)",
+      "text_secondary": "rgba(255, 255, 255, 0.5)",
+      "scheme": "monochrome",
+      "saturation": "muted",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "mixed",
+      "scale": "dramatic",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "tracked",
+      "line_height": "relaxed",
+      "case_treatment": "mixed-case"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "asymmetric",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "geometry": "soft-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "diffused",
+      "z_layers": "deep"
+    },
+    "surface": {
+      "primary_texture": "glass",
+      "gradient_type": "radial",
+      "gradient_character": "subtle",
+      "blur_usage": "pervasive",
+      "border_treatment": "subtle",
+      "background_complexity": "layered"
+    },
+    "motion_implied": {
+      "animation_style": "liquid",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "elevation"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "light",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "landing",
+    "audience": "Design-forward users who expect premium application interfaces—those familiar with operating system design languages and appreciate cutting-edge visual technology",
+    "device": "desktop"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "cream-hud-editorial-grid",
+  "name": "Cream HUD Editorial Grid Landing",
+  "description": "A warm off-white two-column grid layout with generous white card panels, corner-anchored monospace metadata labels creating a HUD-like data overlay, a large tightly-tracked geometric sans headline, animated pastel-colored waveform visualization with soft glow, and a mixed-typography partner logo grid in a structured panel system.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "editorial",
+      "bento-grid",
+      "monospace-accents",
+      "warm-neutrals",
+      "spacious",
+      "clean",
+      "hud-metadata",
+      "pastel-accents",
+      "card-based",
+      "typographic-hierarchy",
+      "structured",
+      "polished"
+    ],
+    "mood": "Feels like opening a beautifully engineered developer tool that was art-directed by a magazine editor — warm and approachable on the surface, but the monospace corner labels and precise grid signal deep technical confidence underneath.",
+    "influences": [
+      "linear app",
+      "stripe 2024 landing page",
+      "vercel dashboard metadata labels",
+      "notion marketing site",
+      "apple developer documentation"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "calm",
+      "formality": "professional",
+      "complexity": "moderate",
+      "technicality": "engineered",
+      "temporality": "contemporary",
+      "weight": "light",
+      "playfulness": "restrained",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#F5F4F0",
+      "secondary": "#FFFFFF",
+      "accent": "#4A7C59",
+      "background": "#F5F4F0",
+      "surface": "#FFFFFF",
+      "text_primary": "#1A1A1A",
+      "text_secondary": "#666666",
+      "additional": [
+        "#CCCCCC",
+        "#FFB3BA",
+        "#BAE1FF",
+        "#D5AAFF",
+        "#FFDFBA"
+      ],
+      "scheme": "warm-neutral-minimal",
+      "saturation": "desaturated",
+      "contrast": "medium",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "primary_font": "Inter",
+      "secondary_font": "JetBrains Mono",
+      "scale": "large",
+      "weight_emphasis": "bold",
+      "hierarchy_strategy": "size-and-weight-driven",
+      "letter_spacing": "tight",
+      "line_height": "compact",
+      "case_treatment": "uppercase-metadata",
+      "headline_size": "5rem",
+      "headline_tracking": "-0.04em",
+      "body_weight": "500",
+      "mono_role": "metadata-labels"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "structured",
+      "whitespace_philosophy": "breathing",
+      "panel_padding": "3.5rem",
+      "grid_gap": "1rem"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "border_radius_value": "14px",
+      "geometry": "soft-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "subtle-elevation",
+      "shadow_character": "diffused",
+      "shadow_value": "0 4px 20px rgba(0, 0, 0, 0.02)",
+      "z_layers": "minimal"
+    },
+    "surface": {
+      "primary_texture": "flat",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "minimal",
+      "background_complexity": "simple",
+      "waveform_glow": "colored-box-shadow"
+    },
+    "motion_implied": {
+      "animation_style": "smooth",
+      "transition_feel": "ease",
+      "hover_philosophy": "color-shift",
+      "waveform_animation": "randomized-bar-height",
+      "button_hover": "translateY-lift"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "medium",
+      "size_role": "functional",
+      "custom_svg": true
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "landing",
+    "audience": "Design-conscious developers and technical users who appreciate clean, structured interfaces with subtle editorial refinement — those who value both aesthetic warmth and engineering precision",
+    "device": "desktop",
+    "responsive": true,
+    "breakpoints": ["1200px", "968px"]
+  }
+}

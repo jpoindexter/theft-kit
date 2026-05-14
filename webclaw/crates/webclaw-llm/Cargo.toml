@@ -1,0 +1,15 @@
+[package]
+name = "webclaw-llm"
+description = "LLM integration for webclaw — local-first hybrid architecture (Ollama -> OpenAI -> Anthropic)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+async-trait = "0.1"
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
