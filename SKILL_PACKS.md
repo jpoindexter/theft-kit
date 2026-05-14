@@ -1,6 +1,8 @@
-# Skill Packs
+# Skill Packs (Global)
 
-## Pack 1: Build Core (default)
+These packs are universal and reusable across projects.
+
+## 1) Core Delivery
 - architect-builder-method
 - project-brain-folder-system
 - sprint-architect-pack
@@ -8,29 +10,39 @@
 - model-switch-router
 - local-release-gate
 
-## Pack 2: Product Reliability
+## 2) Product Flow Quality
 - onboarding-state-machine
 - happy-path-route-audit
-- paperclip-parity-delta
-- ops-to-builder-instructions
+- integration-contract-test
+- postmortem-rca
 
-## Pack 3: Research
+## 3) Research & Strategy
 - research-brief-builder
 - source-truth-check
 - user-interview-synth
 - competitor-teardown
 - experiment-design
+- cost-observability
 
-## Pack 4: UX (NN/g)
+## 4) UX General
 - nng-ux-research-orchestrator
 - nng-web-usability
 - nng-information-architecture
 - nng-navigation-audit
 - nng-content-strategy
+- nng-writing-for-web
 - nng-user-testing-playbook
 
-## Pack 5: Incident / Migration
-- postmortem-rca
+## 5) Product Types
+- nng-ecommerce-ux
+- nng-b2b-application-ux
+- nng-corporate-website-ux
+- nng-intranet-ux
+- nng-mobile-tablet-ux
+- nng-search-ux
+
+## 6) Operations
 - migration-runbook
-- integration-contract-test
-- cost-observability
+- prompt-asset-lab
+- nng-design-process-ops
+- nng-managing-ux-teams
