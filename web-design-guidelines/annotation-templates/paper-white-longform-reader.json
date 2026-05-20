@@ -1,0 +1,105 @@
+{
+  "id": "paper-white-academic-journal",
+  "name": "Paper White Long-Form Reader",
+  "description": "A digital long-form reader with a pure white canvas, thin serif body text at generous line height, sidenote annotations in a smaller sans-serif, and nothing but a faint rule and page numbers for chrome — the UI disappears entirely into the reading experience.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "editorial",
+      "academic",
+      "serif-typography",
+      "minimal",
+      "clean",
+      "spacious",
+      "paper-texture",
+      "monochrome",
+      "swiss-design",
+      "timeless",
+      "focused",
+      "website-like",
+      "readable"
+    ],
+    "mood": "Feels like reading a perfectly typeset journal article in a silent university library with afternoon light — zero distractions, the ideas are the interface.",
+    "influences": [
+      "edward tufte's books",
+      "gwern.net sidenotes",
+      "latex typesetting",
+      "matthew butterick's practical typography",
+      "are.na reading view"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "serene",
+      "formality": "formal",
+      "complexity": "stark",
+      "technicality": "human",
+      "temporality": "timeless",
+      "weight": "light",
+      "playfulness": "serious",
+      "luxury": "modest"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FFFFFF",
+      "secondary": "#FAFAFA",
+      "accent": "#1A1A1A",
+      "background": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "text_primary": "#222222",
+      "text_secondary": "#999999",
+      "scheme": "monochrome",
+      "saturation": "desaturated",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "transitional-serif",
+      "scale": "normal",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "normal",
+      "line_height": "loose",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "paper",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "none",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "none",
+      "transition_feel": "instant",
+      "hover_philosophy": "subtle-shift"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "thin",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "detail",
+    "domain": "reader",
+    "audience": "Readers who demand typographic precision and distraction-free presentation—those who measure quality of reading by the care given to every letter",
+    "device": "desktop"
+  }
+}

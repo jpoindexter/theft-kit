@@ -1,0 +1,71 @@
+{
+  "skill_name": "debugging-vercel-builds",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My Vercel build just failed. The log says 'Error: NEXT_PUBLIC_SUPABASE_URL is not defined'. How do I fix this?",
+      "expected_output": "Should identify this as a missing environment variable issue. Should name the missing key (NEXT_PUBLIC_SUPABASE_URL) and explain it is required at build time for the Supabase client to initialize. Should check vercel-get-project-env-vars for the failed deployment target. Should direct the user to provision the key through the secure add-secret/get-secret tool flow. Should NOT ask the user to paste the value into chat.",
+      "assertions": [
+        "Identifies missing environment variable as the failure category",
+        "Names NEXT_PUBLIC_SUPABASE_URL as the missing key",
+        "Explains why the key is needed (Supabase client initialization at build time)",
+        "Checks Vercel project env vars for the deployment target",
+        "Directs to secure add-secret/get-secret tool flow",
+        "Does NOT ask the user to paste secrets into chat"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Vercel deploy failed with 'No API key provided' from Stripe. The app works locally but not on Vercel preview.",
+      "expected_output": "Should identify this as missing Stripe credentials on the Vercel preview target. Should check vercel-get-project-env-vars for STRIPE_SECRET_KEY and NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY on the preview target. Should direct the user to connect Stripe via connect_stripe rather than pasting keys. Should distinguish test mode vs live mode and note that preview deployments typically use test keys from a Stripe Sandbox.",
+      "assertions": [
+        "Identifies missing Stripe credentials as the cause",
+        "Checks Vercel env vars for the preview deployment target",
+        "Directs user to connect_stripe tool instead of pasting keys",
+        "Distinguishes test mode vs live mode",
+        "Mentions Stripe Sandbox for test keys",
+        "Does NOT ask the user to paste secrets into chat"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My Vercel build shows 'Type error: Property env does not exist on type ProcessEnv' in my checkout route. Should I fix the TypeScript?",
+      "expected_output": "Should identify that the TypeScript error is likely caused by a missing environment variable, not a genuine type error. Should advise checking whether the referenced env var is set on the Vercel deployment target before changing code. Should explain that fixing the env var configuration is the correct approach, not adding type workarounds or fallback values.",
+      "assertions": [
+        "Identifies root cause as likely missing env var, not a code bug",
+        "Advises checking env var configuration before changing code",
+        "Does not recommend adding type workarounds or fallback values",
+        "Recommends checking vercel-get-project-env-vars"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Vercel says 'Lockfile was generated with a different package manager'. We use bun but the build seems to run npm.",
+      "expected_output": "Should identify this as a lockfile/package manager mismatch. Should check which lockfiles exist in the repo and whether vercel.json or project settings specify the correct installCommand for Bun. Should recommend removing extra lockfiles or setting the install command explicitly. Should NOT suggest switching package managers without understanding the project setup.",
+      "assertions": [
+        "Identifies lockfile/package manager mismatch",
+        "Checks for multiple lockfiles in the repo",
+        "Checks vercel.json or project settings for installCommand",
+        "Recommends aligning lockfile with package manager configuration",
+        "Does not blindly suggest switching package managers"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Our Stripe checkout works on the preview URL but fails on the production domain. The production build succeeded but checkout returns a 500.",
+      "expected_output": "Should identify this as likely an env var scope or domain mismatch issue. Should check whether Stripe env vars (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET) are set for the production target specifically, not just preview. Should check whether APP_URL or webhook endpoint URL points to the production domain. Should verify test keys are not accidentally deployed to production. If Stripe credentials are missing for production, should direct to connect_stripe with live mode.",
+      "assertions": [
+        "Checks env var scope across production vs preview targets",
+        "Checks Stripe key mode alignment (test vs live)",
+        "Checks APP_URL or webhook URL domain matches production",
+        "Directs to connect_stripe for live mode credentials if missing",
+        "Does NOT ask the user to paste secrets into chat"
+      ],
+      "files": []
+    }
+  ]
+}

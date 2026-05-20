@@ -1,0 +1,107 @@
+{
+  "id": "copper-deco-luxury-landing",
+  "name": "Copper Deco Sunburst-Ruled Symmetrical Landing",
+  "description": "A luxury landing page built on rigid bilateral symmetry and Art Deco geometry — a deep navy-to-black background with repeating geometric fan and sunburst SVG patterns used as section dividers (not decoration — structural punctuation), copper-gradient borders on cards and frames that use a 3-stop linear gradient (dark copper → bright copper → dark copper) to simulate light catching a beveled metal edge, a tall condensed didone headline where the thin strokes are nearly invisible against the background creating a flickering tension between presence and absence, all content centered on a single vertical axis with decorative elements mirrored left-right, and a single hero image framed by geometric copper corner brackets (L-shaped SVG elements at each corner with a 16px gap to the image edge). Section dividers are horizontal rows of repeating chevron or fan shapes rendered as inline SVG in the copper gradient. The page has the posture of a building lobby, not a website.",
+  "vibes": {
+    "tags": [
+      "art-deco",
+      "dark-mode",
+      "luxury",
+      "copper-gradient",
+      "sunburst-dividers",
+      "fan-patterns",
+      "bilateral-symmetry",
+      "didone-hairlines",
+      "geometric-frames",
+      "corner-brackets",
+      "centered-axis",
+      "mirrored-ornament",
+      "css-gradient-metallic",
+      "navy-black",
+      "ceremonial",
+      "condensed-type"
+    ],
+    "mood": "Feels like stepping into the elevator lobby of a 1928 Manhattan hotel that just completed a meticulous restoration — the copper is polished but not garish, the geometry is precise enough to have been drafted with a ruling pen, the type is so tall and thin it looks like it might snap. Nothing is casual. Every element is placed as if a deviation of 4 pixels would collapse the entire composition. The sunburst dividers between sections feel like curtains being drawn back.",
+    "influences": [
+      "chrysler building lobby metalwork",
+      "cassandre nord express poster",
+      "the ned london interior design",
+      "erte fashion illustrations",
+      "tom ford black orchid packaging"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "still",
+      "formality": "ceremonial",
+      "complexity": "ornate",
+      "technicality": "crafted",
+      "temporality": "nostalgic-precision",
+      "weight": "monumental",
+      "playfulness": "solemn",
+      "luxury": "opulent"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0A0E1A",
+      "secondary": "#131B30",
+      "accent": "#C88A3E",
+      "background": "#070B15",
+      "surface": "#0F1628",
+      "text_primary": "#F5F0E0",
+      "text_secondary": "#8A8575",
+      "scheme": "near-black-with-copper-metallic",
+      "saturation": "muted-except-copper",
+      "contrast": "extreme",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "tall-condensed-didone",
+      "scale": "extreme",
+      "weight_emphasis": "hairline-display-regular-body",
+      "hierarchy_strategy": "size-and-condensation-driven",
+      "letter_spacing": "wide-tracked-uppercase",
+      "line_height": "tight-display-relaxed-body",
+      "case_treatment": "all-uppercase-headings"
+    },
+    "spacing": {
+      "density": "ceremonially-airy",
+      "rhythm": "symmetrical-sections-divided-by-ornament",
+      "whitespace_philosophy": "reverent-negative-space"
+    },
+    "shape": {
+      "border_radius": "none",
+      "geometry": "angular-with-fan-curves",
+      "edges": "precision-cut"
+    },
+    "depth": {
+      "strategy": "layered-ornament",
+      "shadow_character": "copper-glow-on-borders",
+      "z_layers": "ornament-behind-content"
+    },
+    "surface": {
+      "primary_texture": "brushed-metal-implied",
+      "gradient_type": "linear-3-stop",
+      "gradient_character": "metallic-light-simulation",
+      "blur_usage": "subtle-copper-glow",
+      "border_treatment": "copper-gradient-borders-and-corner-brackets",
+      "background_complexity": "layered-with-svg-ornament"
+    },
+    "motion_implied": {
+      "animation_style": "slow-shimmer",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "copper-glow-intensify"
+    },
+    "iconography": {
+      "style": "geometric-deco-svg",
+      "weight": "hairline",
+      "size_role": "structural-dividers"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "luxury",
+    "audience": "Affluent consumers who recognize Art Deco geometry as a permanent register of sophistication — those who would book a hotel based on its elevator lobby and expect a brand's website to have the posture of architecture, not software",
+    "device": "desktop"
+  }
+}

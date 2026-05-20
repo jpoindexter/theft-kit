@@ -1,0 +1,1 @@
+Use this skill when Engineer needs to investigate broken Stripe payments in a generated app: failed checkout, missing subscription access, webhook delivery failures, invoice payment failures, Vercel endpoint errors, missing Stripe env vars, wrong price IDs, or test/live mode mismatches. Start here before changing billing code.

@@ -1,0 +1,105 @@
+{
+  "id": "sunlit-bento-saas-pricing",
+  "name": "Sunlit Bento Grid Pricing Page",
+  "description": "A cheerful light-mode pricing page using a bento grid of rounded cards in white and soft yellow, with pill-shaped CTAs, playful comparison checkmarks, and a confident geometric sans that makes complex pricing feel approachable and transparent.",
+  "vibes": {
+    "tags": [
+      "bento-grid",
+      "light-mode",
+      "rounded",
+      "saas",
+      "pricing",
+      "playful",
+      "clean",
+      "yellow-accent",
+      "consumer-app",
+      "spacious",
+      "modern-saas",
+      "trustworthy",
+      "geometric",
+      "polished"
+    ],
+    "mood": "Feels like sunshine through a clean window onto a well-organized desk — optimistic, competent, the kind of pricing page where you don't need to squint at the fine print because there is none.",
+    "influences": [
+      "linear pricing page",
+      "notion pricing",
+      "vercel pricing",
+      "cal.com design",
+      "craft docs"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "energetic",
+      "formality": "casual",
+      "complexity": "moderate",
+      "technicality": "human",
+      "temporality": "contemporary",
+      "weight": "light",
+      "playfulness": "whimsical",
+      "luxury": "modest"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FFFFFF",
+      "secondary": "#FFF8E1",
+      "accent": "#FBBF24",
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "text_primary": "#111111",
+      "text_secondary": "#888888",
+      "scheme": "neutral-plus-accent",
+      "saturation": "saturated",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "scale": "generous",
+      "weight_emphasis": "bold",
+      "hierarchy_strategy": "weight-driven",
+      "letter_spacing": "tight",
+      "line_height": "relaxed",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "airy",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "breathing"
+    },
+    "shape": {
+      "border_radius": "rounded",
+      "geometry": "soft-rect",
+      "edges": "soft"
+    },
+    "depth": {
+      "strategy": "subtle-shadow",
+      "shadow_character": "diffused",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "subtle",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "spring",
+      "transition_feel": "physics-based",
+      "hover_philosophy": "elevation"
+    },
+    "iconography": {
+      "style": "filled",
+      "weight": "regular",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "pricing",
+    "domain": "product",
+    "audience": "Decision-makers and evaluators who scan quickly—those who respond to visual clarity and honesty in pricing communication",
+    "device": "responsive"
+  }
+}

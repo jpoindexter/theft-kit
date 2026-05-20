@@ -1,0 +1,106 @@
+{
+  "id": "midnight-aurora-ai-saas-landing",
+  "name": "Midnight Grid AI Operations Console Landing",
+  "description": "A dark AI SaaS landing page built on a visible graph-paper grid background (1px #ffffff08 lines at 40px intervals) that makes the entire viewport feel like an engineering schematic — a split-panel hero with a left column of monospace headline + status-pill CTA and a right column containing a live agent activity feed (timestamped log entries with green/amber status dots scrolling upward), horizontal status bars showing system throughput with segment fills, a metrics strip of monospaced numerals with blinking cursor carets, and section dividers rendered as labeled dashed grid lines with coordinate markers.",
+  "vibes": {
+    "tags": [
+      "dark-mode",
+      "graph-paper-grid",
+      "ai-ops",
+      "terminal-aesthetic",
+      "monospace-heavy",
+      "green-on-dark",
+      "status-indicators",
+      "live-feed",
+      "split-panel",
+      "engineering-schematic",
+      "signal-coloring",
+      "dense-data",
+      "operations-console",
+      "hud-elements",
+      "structured"
+    ],
+    "mood": "Feels like logging into a classified planetary engineering console at 3am — the grid background is the graph paper your systems architect scribbled the original design on, the green status dots are heartbeats of actual running agents, and the monospace type treats marketing copy like it's stdout.",
+    "influences": [
+      "datadog real-time dashboards",
+      "github actions live log output",
+      "linear changelog timeline",
+      "bloomberg terminal data density",
+      "vercel deployment log interface"
+    ],
+    "axes": {
+      "temperature": "cold",
+      "energy": "vigilant",
+      "formality": "technical",
+      "complexity": "dense",
+      "technicality": "engineered",
+      "temporality": "futuristic",
+      "weight": "heavy",
+      "playfulness": "dead-serious",
+      "luxury": "utilitarian"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#0A0A0C",
+      "secondary": "#111114",
+      "accent": "#22C55E",
+      "background": "#09090B",
+      "surface": "rgba(255, 255, 255, 0.03)",
+      "text_primary": "rgba(255, 255, 255, 0.88)",
+      "text_secondary": "rgba(255, 255, 255, 0.40)",
+      "scheme": "signal-on-dark",
+      "saturation": "selective-vivid",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "monospace-primary",
+      "scale": "functional",
+      "weight_emphasis": "medium",
+      "hierarchy_strategy": "weight-and-color",
+      "letter_spacing": "normal",
+      "line_height": "snug",
+      "case_treatment": "lowercase-dominant"
+    },
+    "spacing": {
+      "density": "dense",
+      "rhythm": "grid-locked",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "minimal",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat-with-glow",
+      "shadow_character": "colored-glow",
+      "z_layers": "shallow"
+    },
+    "surface": {
+      "primary_texture": "graph-paper-grid",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "dashed-subtle",
+      "background_complexity": "grid-overlay"
+    },
+    "motion_implied": {
+      "animation_style": "data-stream",
+      "transition_feel": "instant",
+      "hover_philosophy": "row-highlight"
+    },
+    "iconography": {
+      "style": "status-dots",
+      "weight": "bold",
+      "size_role": "semantic-signal"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "ai",
+    "audience": "Infrastructure engineers and AI ops leads who read server logs recreationally — they want the marketing page to feel like the product already works, not like someone Figma'd a pitch deck",
+    "device": "desktop"
+  }
+}

@@ -1,0 +1,1 @@
+Use this bundled GIC coding skill for platform-managed implementation playbooks that require code-aware planning or direct repository coding. It consolidates the prior coding-oriented default skills into one shared guide for site rollout, analytics instrumentation, schema markup implementation, Vercel Workflows implementation, and Stripe billing scaffolding.

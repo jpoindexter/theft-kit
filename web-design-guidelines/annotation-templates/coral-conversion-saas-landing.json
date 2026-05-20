@@ -1,0 +1,108 @@
+{
+  "id": "coral-conversion-saas-landing",
+  "name": "Coral Bento Editorial Product Magazine Landing",
+  "description": "A warm off-white (#FBF8F4) bento grid layout with asymmetric panels of varying height — NOT a hero/features/pricing template but a magazine editorial about a product. Each bento panel has a corner-anchored monospace label in 10px uppercase tracking-widest (e.g., 'SIGNAL PROCESSING', 'AGENT STATUS', '< BEFORE / AFTER >') pinned to the top-left with 12px inset. Headlines in Instrument Serif at 48–72px paired with Inter body text and JetBrains Mono for all data, metrics, and code snippets. One large dark panel (#1A1A2E) contains an animated waveform or oscilloscope-style SVG visualization with coral-colored (#F97316) stroke paths. A side-by-side before/after comparison uses a light-surface card vs. a dark-surface card to show transformation. A horizontal-scrolling row of agent-status chips (pill shapes with a colored dot indicator + monospace label) overflows the grid edge. The grid gaps are 1px hairlines that become structural, not just spacing. This page sells by editorial confidence, not conversion psychology.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "bento-grid",
+      "asymmetric-panels",
+      "corner-labels",
+      "monospace-metadata",
+      "editorial-product",
+      "magazine-layout",
+      "instrument-serif",
+      "inter-body",
+      "jetbrains-mono-data",
+      "waveform-visualization",
+      "before-after",
+      "horizontal-scroll",
+      "agent-status-chips",
+      "warm-off-white",
+      "coral-accent",
+      "mixed-surface-dark-light"
+    ],
+    "mood": "Feels like a feature spread in a design magazine that happens to have working CTAs — the bento grid says 'we art-directed this like a physical layout,' the corner-anchored monospace labels say 'this is a system, not a template,' and the dark waveform panel says 'there's actual engineering under the editorial surface.' You don't scroll to find the pricing; you scroll because the layout keeps revealing new information like turning pages.",
+    "influences": [
+      "linear.app marketing site bento layout",
+      "vercel ship conference visual identity",
+      "monocle magazine product features",
+      "teenage engineering product pages",
+      "apple intelligence marketing grid"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "confident",
+      "formality": "editorial",
+      "complexity": "rich",
+      "technicality": "designed-engineering",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "restrained-wit",
+      "luxury": "elevated-casual"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FBF8F4",
+      "secondary": "#F0EDE7",
+      "accent": "#F97316",
+      "background": "#FBF8F4",
+      "surface": "#FFFFFF",
+      "text_primary": "#1A1A2E",
+      "text_secondary": "#6B7280",
+      "scheme": "warm-neutral-with-coral-and-dark-panel",
+      "saturation": "desaturated-with-one-saturated-accent",
+      "contrast": "high-within-dark-panels",
+      "surface_mode": "mixed-light-dominant"
+    },
+    "typography": {
+      "classification": "instrument-serif-headlines-inter-body-jetbrains-mono-data",
+      "scale": "dramatic-headlines-compact-labels",
+      "weight_emphasis": "medium-headlines-regular-body-mono-labels",
+      "hierarchy_strategy": "panel-anchored-with-corner-labels",
+      "letter_spacing": "tracked-labels-tight-headlines-normal-body",
+      "line_height": "snug-headlines-relaxed-body",
+      "case_treatment": "uppercase-corner-labels-mixed-headlines"
+    },
+    "spacing": {
+      "density": "dense-grid-airy-panels",
+      "rhythm": "bento-asymmetric",
+      "whitespace_philosophy": "panel-interior-breathing"
+    },
+    "shape": {
+      "border_radius": "small-panels-pill-chips",
+      "geometry": "rectilinear-grid-with-pill-accents",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "surface-contrast",
+      "shadow_character": "none",
+      "z_layers": "flat-panels-with-dark-light-contrast"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "1px-hairline-grid-gaps",
+      "background_complexity": "mixed-surface-panels"
+    },
+    "motion_implied": {
+      "animation_style": "waveform-oscillation-and-horizontal-scroll",
+      "transition_feel": "physics-based",
+      "hover_philosophy": "panel-lift"
+    },
+    "iconography": {
+      "style": "status-dot-indicators",
+      "weight": "regular",
+      "size_role": "data-communication"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "saas",
+    "audience": "Design-literate product evaluators who distrust template-style landing pages — those who are more likely to sign up for a product that looks like it was art-directed than one that looks like it was A/B tested",
+    "device": "responsive"
+  }
+}

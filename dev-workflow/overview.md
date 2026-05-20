@@ -1,0 +1,1 @@
+Use before starting implementation work in a managed coding-agent sandbox. Covers the repository checkout, branch constraints, already-warmed dev server/GIC browser setup, browser verification, commit/push timing, default PR ownership, and final handoff evidence.

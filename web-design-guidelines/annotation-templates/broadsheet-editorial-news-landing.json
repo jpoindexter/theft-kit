@@ -1,0 +1,107 @@
+{
+  "id": "broadsheet-editorial-news-landing",
+  "name": "Broadsheet Six-Column Ruled Grid Landing",
+  "description": "A newspaper front-page rendered faithfully on screen — a visible 6-column CSS grid with 1px ink-black hairline vertical rules running the full viewport height, a blackletter masthead with a thin-rule dateline and edition number underneath, a lead story spanning 4 columns with a 60pt slab-serif headline set in tight leading over a full-bleed editorial photograph, a 2-column sidebar of secondary stories stacked with bold kickers and 14px body text, pull quotes set in 36px italic serif with a 3px vertical rule on the left edge, 'continued on A3' style cross-reference links in small caps at story truncation points, and a classified-ad footer rendered as a dense 6-column micro-grid of 10px monospaced listings separated by dotted rules — broadsheet authority where the grid IS the design, not a container for it.",
+  "vibes": {
+    "tags": [
+      "editorial",
+      "newspaper",
+      "broadsheet",
+      "6-column-grid",
+      "hairline-rules",
+      "blackletter-masthead",
+      "slab-serif",
+      "light-mode",
+      "dense",
+      "monochrome",
+      "pull-quotes",
+      "classified-ads",
+      "cross-references",
+      "vertical-rules",
+      "ink-on-newsprint",
+      "typographic-hierarchy"
+    ],
+    "mood": "Feels like unfolding the front page of a broadsheet that's been printed continuously since 1847 — ink so fresh it smudges, columns so precise they imply a compositing room somewhere in the basement, and a classified section so dense you need a magnifying glass. The vertical rules aren't decoration; they're load-bearing walls between stories that refuse to bleed into each other.",
+    "influences": [
+      "financial times front page print layout",
+      "new york times above-the-fold grid",
+      "monocle newspaper supplement",
+      "the guardian berliner-format print edition",
+      "bloomberg businessweek contents page"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "calm",
+      "formality": "institutional",
+      "complexity": "dense",
+      "technicality": "human",
+      "temporality": "timeless",
+      "weight": "monumental",
+      "playfulness": "serious",
+      "luxury": "austere"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#FDFBF7",
+      "secondary": "#F2EDE4",
+      "accent": "#C41E1E",
+      "background": "#FDFBF7",
+      "surface": "#FFFFFF",
+      "text_primary": "#1A1A1A",
+      "text_secondary": "#6B6B6B",
+      "scheme": "neutral-plus-accent",
+      "saturation": "desaturated",
+      "contrast": "extreme",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "slab-serif-headlines-with-transitional-body",
+      "scale": "dramatic",
+      "weight_emphasis": "black-headlines-regular-body",
+      "hierarchy_strategy": "column-span-and-size-driven",
+      "letter_spacing": "tight-headlines-normal-body",
+      "line_height": "cramped",
+      "case_treatment": "uppercase-kickers-mixed-headlines"
+    },
+    "spacing": {
+      "density": "packed",
+      "rhythm": "column-locked",
+      "whitespace_philosophy": "absent-by-design"
+    },
+    "shape": {
+      "border_radius": "none",
+      "geometry": "strictly-rectilinear",
+      "edges": "razor"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "newsprint",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "hairline-rules-everywhere",
+      "background_complexity": "solid-with-texture"
+    },
+    "motion_implied": {
+      "animation_style": "none",
+      "transition_feel": "instant",
+      "hover_philosophy": "underline-only"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "none",
+      "size_role": "absent"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "media",
+    "audience": "Readers who still fold newspapers into thirds on the subway and judge publications by their masthead — those who equate column density with editorial seriousness and find whitespace suspicious",
+    "device": "desktop"
+  }
+}

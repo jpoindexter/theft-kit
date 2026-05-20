@@ -1,0 +1,105 @@
+{
+  "id": "oxide-industrial-devtool-settings",
+  "name": "Oxide Industrial Settings Panel",
+  "description": "A dense settings interface for a infrastructure system, built on a dim charcoal ground with orange warning accents, hairline table borders, toggle rows in a tight vertical stack, and monospaced labels throughout — the UI equivalent of a well-organized control room.",
+  "vibes": {
+    "tags": [
+      "dark-mode",
+      "dense",
+      "dev-tool-aesthetic",
+      "industrial",
+      "monospace",
+      "data-dense",
+      "enterprise",
+      "structured",
+      "serious",
+      "functional",
+      "grid-based",
+      "technical",
+      "dim",
+      "utilitarian"
+    ],
+    "mood": "Feels like configuring a system that runs something important — no hand-holding, no illustrations, just rows of clearly labeled controls that trust you to know what they do. The orange warning states are the only color because color is for signals, not decoration.",
+    "influences": [
+      "oxide computer company rack manager",
+      "grafana settings",
+      "tailscale admin panel",
+      "cockroachdb console",
+      "planetscale dashboard"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "calm",
+      "formality": "corporate",
+      "complexity": "rich",
+      "technicality": "cybernetic",
+      "temporality": "contemporary",
+      "weight": "grounded",
+      "playfulness": "serious",
+      "luxury": "utilitarian"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#1C1C1E",
+      "secondary": "#2C2C2E",
+      "accent": "#FF9500",
+      "background": "#161618",
+      "surface": "#1C1C1E",
+      "text_primary": "#E5E5E7",
+      "text_secondary": "#636366",
+      "scheme": "neutral-plus-accent",
+      "saturation": "muted",
+      "contrast": "moderate",
+      "surface_mode": "dim"
+    },
+    "typography": {
+      "classification": "mono",
+      "scale": "compressed",
+      "weight_emphasis": "regular",
+      "hierarchy_strategy": "case-driven",
+      "letter_spacing": "tracked",
+      "line_height": "snug",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "dense",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "functional"
+    },
+    "shape": {
+      "border_radius": "subtle",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "subtle",
+      "blur_usage": "none",
+      "border_treatment": "subtle",
+      "background_complexity": "solid"
+    },
+    "motion_implied": {
+      "animation_style": "micro",
+      "transition_feel": "snappy",
+      "hover_philosophy": "subtle-shift"
+    },
+    "iconography": {
+      "style": "outlined",
+      "weight": "light",
+      "size_role": "functional"
+    }
+  },
+  "meta": {
+    "type": "settings",
+    "domain": "settings",
+    "audience": "Advanced technical users managing complex systems—those who prioritize signal clarity and efficiency over decorative elements",
+    "device": "desktop"
+  }
+}

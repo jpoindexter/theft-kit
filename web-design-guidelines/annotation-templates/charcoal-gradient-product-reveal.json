@@ -1,0 +1,106 @@
+{
+  "id": "charcoal-gradient-product-reveal",
+  "name": "Charcoal Gradient Cinematic Product Reveal Landing",
+  "description": "A cinematic dark product reveal page with keynote-presentation scroll pacing — each viewport-height section holds exactly one idea. The hero is a thin light-weight sans headline in off-white floating over a charcoal-to-black radial gradient void. Scroll reveals a 3-panel product mockup (narrow sidebar navigation + main stats dashboard + agent detail panel) inside a window frame with traffic-light red/yellow/green title-bar dots and a subtle 1px border. Below, numbered editorial value blocks (01 / 02 / 03 in large faded monospace numerals) each pair a single sentence with a supporting detail panel. The entire page is a choreographed vertical unveiling — no lateral movement, no grid, just one thing after another emerging from darkness.",
+  "vibes": {
+    "tags": [
+      "dark-mode",
+      "cinematic-scroll",
+      "product-reveal",
+      "keynote-pacing",
+      "radial-gradient",
+      "traffic-light-dots",
+      "3-panel-mockup",
+      "numbered-sections",
+      "monospace-numerals",
+      "one-idea-per-viewport",
+      "vertical-choreography",
+      "editorial-numbering",
+      "window-chrome",
+      "dramatic",
+      "void-background"
+    ],
+    "mood": "Feels like the lights dimming at an Apple keynote right before the 'one more thing' — the radial gradient is the darkness of a stage, each scroll-stop is a slide transition, and the traffic-light dots on the mockup window are the only signal that this is software and not a film title sequence.",
+    "influences": [
+      "apple product launch page scroll choreography",
+      "teenage engineering product photography on black",
+      "linear changelog cinematic sections",
+      "nothing phone launch page reveal pacing",
+      "bang & olufsen single-product-per-viewport layout"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "controlled",
+      "formality": "formal",
+      "complexity": "sequential",
+      "technicality": "engineered",
+      "temporality": "contemporary",
+      "weight": "heavy",
+      "playfulness": "serious",
+      "luxury": "cinematic"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#1A1A1A",
+      "secondary": "#0D0D0D",
+      "accent": "#E5E5E5",
+      "background": "#0A0A0A",
+      "surface": "#1A1A1A",
+      "text_primary": "#F5F5F5",
+      "text_secondary": "#737373",
+      "scheme": "monochrome",
+      "saturation": "desaturated",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "geometric-sans-plus-monospace-numerals",
+      "scale": "dramatic",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "size-and-opacity",
+      "letter_spacing": "tracked",
+      "line_height": "relaxed",
+      "case_treatment": "sentence-case"
+    },
+    "spacing": {
+      "density": "cavernous",
+      "rhythm": "viewport-locked",
+      "whitespace_philosophy": "void-as-stage"
+    },
+    "shape": {
+      "border_radius": "subtle",
+      "geometry": "rectilinear",
+      "edges": "crisp"
+    },
+    "depth": {
+      "strategy": "emergence-from-dark",
+      "shadow_character": "absent",
+      "z_layers": "sequential"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "radial",
+      "gradient_character": "spotlight-from-center",
+      "blur_usage": "depth-of-field",
+      "border_treatment": "hairline-on-mockup",
+      "background_complexity": "gradient-void"
+    },
+    "motion_implied": {
+      "animation_style": "scroll-triggered-fade",
+      "transition_feel": "slow-reveal",
+      "hover_philosophy": "none"
+    },
+    "iconography": {
+      "style": "traffic-light-dots",
+      "weight": "thin",
+      "size_role": "window-chrome"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "saas",
+    "audience": "Product leaders and technical buyers who expect the marketing page to demonstrate the same production quality as the product — people who notice that the mockup has three panels and the scroll has intentional pacing",
+    "device": "desktop"
+  }
+}

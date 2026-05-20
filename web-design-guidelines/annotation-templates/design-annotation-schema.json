@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Design Annotation",
+  "description": "Annotation format for cataloging React design templates by visual style, vibes, and aesthetic properties. Used by agents to search and match designs to user intent.",
+  "type": "object",
+  "required": ["id", "name", "description", "vibes", "visual", "meta"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this design (e.g. kebab-case slug)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name for the design"
+    },
+    "description": {
+      "type": "string",
+      "description": "1-2 sentence plain english summary of what this design is and what it looks/feels like"
+    },
+    "vibes": {
+      "type": "object",
+      "required": ["tags", "mood", "axes"],
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Open vocabulary array of aesthetic/style descriptors. Be generous — 5-15 tags. Include both concrete (glassmorphism, dark-mode) and abstract (dreamy, corporate-cool) terms."
+        },
+        "mood": {
+          "type": "string",
+          "description": "Freeform 1-2 sentence description of the overall feeling and emotional tone of the design"
+        },
+        "influences": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Known products, designers, design movements, or eras this design evokes (e.g. 'linear app', 'dieter rams', 'Y2K', 'vercel dashboard')"
+        },
+        "axes": {
+          "type": "object",
+          "description": "Scalar aesthetic dimensions for filtering and comparison",
+          "properties": {
+            "temperature": { "type": "string", "enum": ["frigid", "cool", "neutral", "warm", "hot"] },
+            "energy": { "type": "string", "enum": ["serene", "calm", "balanced", "energetic", "intense", "frenetic"] },
+            "formality": { "type": "string", "enum": ["irreverent", "casual", "balanced", "formal", "corporate", "ceremonial"] },
+            "complexity": { "type": "string", "enum": ["stark", "minimal", "moderate", "rich", "maximalist", "baroque"] },
+            "technicality": { "type": "string", "enum": ["organic", "human", "balanced", "technical", "engineered", "cybernetic"] },
+            "temporality": { "type": "string", "enum": ["retro", "nostalgic", "timeless", "contemporary", "futuristic", "sci-fi"] },
+            "weight": { "type": "string", "enum": ["ethereal", "light", "balanced", "grounded", "heavy", "monumental"] },
+            "playfulness": { "type": "string", "enum": ["serious", "restrained", "balanced", "whimsical", "playful", "absurd"] },
+            "luxury": { "type": "string", "enum": ["utilitarian", "modest", "balanced", "refined", "premium", "opulent"] }
+          }
+        }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "properties": {
+        "palette": {
+          "type": "object",
+          "properties": {
+            "dominant": { "type": "string", "description": "Primary brand/UI color as #hex" },
+            "secondary": { "type": "string", "description": "Secondary color as #hex" },
+            "accent": { "type": "string", "description": "Accent/highlight color as #hex" },
+            "background": { "type": "string", "description": "Main background color as #hex" },
+            "surface": { "type": "string", "description": "Card/component surface color as #hex" },
+            "text_primary": { "type": "string", "description": "Primary text color as #hex" },
+            "text_secondary": { "type": "string", "description": "Secondary/muted text color as #hex" },
+            "scheme": { "type": "string", "enum": ["monochrome", "analogous", "complementary", "split-complementary", "triadic", "tetradic", "neutral-plus-accent", "dark-mode-neon", "muted-earth", "high-contrast-duo", "pastel-wash", "jewel-tone"] },
+            "saturation": { "type": "string", "enum": ["desaturated", "muted", "balanced", "saturated", "vivid", "neon"] },
+            "contrast": { "type": "string", "enum": ["whisper", "low", "moderate", "high", "stark", "extreme"] },
+            "surface_mode": { "type": "string", "enum": ["light", "dark", "dim", "mixed"] }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "classification": { "type": "string", "enum": ["geometric-sans", "humanist-sans", "neo-grotesque", "grotesque", "transitional-serif", "modern-serif", "slab", "didone", "display", "handwritten", "mono", "mixed"] },
+            "scale": { "type": "string", "enum": ["compressed", "tight", "normal", "generous", "dramatic", "extreme"] },
+            "weight_emphasis": { "type": "string", "enum": ["hairline", "light", "regular", "medium", "bold", "black", "ultra-black"] },
+            "hierarchy_strategy": { "type": "string", "enum": ["size-driven", "weight-driven", "color-driven", "case-driven", "mixed"] },
+            "letter_spacing": { "type": "string", "enum": ["tight", "normal", "tracked", "wide", "ultra-wide"] },
+            "line_height": { "type": "string", "enum": ["cramped", "snug", "normal", "relaxed", "loose"] },
+            "case_treatment": { "type": "string", "enum": ["normal", "uppercase-headings", "all-uppercase", "small-caps", "mixed-case"] }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "properties": {
+            "density": { "type": "string", "enum": ["compressed", "dense", "normal", "airy", "expansive", "cavernous"] },
+            "rhythm": { "type": "string", "enum": ["uniform", "alternating", "progressive", "asymmetric"] },
+            "whitespace_philosophy": { "type": "string", "enum": ["functional", "breathing", "statement", "void"] }
+          }
+        },
+        "shape": {
+          "type": "object",
+          "properties": {
+            "border_radius": { "type": "string", "enum": ["sharp", "2px", "subtle", "rounded", "pill", "circular", "mixed"] },
+            "geometry": { "type": "string", "enum": ["rectilinear", "soft-rect", "rounded", "organic", "angular", "mixed"] },
+            "edges": { "type": "string", "enum": ["crisp", "soft", "blurred", "feathered"] }
+          }
+        },
+        "depth": {
+          "type": "object",
+          "properties": {
+            "strategy": { "type": "string", "enum": ["flat", "subtle-shadow", "elevation-system", "layered", "parallax", "3d"] },
+            "shadow_character": { "type": "string", "enum": ["none", "tight", "diffused", "colored", "long-cast", "inner"] },
+            "z_layers": { "type": "string", "enum": ["single", "shallow", "moderate", "deep", "extreme"] }
+          }
+        },
+        "surface": {
+          "type": "object",
+          "properties": {
+            "primary_texture": { "type": "string", "enum": ["clean", "grain", "noise", "paper", "fabric", "metal", "glass"] },
+            "gradient_type": { "type": "string", "enum": ["none", "linear", "radial", "conic", "mesh", "multi-stop", "animated"] },
+            "gradient_character": { "type": "string", "enum": ["subtle", "smooth", "bold", "duotone", "aurora", "iridescent"] },
+            "blur_usage": { "type": "string", "enum": ["none", "background-only", "frosted-glass", "depth-of-field", "pervasive"] },
+            "border_treatment": { "type": "string", "enum": ["none", "subtle", "defined", "accent-colored", "gradient-border", "glow"] },
+            "background_complexity": { "type": "string", "enum": ["solid", "simple-gradient", "textured", "layered", "illustrative", "animated"] }
+          }
+        },
+        "motion_implied": {
+          "type": "object",
+          "properties": {
+            "animation_style": { "type": "string", "enum": ["none", "micro", "smooth", "spring", "bouncy", "cinematic", "liquid"] },
+            "transition_feel": { "type": "string", "enum": ["instant", "snappy", "ease", "slow-smooth", "dramatic", "physics-based"] },
+            "hover_philosophy": { "type": "string", "enum": ["none", "subtle-shift", "color-change", "elevation", "expand", "reveal", "glow"] }
+          }
+        },
+        "iconography": {
+          "type": "object",
+          "properties": {
+            "style": { "type": "string", "enum": ["outlined", "filled", "duotone", "custom-illustrated", "emoji", "none"] },
+            "weight": { "type": "string", "enum": ["thin", "light", "regular", "bold"] },
+            "size_role": { "type": "string", "enum": ["decorative", "functional", "hero", "mixed"] }
+          }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "type": { "type": "string", "enum": ["landing", "dashboard", "settings", "form", "card", "modal", "nav", "hero", "pricing", "profile", "onboarding", "empty-state", "error", "gallery", "detail", "checkout", "auth"] },
+        "domain": { "type": "string", "enum": ["saas", "ecommerce", "social", "finance", "health", "creative", "dev-tools", "marketing", "media", "education", "ai", "gaming", "luxury", "agency"] },
+        "audience": { "type": "string", "description": "Freeform description of target audience" },
+        "device": { "type": "string", "enum": ["desktop", "mobile", "responsive", "tablet"] }
+      }
+    }
+  }
+}

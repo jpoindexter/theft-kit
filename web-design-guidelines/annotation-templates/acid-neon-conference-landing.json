@@ -1,0 +1,107 @@
+{
+  "id": "acid-neon-conference-landing",
+  "name": "Acid Neon Terminal-Poster Conference Landing",
+  "description": "A conference landing page composed as a single continuous poster — the date fills 100vh as a stacked typographic block (one element per line at 30vw, ultra-black weight) with corner-anchored metadata in monospace at each viewport corner (location top-right, URL bottom-left, ticket CTA bottom-right). Below, a full-width black-background marquee scrolls keywords at 140px continuously. The speaker lineup is a black-on-light terminal dump: monospace fixed-column table (# / NAME / ROLE / TALK-SLUG) with neon green (#39FF14) full-row highlight on hover, prefixed by a terminal command line ($ gi summit --list-speakers). Schedule is a compact ledger format (TIME / TITLE / SPEAKER in ruled rows), not cards. Stats are a single inline horizontal strip of value-label pairs, not a grid. Sections divided by 4px solid black rules. No imagery, no icons, no cards, no rounded corners — density is the design. Every pixel is information.",
+  "vibes": {
+    "tags": [
+      "light-mode",
+      "poster-composition",
+      "viewport-scale-date",
+      "terminal-dump",
+      "neon-green-row-highlight",
+      "corner-anchored-metadata",
+      "continuous-marquee",
+      "monospace-fixed-columns",
+      "ledger-schedule",
+      "inline-stats",
+      "4px-rules",
+      "no-imagery",
+      "all-uppercase",
+      "ultra-black-weight",
+      "density-is-design",
+      "mixed-surface-light-dark"
+    ],
+    "mood": "Feels like the wayfinding signage at a design festival got concatenated with a database query result and projected at 400% — the date is a poster you can read from across the room, the speaker list is stdout from a CLI, the green highlight rows pulse like a rave wristband, and the thick black rules slam sections together like train cars coupling.",
+    "influences": [
+      "offf barcelona 2023 identity full-bleed type",
+      "virgil abloh exhibition signage system",
+      "figma config stacked date lockup",
+      "bloomberg terminal fixed-column data",
+      "jenny holzer LED text installations"
+    ],
+    "axes": {
+      "temperature": "neutral",
+      "energy": "frenetic",
+      "formality": "irreverent",
+      "complexity": "dense",
+      "technicality": "raw",
+      "temporality": "urgent",
+      "weight": "crushing",
+      "playfulness": "confrontational",
+      "luxury": "anti-luxury"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#F5F5F5",
+      "secondary": "#0A0A0A",
+      "accent": "#39FF14",
+      "background": "#F5F5F5",
+      "surface": "#0A0A0A",
+      "text_primary": "#0A0A0A",
+      "text_secondary": "#666666",
+      "scheme": "mixed-surface-with-neon-signal",
+      "saturation": "neon-single",
+      "contrast": "extreme",
+      "surface_mode": "mixed"
+    },
+    "typography": {
+      "classification": "grotesque-display-with-monospace-data",
+      "scale": "viewport-filling",
+      "weight_emphasis": "ultra-black",
+      "hierarchy_strategy": "scale-extreme",
+      "letter_spacing": "tight-negative",
+      "line_height": "crushed",
+      "case_treatment": "all-uppercase"
+    },
+    "spacing": {
+      "density": "packed",
+      "rhythm": "relentless",
+      "whitespace_philosophy": "denied"
+    },
+    "shape": {
+      "border_radius": "zero",
+      "geometry": "rectilinear",
+      "edges": "razor"
+    },
+    "depth": {
+      "strategy": "flat",
+      "shadow_character": "none",
+      "z_layers": "single"
+    },
+    "surface": {
+      "primary_texture": "clean",
+      "gradient_type": "none",
+      "gradient_character": "none",
+      "blur_usage": "none",
+      "border_treatment": "4px-black-rules",
+      "background_complexity": "mixed-light-and-dark-sections"
+    },
+    "motion_implied": {
+      "animation_style": "continuous-marquee",
+      "transition_feel": "instant",
+      "hover_philosophy": "full-row-neon-bar"
+    },
+    "iconography": {
+      "style": "none",
+      "weight": "none",
+      "size_role": "absent"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "marketing",
+    "audience": "Creative technologists who screenshot conference websites and post them in design Discords — people who buy tickets because the page itself was the most interesting design work they saw that week",
+    "device": "responsive"
+  }
+}

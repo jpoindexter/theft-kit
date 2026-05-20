@@ -1,0 +1,105 @@
+{
+  "id": "vaporwave-gradient-music-player",
+  "name": "Vaporwave Gradient Immersive Player Interface",
+  "description": "A full-screen media player UI drenched in pink-to-cyan mesh gradients, with a centered artwork circle, translucent frosted playback controls, and a chrome-finished progress bar — nostalgia for a future that never happened.",
+  "vibes": {
+    "tags": [
+      "vaporwave",
+      "gradient-heavy",
+      "mesh-gradient",
+      "music",
+      "glassmorphism",
+      "dreamy",
+      "retro-futurism",
+      "iridescent",
+      "bold",
+      "immersive",
+      "consumer-app",
+      "dark-mode",
+      "nostalgic",
+      "y2k"
+    ],
+    "mood": "Feels like listening to a slowed-and-reverbed playlist in a neon-lit hotel lobby that exists only on the internet — melancholic beauty processed through 12 Instagram filters until it becomes something new.",
+    "influences": [
+      "windows media player classic visualizers",
+      "spotify wrapped 2023",
+      "poolside.fm",
+      "vaporwave album covers",
+      "ios 7 music app blur aesthetic"
+    ],
+    "axes": {
+      "temperature": "cool",
+      "energy": "calm",
+      "formality": "irreverent",
+      "complexity": "minimal",
+      "technicality": "human",
+      "temporality": "retro",
+      "weight": "ethereal",
+      "playfulness": "playful",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#E040FB",
+      "secondary": "#00E5FF",
+      "accent": "#FF6090",
+      "background": "#1A0030",
+      "surface": "rgba(255, 255, 255, 0.08)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255, 255, 255, 0.5)",
+      "scheme": "analogous",
+      "saturation": "vivid",
+      "contrast": "high",
+      "surface_mode": "dark"
+    },
+    "typography": {
+      "classification": "geometric-sans",
+      "scale": "normal",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "wide",
+      "line_height": "relaxed",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "expansive",
+      "rhythm": "uniform",
+      "whitespace_philosophy": "statement"
+    },
+    "shape": {
+      "border_radius": "circular",
+      "geometry": "rounded",
+      "edges": "blurred"
+    },
+    "depth": {
+      "strategy": "layered",
+      "shadow_character": "colored",
+      "z_layers": "moderate"
+    },
+    "surface": {
+      "primary_texture": "glass",
+      "gradient_type": "mesh",
+      "gradient_character": "iridescent",
+      "blur_usage": "pervasive",
+      "border_treatment": "glow",
+      "background_complexity": "animated"
+    },
+    "motion_implied": {
+      "animation_style": "liquid",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "glow"
+    },
+    "iconography": {
+      "style": "filled",
+      "weight": "regular",
+      "size_role": "hero"
+    }
+  },
+  "meta": {
+    "type": "detail",
+    "domain": "product",
+    "audience": "Users for whom interface is an extension of their content experience—those who see visual design as equally important as functionality",
+    "device": "mobile"
+  }
+}

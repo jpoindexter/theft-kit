@@ -1,0 +1,105 @@
+{
+  "id": "ink-wash-storytelling-scroll",
+  "name": "Ink Wash Long-Form Narrative Scroll",
+  "description": "A long-form vertical narrative site with sumi-e ink wash illustrations bleeding into a warm rice-paper background, calligraphic display headings, and a single-column flow where text and imagery merge through parallax opacity layers — the scroll itself is the story.",
+  "vibes": {
+    "tags": [
+      "editorial",
+      "organic",
+      "monochrome",
+      "ink-wash",
+      "parallax",
+      "storytelling",
+      "calligraphic",
+      "spacious",
+      "serene",
+      "art-gallery",
+      "paper-texture",
+      "website-like",
+      "immersive",
+      "timeless"
+    ],
+    "mood": "Feels like unrolling a scroll painting in a quiet room with rain outside — unhurried, contemplative, each section reveals itself with the patience of ink diffusing through wet paper.",
+    "influences": [
+      "apple product reveal scroll pages",
+      "snow fall nyt interactive longform",
+      "japanese ink painting (sumi-e)",
+      "muji brand identity",
+      "pudding.cool data essays"
+    ],
+    "axes": {
+      "temperature": "warm",
+      "energy": "serene",
+      "formality": "formal",
+      "complexity": "moderate",
+      "technicality": "organic",
+      "temporality": "timeless",
+      "weight": "ethereal",
+      "playfulness": "serious",
+      "luxury": "refined"
+    }
+  },
+  "visual": {
+    "palette": {
+      "dominant": "#F5F0E4",
+      "secondary": "#E8E0D0",
+      "accent": "#1A1A1A",
+      "background": "#F5F0E4",
+      "surface": "#F5F0E4",
+      "text_primary": "#1A1A1A",
+      "text_secondary": "#8A8172",
+      "scheme": "monochrome",
+      "saturation": "desaturated",
+      "contrast": "moderate",
+      "surface_mode": "light"
+    },
+    "typography": {
+      "classification": "display",
+      "scale": "extreme",
+      "weight_emphasis": "light",
+      "hierarchy_strategy": "size-driven",
+      "letter_spacing": "normal",
+      "line_height": "loose",
+      "case_treatment": "normal"
+    },
+    "spacing": {
+      "density": "cavernous",
+      "rhythm": "progressive",
+      "whitespace_philosophy": "void"
+    },
+    "shape": {
+      "border_radius": "sharp",
+      "geometry": "organic",
+      "edges": "feathered"
+    },
+    "depth": {
+      "strategy": "parallax",
+      "shadow_character": "none",
+      "z_layers": "deep"
+    },
+    "surface": {
+      "primary_texture": "paper",
+      "gradient_type": "linear",
+      "gradient_character": "subtle",
+      "blur_usage": "depth-of-field",
+      "border_treatment": "none",
+      "background_complexity": "textured"
+    },
+    "motion_implied": {
+      "animation_style": "cinematic",
+      "transition_feel": "slow-smooth",
+      "hover_philosophy": "none"
+    },
+    "iconography": {
+      "style": "custom-illustrated",
+      "weight": "thin",
+      "size_role": "hero"
+    }
+  },
+  "meta": {
+    "type": "landing",
+    "domain": "reader",
+    "audience": "Thoughtful readers who value pacing and craft—those who appreciate when digital narratives are given the same care as editorial print design",
+    "device": "desktop"
+  }
+}

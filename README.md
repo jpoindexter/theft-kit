@@ -1,47 +1,60 @@
-# agents
+# theft-kit
 
-Personal library of Claude Code agents. Subagent definitions organized by domain.
+A centralized library of reusable `SKILL.md` modules for Claude Code and other AI coding agents. Skills are structured prompt packets that give agents specialized knowledge and workflows — loaded on demand via the Claude Code plugin system or symlinked globally.
 
-## Install
+## What is a skill?
 
-Clone into any location, then symlink or copy to `~/.claude/agents/`:
+Each top-level directory is one skill. Every skill contains a `SKILL.md` with YAML frontmatter and a Markdown body:
 
-```bash
-git clone git@github.com:jpoindexter/agents.git ~/code/agents
-# Option A: symlink (keeps repo as source of truth)
-ln -s ~/code/agents ~/.claude/agents
-# Option B: copy
-cp -r ~/code/agents/ ~/.claude/agents/
+```
+dev-workflow/
+  SKILL.md        # name, description, instructions
+  overview.md     # optional supporting docs
 ```
 
-## Categories
+Skills are invoked inside Claude Code sessions via `/skill <name>` or referenced in agent configurations.
 
-Each folder is a domain with related subagents. All agents are Markdown files with frontmatter — Claude Code auto-discovers them.
+## Key docs
 
-| Folder | Purpose | Notes |
-|--------|---------|-------|
-| `content/` | Long-form writing — blogs, newsletters, content calendars, SEO | Useful for product launches and blog posts |
-| `creative/` | Copy, ads, voice, video, visuals | `copywriter.md` is the main one I actually use |
-| `data/` | Data quality, pipeline health, scrapers | Gripe and scraping work |
-| `design/` | Accessibility, design critique, lint, QA, Figma, UX research, design-dev bridge | Most-used category |
-| `engineering/` | Code review, security, bundle health, design-system compliance, documentation, rapid prototyping | Core dev workflow |
-| `influencer/` | Creator scouting, campaign tracking, outreach, performance | Not actively used |
-| `meta/` | Reality checks and self-audits for agent outputs | Use when stuck |
-| `ops/` | Project tracking, deadlines, client reporting, invoicing, analytics | Project management |
-| `pr/` | Press releases, journalist outreach, coverage tracking, crisis | Not actively used |
-| `product/` | Spec validation | |
-| `reference/` | Static guides (Claude skills, handoff patterns, identity/trust) | Docs, not agents per se |
-| `sales/` | Follow-up, lead qualification, pipeline, pitch decks, proposals | Not actively used |
-| `strategy/` | Competitor analysis, positioning, trend scouting, market research, campaigns | Most-used for Gripe + THEFT positioning |
-| `testing/` | Test result analysis | |
+| File | Purpose |
+|------|---------|
+| `CORE_SKILLS.md` | Curated daily-use skill set |
+| `SKILL_PACKS.md` | Grouped packs by workflow type |
+| `SKILLS_INDEX.md` | Full inventory |
+| `IMPROVEMENTS.md` | Consolidation and governance roadmap |
+| `ARCHIVE_CANDIDATES.md` | Staged cleanup targets |
 
-## Philosophy
+## Skill packs (quick reference)
 
-- Keep agent frontmatter descriptions specific — overlapping descriptions cause router confusion when Claude picks which agent to use.
-- Every agent should have a name-when-NOT-to-use criterion in its description.
-- Reference docs live in `reference/` because they're not invocable agents.
-- Empty categories were deleted; re-add when populated.
+- **Core Delivery** — `architect-builder-method`, `sprint-architect-pack`, `clean-context-engineering`, `local-release-gate`, `model-switch-router`
+- **Product Flow Quality** — `onboarding-state-machine`, `happy-path-route-audit`, `integration-contract-test`, `postmortem-rca`
+- **Research & Strategy** — `research-brief-builder`, `source-truth-check`, `user-interview-synth`, `competitor-teardown`
+- **UX** — `nng-ux-research-orchestrator`, `nng-web-usability`, `nng-information-architecture`, `nng-navigation-audit`
+- **Design & Engineering** — `design-system-audit`, `frontend-design`, `code-review`, `security-scan`
+
+## Setup
+
+Clone the repo and symlink to wherever your agent runtime resolves skills from:
+
+```sh
+git clone https://github.com/jpoindexter/theft-kit.git
+```
+
+Then point your Claude Code or Codex config at the cloned path.
+
+## Quality rules
+
+- Every skill requires valid YAML frontmatter between `---` delimiters.
+- Extend existing skills before creating new ones.
+- Skill instructions should be concise and workflow-specific — not general documentation.
+
+## Validation
+
+```sh
+./scripts/validate_skills.sh        # YAML frontmatter check on all SKILL.md files
+./scripts/streamline_inventory.py   # overlap report and grouping CSV
+```
 
 ## License
 
-Personal use. Not published to any marketplace.
+MIT
