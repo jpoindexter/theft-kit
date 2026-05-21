@@ -1,0 +1,4 @@
+interface:
+  display_name: "First Principles Deconstructor"
+  short_description: "Strip problems to first principles."
+  default_prompt: "Use first-principles-deconstructor to deconstruct this problem:"
