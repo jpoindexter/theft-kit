@@ -87,9 +87,9 @@ The aesthetic borrows from editorial print, technical white papers,
 and old typewritten correspondence — the goal is *good content on
 good paper*, not *modern app UI*.
 
-> **Design system source of truth:** [`design-systems/kami/DESIGN.md`](../../design-systems/kami/DESIGN.md).
-> Read it before shipping. Tokens, type rules, the "ten invariants",
-> and forbidden colors all live there.
+> **Portable design-system contract:** the tokens, type rules, invariants,
+> and forbidden colors in this skill are the source of truth. Do not depend
+> on a repository-level design-system file that may not travel with the skill.
 
 ## What you get
 
@@ -227,7 +227,6 @@ skills/kami-landing/
 
 ## See also
 
-- [`design-systems/kami/DESIGN.md`](../../design-systems/kami/DESIGN.md) — the full token spec.
 - [`skills/kami-deck/`](../kami-deck/) — sister skill that produces a
   slide deck in the same kami language.
 - Upstream: [`tw93/kami`](https://github.com/tw93/kami) — original

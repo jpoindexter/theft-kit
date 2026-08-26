@@ -121,4 +121,5 @@ Things to notice:
 - DESIGN.md is treated as a collaborator, not an override. The skill gives the agent authority to override when the brief conflicts, but never to invent new tokens.
 - `data-od-id` tagging is how we wire elements to comment mode. Skills that want comment-mode compatibility must annotate their output.
 
-See [`../../docs/skills-protocol.md`](../../docs/skills-protocol.md) for the full protocol.
+Keep those four rules inside the package contract; do not depend on a
+repository-level protocol file that may not travel with this skill.

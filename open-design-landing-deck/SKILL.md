@@ -76,9 +76,8 @@ Atelier Zero visual system (warm paper, Inter Tight + Playfair Display,
 italic-serif emphasis, coral dots), but paginated as a **horizontal
 magazine-style swipe deck** instead of a long scrolling page.
 
-The navigation model is intentionally borrowed from the
-[`guizang-ppt`](../guizang-ppt/) skill — `←/→` arrow keys, wheel /
-swipe, ESC for the overview grid — so it feels like a print magazine
+The navigation model uses `←/→` arrow keys, wheel / swipe, and ESC for
+the overview grid, so it feels like a print magazine
 flipping page by page rather than a web slide deck scrolling.
 
 ```text
@@ -217,6 +216,3 @@ writes one self-contained HTML file.
 ## See also
 
 - [`open-design-landing`](../open-design-landing/) — landing page sister skill.
-- [`guizang-ppt`](../guizang-ppt/) — the magazine-deck navigation
-  pattern this skill borrows.
-- [`design-systems/atelier-zero/DESIGN.md`](../../design-systems/atelier-zero/DESIGN.md) — token spec.

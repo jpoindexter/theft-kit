@@ -316,6 +316,4 @@ skills/open-design-landing/
 
 ## See also
 
-- [`design-systems/atelier-zero/DESIGN.md`](../../design-systems/atelier-zero/DESIGN.md) — token spec.
-- [`apps/landing-page/`](../../apps/landing-page/) — deployable Astro static counterpart.
 - [`skills/open-design-landing-deck/`](../open-design-landing-deck/) — sibling slides skill that reuses this design system.

@@ -70,15 +70,13 @@ self-contained HTML file: a horizontal magazine-style swipe deck in
 the **kami (紙 / 纸)** design system — print rhythm, ink-blue accent,
 serif at one weight, no italic, no cool grays.
 
-The navigation model is intentionally borrowed from the
-[`guizang-ppt`](../guizang-ppt/) skill — `←/→` arrow keys, wheel /
-swipe, ESC for the overview grid. The aesthetic stays kami: parchment
+The navigation model uses `←/→` arrow keys, wheel / swipe, and ESC for
+the overview grid. The aesthetic stays kami: parchment
 content slides, ink-blue cover and chapter slides, serif everywhere.
 
-> **Design system source of truth:**
-> [`design-systems/kami/DESIGN.md`](../../design-systems/kami/DESIGN.md).
-> Read it before shipping. Tokens, type rules, and forbidden colors
-> all live there. Slide-specific scale ratios (macro × 1.6,
+> **Portable design-system contract:** the tokens, type rules, forbidden
+> colors, and invariants in this skill are the source of truth.
+> Slide-specific scale ratios (macro × 1.6,
 > letter-spacing × 0.6 vs. print) are documented in §3 "Hierarchy"
 > and §5 "Layout Principles · Slides".
 
@@ -146,8 +144,7 @@ strokes are thinner.
 ### 3. Write `index.html`
 
 Output a single file with all CSS inline. Mirror the structure of
-[`example.html`](./example.html). Use only the tokens from
-`design-systems/kami/DESIGN.md`.
+[`example.html`](./example.html). Use only the tokens defined here.
 
 The runtime script (keyboard / wheel / touch nav, dot indicator,
 progress bar, ESC overview) should match the model documented in
@@ -178,8 +175,7 @@ language is different.
   pick nothing.
 - **Do not** use italic anywhere — emphasis swaps to ink-blue.
 - **Do not** use `rgba()` for tag fills; pre-blend over parchment
-  and use solid hex from the table in
-  `design-systems/kami/DESIGN.md` §2.
+  and use solid hex from the table in this skill.
 - **Do not** add a router. This is a single-file artifact.
 - **Do not** reuse Atelier Zero collage imagery (the open-design-landing
   visual system). Kami is gradient-free, image-light, and hierarchy
@@ -188,7 +184,6 @@ language is different.
 ## See also
 
 - [`kami-landing`](../kami-landing/) — long-form one-pager sister skill.
-- [`design-systems/kami/DESIGN.md`](../../design-systems/kami/DESIGN.md) — token spec.
 - [`open-design-landing-deck`](../open-design-landing-deck/) — same
   horizontal swipe nav model, different visual language (Atelier Zero).
 - Upstream: [`tw93/kami`](https://github.com/tw93/kami) — original
